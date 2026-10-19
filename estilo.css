@@ -93,3 +93,50 @@ nav ul { padding-left: 1.2rem; }
   select, input { width: 100%; min-width: 0; }
   #contador { margin-left: 0; }
 }
+
+/* mapa interativo */
+#mapa { margin-top: .4rem; }
+#mapa h2 { margin-top: 1rem; }
+.dica { color: var(--suave); margin-top: 0; }
+.mapa-bloco { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 1.2rem; align-items: start; }
+.mapa { margin: 0; background: var(--papel); border: 1px solid var(--linha); border-radius: .6rem; padding: .8rem .8rem .6rem; box-shadow: 0 1px 2px rgba(31, 35, 40, .06); }
+.mapa svg { display: block; width: 100%; height: auto; -webkit-tap-highlight-color: transparent; }
+.mapa path.uf { stroke: #ffffff; stroke-width: 1.1; stroke-linejoin: round; cursor: pointer; transition: fill .15s, filter .15s; }
+.mapa path.uf:hover { filter: brightness(1.12); }
+.mapa path.uf:focus { outline: none; }
+.mapa path.uf:focus-visible { stroke: var(--coral); stroke-width: 2.5; }
+.mapa path.uf.ativo { fill: var(--coral) !important; stroke: var(--destaque-escuro); stroke-width: 1.6; filter: drop-shadow(0 2px 3px rgba(31, 35, 40, .35)); }
+.mapa .rotulo { font: 700 14px var(--sans); fill: var(--destaque-escuro); text-anchor: middle; pointer-events: none; letter-spacing: .02em; }
+.mapa .rotulo.claro { fill: #ffffff; }
+.mapa .rotulo.fora { pointer-events: auto; cursor: pointer; }
+.mapa .rotulo.fora text { font: 700 14px var(--sans); fill: var(--destaque-escuro); text-anchor: start; }
+.mapa .rotulo.fora line { stroke: #8a9693; stroke-width: .8; }
+.mapa .rotulo.fora .ponto { fill: var(--coral); stroke: #ffffff; stroke-width: 1.2; }
+.mapa .rotulo.df text { paint-order: stroke; stroke: #ffffff; stroke-width: 3px; stroke-linejoin: round; }
+.mapa figcaption { margin-top: .4rem; }
+.escala-titulo { margin: 0 0 .3rem; font-size: .78rem; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; color: var(--suave); }
+.escala { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: .3rem .9rem; font-size: .8rem; color: var(--suave); font-variant-numeric: tabular-nums; }
+.escala li { display: flex; align-items: center; gap: .35rem; }
+.escala .faixa { width: 1.1rem; height: .75rem; border-radius: 2px; border: 1px solid var(--linha); }
+.cartao { background: var(--papel); border: 1px solid var(--linha); border-left: 6px solid var(--coral); border-radius: .6rem; padding: 1rem 1.2rem; min-height: 14rem; box-shadow: 0 1px 2px rgba(31, 35, 40, .06); scroll-margin-top: .8rem; }
+.cartao h3 { margin: 0 0 .7rem; font-size: 1.3rem; font-weight: 800; color: var(--destaque-escuro); }
+.cartao-sigla { font-size: .8rem; font-weight: 700; color: #F5F6F7; background: var(--destaque); border-radius: .3rem; padding: .08rem .4rem; vertical-align: middle; }
+.cartao-linha { border-top: 1px solid var(--linha); padding: .7rem 0 .2rem; }
+.cartao-linha:first-of-type { border-top: 0; padding-top: 0; }
+.cartao-linha p, .cartao-inicial p { margin: .2rem 0; }
+.cartao-rotulo { font-size: .78rem; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; color: var(--suave); }
+.cartao-valor { font-size: 1.7rem; font-weight: 800; color: var(--destaque-escuro); letter-spacing: -.01em; font-variant-numeric: tabular-nums; line-height: 1.25; }
+.cartao-base, .cartao-data { color: var(--suave); font-size: .88rem; }
+.cartao-aviso { background: var(--entrada); border-left: 4px solid #A66300; border-radius: .3rem; padding: .45rem .65rem; font-size: .88rem; color: #3b2f00; }
+.cartao-uniao { margin-top: .9rem !important; padding-top: .7rem; border-top: 1px solid var(--linha); color: var(--suave); font-size: .92rem; }
+.cartao-uf[hidden] { display: none; }
+.siglas { display: grid; grid-template-columns: repeat(auto-fill, minmax(2.9rem, 1fr)); gap: .35rem; margin: .9rem 0 0; }
+.sigla { font: inherit; font-size: .85rem; font-weight: 700; padding: .45rem 0; border: 1px solid var(--linha); border-radius: .35rem; background: var(--papel); color: var(--destaque); cursor: pointer; }
+.sigla:hover { border-color: var(--coral); color: var(--coral); }
+.sigla[aria-pressed="true"] { background: var(--coral); border-color: var(--coral); color: #ffffff; }
+.credito { font-size: .78rem; }
+@media (max-width: 899px) {
+  .mapa-bloco { grid-template-columns: minmax(0, 1fr); }
+  .cartao { min-height: 0; }
+  .mapa { padding: .5rem .5rem .5rem; }
+}
