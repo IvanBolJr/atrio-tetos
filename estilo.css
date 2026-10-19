@@ -1,0 +1,95 @@
+@font-face { font-family: "Inter"; font-style: normal; font-weight: 400; font-display: swap; src: url("fontes/inter-400.woff2") format("woff2"); }
+@font-face { font-family: "Inter"; font-style: normal; font-weight: 500; font-display: swap; src: url("fontes/inter-500.woff2") format("woff2"); }
+@font-face { font-family: "Inter"; font-style: normal; font-weight: 600; font-display: swap; src: url("fontes/inter-600.woff2") format("woff2"); }
+@font-face { font-family: "Inter"; font-style: normal; font-weight: 700; font-display: swap; src: url("fontes/inter-700.woff2") format("woff2"); }
+@font-face { font-family: "Inter"; font-style: normal; font-weight: 800; font-display: swap; src: url("fontes/inter-800.woff2") format("woff2"); }
+:root {
+  /* identidade Grafite do Átrio (13/10/2026) */
+  --fundo: #F5F6F7; --papel: #ffffff; --texto: #1F2328; --suave: #525A64; --linha: #DADEE3;
+  --destaque: #2D333B; --destaque-escuro: #1F2328; --destaque-claro: #E6E9ED; --zebra: #F5F6F7;
+  --coral: #E4572E; --entrada: #FFF8E6;
+  --serifa: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--fundo); color: var(--texto); font: 1rem/1.6 var(--sans); overflow-wrap: break-word; }
+.topo { background: var(--destaque); color: #F5F6F7; border-bottom: 3px solid var(--coral); }
+.topo .conteudo { padding-top: .7rem; padding-bottom: .7rem; font-size: 1.05rem; letter-spacing: .01em; display: flex; align-items: baseline; gap: .6rem; flex-wrap: wrap; }
+.topo a { color: #F5F6F7; text-decoration: none; font-weight: 700; }
+.topo .marca { font-size: 1.25rem; letter-spacing: -.01em; }
+.topo .marca .acento { color: var(--coral); }
+.topo .secao { color: #DADEE3; font-weight: 500; }
+.topo a:hover { text-decoration: underline; }
+.conteudo { max-width: 1100px; margin: 0 auto; padding: 0 16px; }
+main.conteudo { padding-bottom: 2rem; }
+h1, h2 { font-family: var(--sans); font-weight: 800; color: var(--destaque-escuro); line-height: 1.2; letter-spacing: -.01em; }
+h1::after { content: ""; display: block; width: 3.5rem; height: 4px; background: var(--coral); margin-top: .6rem; border-radius: 2px; }
+h1 { font-size: 2rem; margin: 1.6rem 0 .8rem; }
+h2 { font-size: 1.35rem; margin: 2rem 0 .5rem; }
+p { max-width: 70ch; }
+a { color: var(--destaque); text-decoration-thickness: 1px; text-underline-offset: 2px; text-decoration-color: var(--coral); }
+a:hover { color: var(--coral); }
+a:focus-visible, button:focus-visible, select:focus-visible, input:focus-visible { outline: 3px solid var(--coral); outline-offset: 2px; }
+.voltar { display: inline-block; margin: 1rem 0 0; padding: .35rem .8rem; border: 1px solid var(--destaque); border-radius: .35rem;
+  background: var(--papel); color: var(--destaque); font-weight: 600; text-decoration: none; }
+.voltar:hover { background: var(--destaque-claro); border-color: var(--coral); color: var(--coral); }
+.aviso { background: var(--entrada); border: 1px solid #EAD9A8; border-left: 5px solid #A66300; border-radius: .35rem; padding: .8rem 1rem; max-width: none; color: #3b2f00; }
+.valor { background: var(--papel); border: 1px solid var(--linha); border-left: 6px solid var(--coral); border-radius: .5rem;
+  padding: 1rem 1.2rem; margin: 1rem 0; font-size: 1.8rem; font-weight: 800; color: var(--destaque-escuro); max-width: none; letter-spacing: -.01em; }
+.produto { margin-top: 2.5rem; padding: .9rem 1.1rem; background: var(--papel); border: 1px solid var(--linha); border-radius: .4rem; color: var(--suave); font-size: .95rem; }
+.produto p { margin: 0; max-width: none; }
+.produto .comprar { margin-top: .7rem; }
+.botao { display: inline-block; padding: .55rem 1rem; margin-right: .4rem; margin-top: .3rem; border: 1px solid var(--destaque); border-radius: .4rem; background: var(--destaque); color: #F5F6F7; font-weight: 700; text-decoration: none; }
+.botao:hover { background: var(--coral); border-color: var(--coral); color: #ffffff; }
+.produto strong { color: var(--destaque-escuro); }
+dl { background: var(--papel); border: 1px solid var(--linha); border-radius: .4rem; padding: .4rem 1rem; display: grid; grid-template-columns: 11rem 1fr; gap: 0; }
+dt { font-weight: 600; color: var(--suave); padding: .55rem 0; border-top: 1px solid var(--linha); }
+dd { margin: 0; padding: .55rem 0; border-top: 1px solid var(--linha); min-width: 0; overflow-wrap: anywhere; }
+dt:first-of-type, dd:first-of-type { border-top: 0; }
+.filtros { display: flex; flex-wrap: wrap; gap: .8rem 1.2rem; margin: 1rem 0; align-items: end; background: var(--papel); border: 1px solid var(--linha); border-radius: .4rem; padding: .8rem 1rem; }
+.filtros label { display: block; font-size: .9rem; font-weight: 600; color: var(--suave); margin-bottom: .2rem; }
+select, input { font: inherit; padding: .45rem .6rem; border: 1px solid #8a9693; border-radius: .3rem; background: #fff; color: var(--texto); min-width: 12rem; }
+#contador { margin: 0 0 .4rem auto; color: var(--suave); font-size: .9rem; }
+.legenda { display: flex; flex-wrap: wrap; gap: .4rem .8rem; list-style: none; padding: 0; margin: .5rem 0 1rem; font-size: .88rem; color: var(--suave); }
+.legenda li { display: flex; align-items: center; gap: .4rem; }
+.selo { display: inline-block; padding: .12rem .55rem; border-radius: 999px; font-size: .8rem; line-height: 1.35; font-weight: 600; border: 1px solid transparent; }
+.selo-oficial { background: #E3F1E6; color: #1E5A2A; border-color: #BFDCC5; }
+.selo-secundaria { background: #fff4d6; color: #6b4a00; border-color: #e8d28f; }
+.selo-naoconf { background: #fde8e4; color: #8a2a1a; border-color: #f2bfb6; }
+.selo-adct { background: #e8eef7; color: #1f3f75; border-color: #bccbe6; }
+.selo-piso { background: #efe9f7; color: #4b2d7a; border-color: #d3c4e8; }
+.selo-sem { background: #eceeed; color: #3d4643; border-color: #cfd4d2; }
+table { border-collapse: separate; border-spacing: 0; width: 100%; font-size: .88rem; background: var(--papel); border: 1px solid var(--linha); border-radius: .4rem; }
+caption { text-align: left; padding: .6rem .2rem; font-weight: 700; font-size: 1.1rem; color: var(--destaque-escuro); }
+th, td { text-align: left; vertical-align: top; padding: .55rem .6rem; border-bottom: 1px solid var(--linha); }
+thead th { position: sticky; top: 0; z-index: 2; background: var(--destaque); color: #F5F6F7; font-weight: 600; border-bottom: 0; }
+tbody tr:nth-child(even) { background: var(--zebra); }
+tbody tr:hover { background: var(--destaque-claro); }
+tbody th { font-weight: 600; }
+td.num { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; font-feature-settings: "tnum"; font-weight: 600; }
+thead th.num { text-align: right; }
+footer { margin-top: 1rem; padding: 1rem 0 2rem; font-size: .85rem; color: var(--suave); }
+nav ul { padding-left: 1.2rem; }
+@media (max-width: 899px) {
+  h1 { font-size: 1.6rem; }
+  dl { grid-template-columns: minmax(0, 1fr); }
+  .valor { font-size: 1.25rem; }
+  dt { border-top: 1px solid var(--linha); padding-bottom: 0; }
+  dd { border-top: 0; padding-top: .1rem; }
+  table, tbody, tr, th, td { display: block; }
+  table { border: 0; background: transparent; }
+  caption { display: block; padding-left: 0; }
+  thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  tbody tr { background: var(--papel) !important; border: 1px solid var(--linha); border-left: 5px solid var(--coral); border-radius: .4rem; margin: 0 0 .8rem; padding: .3rem .8rem .5rem; }
+  tbody tr:hover { background: var(--papel) !important; }
+  tbody th { font-size: 1.1rem; color: var(--destaque-escuro); border-bottom: 1px solid var(--linha); padding: .5rem 0; }
+  td { display: grid; grid-template-columns: 7.5rem 1fr; gap: .6rem; padding: .3rem 0; border-bottom: 0; }
+  td::before { content: attr(data-label); font-weight: 600; color: var(--suave); font-size: .8rem; white-space: normal; }
+  td.num { text-align: left; font-size: 1.05rem; }
+  /* O filtro esconde linhas com o atributo hidden; "tr { display: block }" acima venceria o estilo padrão do navegador. */
+  tbody tr[hidden] { display: none; }
+  .filtros { flex-direction: column; align-items: stretch; }
+  select, input { width: 100%; min-width: 0; }
+  #contador { margin-left: 0; }
+}
