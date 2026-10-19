@@ -159,3 +159,70 @@ nav ul { padding-left: 1.2rem; }
   .cartao { min-height: 0; }
   .mapa { padding: .5rem .5rem .5rem; }
 }
+
+/* layout com barra lateral (substitui a faixa do topo) */
+.topo { display: none; }
+.pular { position: absolute; left: -999px; top: .5rem; z-index: 50; background: var(--papel); padding: .4rem .8rem; border: 2px solid var(--coral); border-radius: .3rem; }
+.pular:focus { left: .5rem; }
+.lateral { position: fixed; top: 0; left: 0; bottom: 0; width: 16rem; background: var(--destaque); color: #DADEE3; display: flex; flex-direction: column; padding: 1.4rem 1.1rem 1.2rem; z-index: 30; overflow-y: auto; }
+.marca { display: inline-flex; align-items: center; gap: .55rem; text-decoration: none; color: inherit; }
+.marca .simbolo { width: 2.1rem; height: 2.1rem; flex: 0 0 auto; }
+.marca .haste { fill: #F5F6F7; }
+.marca .traco { stroke: var(--coral); }
+.marca-nome { font-weight: 800; font-size: 1.45rem; letter-spacing: -.02em; color: #F5F6F7; }
+.marca-frase { margin: .55rem 0 0; font-size: .82rem; line-height: 1.4; color: #AEB5BE; }
+.lateral-topo { padding-bottom: 1.1rem; border-bottom: 1px solid rgba(255, 255, 255, .12); }
+.menu { list-style: none; margin: 1rem 0 0; padding: 0; display: grid; gap: .2rem; }
+.menu a { display: block; padding: .55rem .7rem; border-radius: .4rem; color: #E6E9ED; text-decoration: none; font-weight: 600; font-size: .95rem; border-left: 3px solid transparent; }
+.menu a:hover { background: rgba(255, 255, 255, .07); color: #ffffff; }
+.menu a[aria-current="page"] { background: rgba(255, 255, 255, .1); border-left-color: var(--coral); color: #ffffff; }
+.lateral-pe { margin-top: auto; padding-top: 1rem; border-top: 1px solid rgba(255, 255, 255, .12); font-size: .85rem; }
+.lateral-pe a { color: #DADEE3; text-decoration-color: var(--coral); }
+.lateral a:focus-visible { outline: 3px solid var(--coral); outline-offset: 2px; }
+.principal { margin-left: 16rem; min-height: 100vh; }
+.principal .conteudo { max-width: 1120px; padding: 0 2rem; }
+.barra-movel, .fundo-menu { display: none; }
+/* página inicial */
+.abertura { padding: 2.2rem 0 1rem; }
+.sobretitulo { margin: 0; font-size: .8rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: var(--coral); }
+.abertura h1 { font-size: 2.4rem; margin-top: .4rem; }
+.lead { font-size: 1.12rem; color: var(--suave); max-width: 62ch; }
+.botao.secundario { background: var(--papel); color: var(--destaque); }
+.botao.secundario:hover { background: var(--coral); color: #ffffff; }
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr)); gap: 1rem; margin: 1.2rem 0; }
+.card { background: var(--papel); border: 1px solid var(--linha); border-top: 4px solid var(--coral); border-radius: .6rem; padding: 1.1rem 1.2rem; box-shadow: 0 1px 2px rgba(31, 35, 40, .06); }
+.card h2 { margin: .2rem 0 .4rem; font-size: 1.25rem; }
+.card p { margin: .4rem 0; }
+.card-rotulo { margin: 0; font-size: .75rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--suave); }
+.card-nota { font-size: .88rem; color: var(--suave); }
+.card a { font-weight: 700; }
+.atalhos h2 { font-size: 1.1rem; }
+a.sigla { display: block; text-align: center; text-decoration: none; }
+.destaque-produto { margin: 2rem 0 1rem; background: var(--destaque); color: #E6E9ED; border-radius: .7rem; padding: 1.4rem 1.5rem; }
+.destaque-produto h2 { color: #ffffff; margin-top: .2rem; }
+.destaque-produto .card-rotulo { color: #F0A58C; }
+.destaque-produto p { max-width: 70ch; }
+.lista-check { list-style: none; padding: 0; margin: .8rem 0; display: grid; gap: .35rem; }
+.lista-check li { padding-left: 1.6rem; position: relative; }
+.lista-check li::before { content: ""; position: absolute; left: .2rem; top: .45rem; width: .75rem; height: .4rem; border-left: 2.5px solid var(--coral); border-bottom: 2.5px solid var(--coral); transform: rotate(-45deg); }
+.destaque-produto .preco { font-weight: 700; color: #ffffff; }
+.destaque-produto .botao { background: var(--coral); border-color: var(--coral); color: #ffffff; }
+.destaque-produto .botao:hover { background: #ffffff; color: var(--destaque); border-color: #ffffff; }
+@media (max-width: 899px) {
+  .lateral { transform: translateX(-105%); transition: transform .2s ease; width: 17rem; box-shadow: 4px 0 18px rgba(0, 0, 0, .25); }
+  .menu-aberto .lateral { transform: none; }
+  .fundo-menu { position: fixed; inset: 0; background: rgba(31, 35, 40, .45); z-index: 20; }
+  .menu-aberto .fundo-menu { display: block; }
+  .principal { margin-left: 0; }
+  .principal .conteudo { padding: 0 16px; }
+  .barra-movel { display: flex; align-items: center; justify-content: space-between; padding: .6rem 16px; background: var(--fundo); border-bottom: 1px solid var(--linha); position: sticky; top: 0; z-index: 10; }
+  .barra-movel .haste { fill: var(--destaque); }
+  .barra-movel .marca-nome { color: var(--destaque-escuro); font-size: 1.25rem; }
+  .barra-movel .simbolo { width: 1.8rem; height: 1.8rem; }
+  .botao-menu { font: inherit; font-weight: 700; font-size: .9rem; display: inline-flex; align-items: center; gap: .5rem; padding: .45rem .8rem; border: 1px solid var(--linha); border-radius: .4rem; background: var(--papel); color: var(--destaque); cursor: pointer; }
+  .hamburguer, .hamburguer::before, .hamburguer::after { display: block; width: 1rem; height: 2px; background: currentColor; border-radius: 1px; position: relative; }
+  .hamburguer::before, .hamburguer::after { content: ""; position: absolute; left: 0; }
+  .hamburguer::before { top: -5px; }
+  .hamburguer::after { top: 5px; }
+  .abertura h1 { font-size: 1.8rem; }
+}
