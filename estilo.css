@@ -135,6 +135,25 @@ nav ul { padding-left: 1.2rem; }
 .sigla:hover { border-color: var(--coral); color: var(--coral); }
 .sigla[aria-pressed="true"] { background: var(--coral); border-color: var(--coral); color: #ffffff; }
 .credito { font-size: .78rem; }
+/* selo de credibilidade */
+.selo-conf { display: flex; gap: .55rem; align-items: flex-start; max-width: none; margin: .4rem 0 1rem; padding: .6rem .8rem; border-radius: .45rem; border: 1px solid; font-size: .92rem; }
+.selo-conf .icone { flex: 0 0 1.25rem; width: 1.25rem; height: 1.25rem; margin-top: .12rem; }
+.selo-conf.selo-oficial .icone circle { fill: #2E7D3E; }
+.selo-conf .icone circle { fill: #6B7480; }
+.selo-conf.selo-secundaria .icone circle { fill: #A66300; }
+.selo-conf a { font-weight: 600; }
+/* histórico */
+.historico { list-style: none; padding: 0; margin: .6rem 0 1rem; display: grid; gap: .7rem; }
+.hist-item { background: var(--papel); border: 1px solid var(--linha); border-left: 5px solid var(--coral); border-radius: .45rem; padding: .7rem 1rem; }
+.hist-conferencia { border-left-color: #2E7D3E; }
+.hist-item p { margin: .15rem 0; max-width: none; }
+.hist-data { font-size: .78rem; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; color: var(--suave); }
+.hist-titulo { font-weight: 800; font-size: 1.08rem; color: var(--destaque-escuro); }
+.hist-mudanca .antes { color: var(--suave); text-decoration: line-through; text-decoration-color: #b0b6bd; }
+.hist-mudanca strong { color: var(--destaque-escuro); }
+.hist-norma, .hist-transicao, .hist-fonte { font-size: .9rem; color: var(--suave); }
+.historico.curto { grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 @media (max-width: 899px) {
   .mapa-bloco { grid-template-columns: minmax(0, 1fr); }
   .cartao { min-height: 0; }
