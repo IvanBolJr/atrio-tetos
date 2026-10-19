@@ -239,6 +239,33 @@ a.sigla { display: block; text-align: center; text-decoration: none; }
 .chamada-final { text-align: left; margin-top: 2rem; }
 .vitrine { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); gap: 1.6rem; align-items: center; }
 .vitrine-imagem img { display: block; width: 100%; height: auto; border-radius: .5rem; box-shadow: 0 10px 30px rgba(0, 0, 0, .35); }
+.calc-grade { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: 1.6rem; align-items: start; margin: 1.4rem 0 2rem; }
+.calc-form { background: var(--papel); border: 1px solid var(--linha); border-radius: .6rem; padding: 1.2rem 1.3rem; }
+.calc-campo { margin-bottom: 1rem; }
+.calc-campo label { display: block; font-weight: 700; margin-bottom: .3rem; color: var(--destaque-escuro); }
+.calc-campo select, .calc-campo input { width: 100%; font: inherit; font-size: 1rem; padding: .55rem .7rem; border: 1px solid #AEB5BE; border-radius: .4rem; background: var(--entrada); color: var(--texto); }
+.calc-campo select:focus, .calc-campo input:focus { outline: 3px solid var(--coral); outline-offset: 1px; }
+.calc-dica { margin: .3rem 0 0; font-size: .85rem; color: var(--suave); }
+.calc-form .botao { font: inherit; font-weight: 700; cursor: pointer; padding: .65rem 1.4rem; }
+.calc-cartao { background: var(--papel); border: 1px solid var(--linha); border-left: 6px solid var(--destaque); border-radius: .6rem; padding: 1.1rem 1.3rem; }
+.calc-vazio { color: var(--suave); border-left-color: var(--linha); }
+.calc-sim { border-left-color: #1E7B4F; }
+.calc-nao { border-left-color: var(--coral); }
+.calc-erro, .calc-incerto { border-left-color: #B7791F; }
+.calc-veredito { margin: 0 0 .4rem; font-size: 1.6rem; font-weight: 800; letter-spacing: -.01em; color: var(--destaque-escuro); }
+.calc-sim .calc-veredito { color: #1E7B4F; }
+.calc-nao .calc-veredito { color: #C2410C; }
+.calc-detalhe { display: grid; grid-template-columns: max-content 1fr; gap: .3rem 1rem; margin: 1rem 0 0; font-size: .92rem; }
+.calc-detalhe dt { font-weight: 700; color: var(--suave); }
+.calc-detalhe dd { margin: 0; }
+.calc-avisos { margin: 1rem 0 0; padding: .7rem 1rem .7rem 2rem; background: #FFF8E6; border-radius: .4rem; font-size: .9rem; }
+.calc-links { margin: 1rem 0 0; font-size: .92rem; }
+.calc-produto { margin-top: 2rem; }
+@media (max-width: 899px) {
+  .calc-grade { grid-template-columns: minmax(0, 1fr); }
+  .calc-detalhe { grid-template-columns: minmax(0, 1fr); }
+  .calc-detalhe dd { margin-bottom: .4rem; }
+}
 @media (max-width: 899px) {
   .produto-topo, .vitrine, .duas-colunas, .galeria { grid-template-columns: minmax(0, 1fr); }
   .produto-topo h1 { font-size: 2rem; }
