@@ -182,6 +182,31 @@ nav ul { padding-left: 1.2rem; }
 .principal { margin-left: 16rem; min-height: 100vh; }
 .principal .conteudo { max-width: 1120px; padding: 0 2rem; }
 .barra-movel, .fundo-menu { display: none; }
+/* página de um ente: a resposta (o valor) manda, com os dados ao lado */
+.trilha { padding-top: 1.2rem; }
+.trilha a { font-weight: 600; text-decoration: none; color: var(--suave); }
+.trilha a:hover { color: var(--coral); }
+.ente-topo { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 2.5rem; align-items: start; margin: .4rem 0 1.6rem; }
+.ente-topo h1 { margin-top: .6rem; text-wrap: balance; }
+.ente-topo .valor { background: none; border: 0; padding: 0; margin: 1.4rem 0 .2rem; line-height: 1; }
+.valor-num { display: block; font-size: clamp(2.6rem, 4.2vw, 3.6rem); font-weight: 800; letter-spacing: -.03em; color: var(--destaque-escuro); font-variant-numeric: tabular-nums; }
+.valor-num.valor-sem { font-size: 1.8rem; color: var(--suave); letter-spacing: -.01em; }
+.valor-base { margin: .7rem 0 1rem; font-size: 1.05rem; color: var(--suave); }
+.ente-topo .selo-conf { border: 0; background: none; padding: 0; margin: 0 0 1.4rem; font-size: 1rem; }
+.ente-acoes { margin: 0; }
+.ente-acoes .botao { margin: 0; padding: .7rem 1.2rem; }
+.ente-dados h2 { margin-top: .9rem; }
+.ente-dados dl { margin: .4rem 0 0; grid-template-columns: 8.5rem 1fr; }
+.ente-topo + .cartao-aviso, .historico-ente .historico { max-width: 75ch; }
+@media (max-width: 1099px) {
+  .ente-topo { grid-template-columns: minmax(0, 1fr); gap: .5rem; }
+}
+.historico-ente .hist-item, .historico-ente .hist-item p { font-size: 1rem; }
+.historico-ente .hist-item .hist-data { font-size: .85rem; }
+@media (max-width: 899px) {
+  .ente-dados dl { grid-template-columns: minmax(0, 1fr); }
+  .ente-topo h1 { font-size: 1.9rem; }
+}
 /* página inicial */
 .abertura { padding: 2.2rem 0 1rem; }
 .sobretitulo { margin: 0; font-size: .8rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: var(--coral); }
