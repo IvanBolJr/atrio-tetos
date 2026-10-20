@@ -48,6 +48,14 @@ a:focus-visible, button:focus-visible, select:focus-visible, input:focus-visible
 .form-consentimento input { margin: .3rem 0 0; width: 1rem; height: 1rem; }
 .form-aviso .comprar { margin: 0; }
 .form-aviso button { font: inherit; font-weight: 700; cursor: pointer; }
+.artigo { max-width: 46rem; }
+.artigo h1 { text-wrap: balance; }
+.artigo-meta { margin: -.3rem 0 1rem; font-size: .9rem; color: var(--suave); }
+.artigo-resumo { font-size: 1.12rem; line-height: 1.6; color: var(--destaque-escuro); }
+.artigo h2 { margin-top: 1.8rem; }
+.artigo p { line-height: 1.65; }
+.artigo-fontes ul { padding-left: 1.2rem; } .artigo-fontes li { margin-bottom: .3rem; font-size: .95rem; }
+.minis .mini h3 a { text-decoration: none; color: inherit; } .minis .mini h3 a:hover { color: var(--coral); }
 .produto { margin-top: 2.5rem; padding: .9rem 1.1rem; background: var(--papel); border: 1px solid var(--linha); border-radius: .4rem; color: var(--suave); font-size: .95rem; }
 .produto p { margin: 0; max-width: none; }
 .produto .comprar { margin-top: .7rem; }
