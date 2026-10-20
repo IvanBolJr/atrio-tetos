@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#2D333B">
+<title>Privacidade</title>
+<meta name="description" content="O que o site atriojur.com.br guarda e por quê.">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Privacidade">
+<meta property="og:description" content="O que o site atriojur.com.br guarda e por quê.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:image" content="https://atriojur.com.br/imagens/compartilhar.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="estilo.css?v=66688b2a">
+</head>
+<body>
+<a class="pular" href="#conteudo">Pular para o conteúdo</a>
+<div class="barra-movel"><a class="marca" href="index.html" aria-label="Átrio, página inicial"><svg class="simbolo" viewBox="300 290 690 680" aria-hidden="true" focusable="false"><polygon class="haste" points="522,318 676,318 955,936 779,936"/><line class="traco" x1="527" y1="563" x2="334" y2="890" stroke-width="92" stroke-linecap="round"/></svg><span class="marca-nome" translate="no">Átrio</span></a><button type="button" id="abrir-menu" class="botao-menu" aria-controls="menu-lateral" aria-expanded="false"><span class="hamburguer" aria-hidden="true"></span>Menu</button></div>
+<aside class="lateral" id="menu-lateral"><div class="lateral-topo"><a class="marca" href="index.html" aria-label="Átrio, página inicial"><svg class="simbolo" viewBox="300 290 690 680" aria-hidden="true" focusable="false"><polygon class="haste" points="522,318 676,318 955,936 779,936"/><line class="traco" x1="527" y1="563" x2="334" y2="890" stroke-width="92" stroke-linecap="round"/></svg><span class="marca-nome" translate="no">Átrio</span></a><p class="marca-frase">ferramentas para escritórios de advocacia</p></div><nav aria-label="Menu principal"><ul class="menu"><li><a href="index.html">Início</a></li><li><a href="tetos-de-rpv.html">Tetos de RPV: mapa e tabela</a></li><li><a href="calculadora-rpv.html">Calculadora: cabe em RPV?</a></li><li><a href="historico.html">Histórico de mudanças</a></li><li><a href="planilha-atrio-recebiveis.html">Planilha Átrio Recebíveis</a></li></ul></nav><div class="lateral-pe"><a href="https://instagram.com/atriojur">Instagram @atriojur</a></div></aside>
+<div id="fundo-menu" class="fundo-menu"></div>
+<div class="principal" id="conteudo"><div class="pagina conteudo">
+<nav aria-label="Navegação" class="trilha"><a href="index.html">&larr; Início</a></nav>
+<main>
+<h1>Privacidade e uso dos dados</h1>
+<p>Esta página explica o que o site atriojur.com.br guarda e por quê (Lei 13.709/2018, LGPD).</p>
+<h2>O que é coletado</h2>
+<ul class="lista-check">
+<li><strong>Consulta aos tetos e à calculadora:</strong> nada. As contas são feitas no seu navegador; nenhum valor digitado é enviado.</li>
+<li><strong>Aviso de mudança de teto:</strong> só o e-mail que você digita e, se quiser, o ente que mais usa. Fica guardado na plataforma de e-mail que usamos (Brevo), com o registro do dia e da hora em que você concordou.</li>
+<li><strong>Estatísticas:</strong> o site não usa cookies de rastreamento nem anúncios. O que sabemos sobre visitas vem do Google Search Console (buscas que levaram ao site), sem identificar pessoas.</li>
+</ul>
+<h2>Para que o e-mail é usado</h2>
+<p>Para avisar mudanças de teto de RPV (lei nova, salário mínimo e teto do RGPS do ano) e novidades das planilhas Átrio. Não é vendido nem cedido a ninguém.</p>
+<h2>Como cancelar ou apagar</h2>
+<p>Toda mensagem tem um link para cancelar. Para apagar o cadastro ou pedir uma cópia dos dados, escreva para <a href="mailto:[E-MAIL DE SUPORTE]">[E-MAIL DE SUPORTE]</a>: respondemos em até 2 dias úteis.</p>
+<h2>Compras</h2>
+<p>A planilha é vendida pela Kiwify e pela Hotmart. Os dados da compra (nome, CPF, pagamento) ficam nessas plataformas, com as regras de privacidade delas; o site não os recebe.</p>
+<p class="aviso">Responsável pelo site: Átrio (atriojur.com.br). Contato: [E-MAIL DE SUPORTE].</p>
+</main>
+<footer><p>Dados conferidos até 19/10/2026. Um serviço do <strong>Átrio</strong>, ferramentas para escritórios de advocacia · <a href="tetos-de-rpv.html">Tetos de RPV</a> · <a href="historico.html">Histórico de mudanças</a> · <a href="https://instagram.com/atriojur">@atriojur</a></p></footer>
+</div></div>
+<script>
+(function () {
+  var botao = document.getElementById('abrir-menu');
+  var corpo = document.body;
+  if (!botao) return;
+  function fechar() { corpo.classList.remove('menu-aberto'); botao.setAttribute('aria-expanded', 'false'); }
+  botao.addEventListener('click', function () {
+    var aberto = corpo.classList.toggle('menu-aberto');
+    botao.setAttribute('aria-expanded', aberto ? 'true' : 'false');
+  });
+  document.getElementById('fundo-menu').addEventListener('click', fechar);
+  document.addEventListener('keydown', function (ev) { if (ev.key === 'Escape') fechar(); });
+  var links = document.querySelectorAll('.lateral a');
+  for (var i = 0; i < links.length; i++) links[i].addEventListener('click', fechar);
+})();
+</script>
+</body>
+</html>
