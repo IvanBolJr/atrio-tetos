@@ -48,6 +48,7 @@ a:focus-visible, button:focus-visible, select:focus-visible, input:focus-visible
 .form-consentimento input { margin: .3rem 0 0; width: 1rem; height: 1rem; }
 .form-aviso .comprar { margin: 0; }
 .form-aviso button { font: inherit; font-weight: 700; cursor: pointer; }
+.form-retorno { margin: 0; font-weight: 600; }
 .artigo { max-width: 46rem; }
 .artigo h1 { text-wrap: balance; }
 .artigo-meta { margin: -.3rem 0 1rem; font-size: .9rem; color: var(--suave); }
