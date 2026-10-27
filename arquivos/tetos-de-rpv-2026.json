@@ -3,7 +3,7 @@
  "fonte": "Átrio (atriojur.com.br)",
  "licenca": "CC BY 4.0",
  "credito_obrigatorio": "Fonte: Átrio, https://atriojur.com.br/tetos-de-rpv.html",
- "conferido_ate": "2026-10-19",
+ "conferido_ate": "2026-10-27",
  "aviso": "Esta tabela é informativa e não substitui a consulta à lei do ente nem à orientação de um advogado. Os valores dependem de salário mínimo, unidades fiscais e leis que mudam. Confira sempre na lei do ente antes de usar o valor em um pedido.",
  "entes": [
   {
@@ -277,9 +277,9 @@
    "teto": "8475.55",
    "base": "Piso do RGPS (maior benefício do RGPS)",
    "lei": "Lei Complementar 66/2001",
-   "situacao": "Lei conferida em fonte secundária · Teto da lei abaixo do piso: aplicado o maior benefício do RGPS",
-   "conferido_em": "2026-09-24",
-   "fonte": "https://al.se.leg.br/Legislacao/Complementar/2001/C00662001.pdf",
+   "situacao": "Valor confirmado em ato oficial do TJSE (Ato 630/2007, art. 1º); texto da lei não lido · Teto da lei abaixo do piso: aplicado o maior benefício do RGPS",
+   "conferido_em": "2026-10-27",
+   "fonte": "https://agencia.tjse.jus.br/noticias/item/990-ato-dispoe-sobre-requisicoes-de-pequeno-valor-contra-fazenda-publica",
    "pagina": "https://atriojur.com.br/teto-rpv-sergipe.html"
   },
   {
@@ -371,11 +371,11 @@
    "uf": "AP",
    "tipo": "capital",
    "teto": "8475.55",
-   "base": "Valor da lei, não confirmado",
+   "base": "Piso do RGPS (maior benefício do RGPS)",
    "lei": "Lei Municipal 1.803/2010",
-   "situacao": "Lei localizada, valor não confirmado",
-   "conferido_em": "2026-10-03",
-   "fonte": "https://www.jusbrasil.com.br/jurisprudencia/tj-ap/5158105175/inteiro-teor-5158105298",
+   "situacao": "Lei conferida no texto oficial",
+   "conferido_em": "2026-10-27",
+   "fonte": "https://www.tjap.jus.br/portal/images/PRECATORIOS/Legislacao/leis-rpv/lei_municipal_n_1803-2010_-_municpio_de_macap.pdf",
    "pagina": "https://atriojur.com.br/teto-rpv-macapa.html"
   },
   {
@@ -421,9 +421,9 @@
    "teto": "48630.00",
    "base": "Padrão do ADCT, art. 87 (lei própria não localizada)",
    "lei": "não localizado",
-   "situacao": "Lei própria não localizada: aplicado o padrão do ADCT, art. 87",
-   "conferido_em": "2026-10-03",
-   "fonte": "https://www.tjes.jus.br/wp-content/uploads/OPV-2024.pdf",
+   "situacao": "Lei própria não localizada (TJES, tabela OPV 2025: sem regulamentação, 30 SM): aplicado o padrão do ADCT, art. 87",
+   "conferido_em": "2026-10-27",
+   "fonte": "https://www.tjes.jus.br/wp-content/uploads/OPV-2025.pdf",
    "pagina": "https://atriojur.com.br/teto-rpv-vitoria.html"
   },
   {
@@ -434,7 +434,7 @@
    "base": "Padrão do ADCT, art. 87 (lei própria não localizada)",
    "lei": "não localizado",
    "situacao": "Lei própria não localizada: aplicado o padrão do ADCT, art. 87",
-   "conferido_em": "2026-10-03",
+   "conferido_em": "2026-10-27",
    "fonte": "",
    "pagina": "https://atriojur.com.br/teto-rpv-goiania.html"
   },
@@ -458,7 +458,7 @@
    "base": "Piso do RGPS (maior benefício do RGPS)",
    "lei": "Lei Municipal nº 5.953/2015, art. 1º, com redação dada pela Lei nº 6.837, de 24/06/2022",
    "situacao": "Lei conferida no texto oficial · Teto da lei abaixo do piso: aplicado o maior benefício do RGPS",
-   "conferido_em": "2026-09-27",
+   "conferido_em": "2026-10-27",
    "fonte": "https://legislativo.camaracuiaba.mt.gov.br/Arquivo/Documents/legislacao/html/L68372022.html",
    "pagina": "https://atriojur.com.br/teto-rpv-cuiaba.html"
   },
@@ -517,8 +517,8 @@
    "teto": "8475.55",
    "base": "Piso do RGPS (maior benefício do RGPS)",
    "lei": "Lei Municipal 10.235/2001, art. 1º e art. 5º; Decreto 789/2025",
-   "situacao": "Lei conferida no texto oficial · Teto da lei abaixo do piso: aplicado o maior benefício do RGPS",
-   "conferido_em": "2026-10-03",
+   "situacao": "Lei localizada no texto oficial; valor atualizado por decreto, cujo texto não foi lido · Teto da lei abaixo do piso: aplicado o maior benefício do RGPS",
+   "conferido_em": "2026-10-27",
    "fonte": "https://legisladocexterno.curitiba.pr.gov.br/VisualizarHTML.aspx?id=449574",
    "pagina": "https://atriojur.com.br/teto-rpv-curitiba.html"
   },
@@ -578,8 +578,8 @@
    "base": "Padrão do ADCT, art. 87 (lei própria não localizada)",
    "lei": "não localizado",
    "situacao": "Lei própria não localizada: aplicado o padrão do ADCT, art. 87",
-   "conferido_em": "2026-10-03",
-   "fonte": "",
+   "conferido_em": "2026-10-27",
+   "fonte": "https://camarapoa.rs.gov.br/draco/processos/140223/SEICAM_3.PDF",
    "pagina": "https://atriojur.com.br/teto-rpv-porto-alegre.html"
   },
   {
