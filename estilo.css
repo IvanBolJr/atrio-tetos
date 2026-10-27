@@ -291,6 +291,15 @@ a.sigla { display: block; text-align: center; text-decoration: none; }
 .calc-campo { margin-bottom: 1rem; }
 .calc-campo label { display: block; font-weight: 700; margin-bottom: .3rem; color: var(--destaque-escuro); }
 .calc-campo select, .calc-campo input { width: 100%; font: inherit; font-size: 1rem; padding: .55rem .7rem; border: 1px solid #7A828C; border-radius: .4rem; background: var(--entrada); color: var(--texto); }
+pre.codigo { background: #F5F6F7; border: 1px solid var(--linha); border-radius: .4rem; padding: .8rem; overflow-x: auto; font-size: .82rem; white-space: pre-wrap; word-break: break-all; }
+.modelo-texto { background: var(--papel); border: 1px solid var(--linha); border-radius: .6rem; padding: 1rem 1.2rem; }
+.tabela-rolavel { overflow-x: auto; margin: 0 0 1rem; }
+.tabela-indices { border-collapse: collapse; width: 100%; font-size: .95rem; }
+.tabela-indices th, .tabela-indices td { padding: .4rem .6rem; border-bottom: 1px solid var(--linha); text-align: left; }
+.tabela-indices .num { text-align: right; font-variant-numeric: tabular-nums; }
+.linha-acumulado th, .linha-acumulado td { font-weight: 700; background: #F5F6F7; }
+.calc-check label { display: flex; gap: .6rem; align-items: flex-start; }
+.calc-campo.calc-check input { width: 1.15rem; height: 1.15rem; padding: 0; margin: .2rem 0 0; flex: none; accent-color: var(--destaque); }
 .calc-campo select:focus, .calc-campo input:focus { outline: 3px solid var(--coral); outline-offset: 1px; }
 .calc-dica { margin: .3rem 0 0; font-size: .85rem; color: var(--suave); }
 .calc-form .botao { font: inherit; font-weight: 700; cursor: pointer; padding: .65rem 1.4rem; }
