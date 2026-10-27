@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#2D333B">
+<title>Página não encontrada | Átrio</title>
+<meta name="description" content="Página não encontrada.">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Página não encontrada | Átrio">
+<meta property="og:description" content="Página não encontrada.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:image" content="https://atriojur.com.br/imagens/compartilhar.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="estilo.css?v=4bb247d3">
+<meta name="robots" content="noindex">
+</head>
+<body>
+<a class="pular" href="#conteudo">Pular para o conteúdo</a>
+<div class="barra-movel"><a class="marca" href="index.html" aria-label="Átrio, página inicial"><svg class="simbolo" viewBox="300 290 690 680" aria-hidden="true" focusable="false"><polygon class="haste" points="522,318 676,318 955,936 779,936"/><line class="traco" x1="527" y1="563" x2="334" y2="890" stroke-width="92" stroke-linecap="round"/></svg><span class="marca-nome" translate="no">Átrio</span></a><button type="button" id="abrir-menu" class="botao-menu" aria-controls="menu-lateral" aria-expanded="false"><span class="hamburguer" aria-hidden="true"></span>Menu</button></div>
+<aside class="lateral" id="menu-lateral"><div class="lateral-topo"><a class="marca" href="index.html" aria-label="Átrio, página inicial"><svg class="simbolo" viewBox="300 290 690 680" aria-hidden="true" focusable="false"><polygon class="haste" points="522,318 676,318 955,936 779,936"/><line class="traco" x1="527" y1="563" x2="334" y2="890" stroke-width="92" stroke-linecap="round"/></svg><span class="marca-nome" translate="no">Átrio</span></a><p class="marca-frase">ferramentas para escritórios de advocacia</p></div><nav aria-label="Menu principal"><ul class="menu"><li><a href="index.html">Início</a></li><li><a href="tetos-de-rpv.html">Tetos de RPV: mapa e tabela</a></li><li><a href="calculadora-rpv.html">Calculadora: cabe em RPV?</a></li><li><a href="atualizar-valor-ipca.html">Atualizar valor pelo IPCA</a></li><li><a href="historico.html">Histórico de mudanças</a></li><li><a href="guia.html">Guia: prazos, teto e honorários</a></li><li><a href="planilha-atrio-recebiveis.html">Planilha Átrio Recebíveis</a></li></ul></nav><div class="lateral-pe"><a href="https://instagram.com/atriojur">Instagram @atriojur</a></div></aside>
+<div id="fundo-menu" class="fundo-menu"></div>
+<div class="principal" id="conteudo"><div class="pagina conteudo">
+<main>
+<h1>Página não encontrada</h1>
+<p class="lead">O endereço pode ter mudado. Estas páginas resolvem quase tudo:</p>
+<ul class="lista-check">
+<li><a href="tetos-de-rpv.html">Teto de RPV por estado e capital em 2026</a></li>
+<li><a href="calculadora-rpv.html">Calculadora: o crédito cabe em RPV?</a></li>
+<li><a href="atualizar-valor-ipca.html">Atualizar um valor pelo IPCA</a></li>
+<li><a href="guia.html">Guia de RPV e precatório</a></li>
+</ul>
+</main>
+<footer><p>Um serviço gratuito do <strong>Átrio</strong>, ferramentas para escritórios de advocacia · <a href="index.html">Início</a></p></footer>
+</div></div>
+<script>
+(function () {
+  var botao = document.getElementById('abrir-menu');
+  var corpo = document.body;
+  if (!botao) return;
+  function fechar() { corpo.classList.remove('menu-aberto'); botao.setAttribute('aria-expanded', 'false'); }
+  botao.addEventListener('click', function () {
+    var aberto = corpo.classList.toggle('menu-aberto');
+    botao.setAttribute('aria-expanded', aberto ? 'true' : 'false');
+  });
+  document.getElementById('fundo-menu').addEventListener('click', fechar);
+  document.addEventListener('keydown', function (ev) { if (ev.key === 'Escape') fechar(); });
+  var links = document.querySelectorAll('.lateral a');
+  for (var i = 0; i < links.length; i++) links[i].addEventListener('click', fechar);
+})();
+</script>
+</body>
+</html>
