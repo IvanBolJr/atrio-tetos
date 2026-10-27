@@ -58,7 +58,7 @@
 <li>A superpreferência vale para precatório alimentar de credor com 60 anos ou mais, doença grave ou deficiência, até 3 vezes o teto de RPV do ente (CF, art. 100, §2º).</li>
 <li>No regime especial do ADCT, art. 101, o limite é de 5 vezes o teto (ADCT, art. 102, §2º). A União não está nesse regime.</li>
 <li>O teto usado é o teto vigente do ente publicado neste site, já com o piso do maior benefício do RGPS.</li>
-<li>O que passa do limite volta para a ordem cronológica. Crédito que cabe no teto é pago por RPV, sem precisar de superpreferência.</li>
+<li>O que passa do limite volta para a ordem cronológica. Na expedição, crédito até o teto é pago por RPV, sem precisar de superpreferência.</li>
 </ul>
 <p class="calc-links">Leia também: <a href="guia-superpreferencia-precatorio.html">superpreferência: quem tem direito</a> · <a href="quando-o-precatorio-e-pago.html">quando o precatório deve ser pago</a> · <a href="tetos-de-rpv.html">teto de cada ente</a></p>
 <p class="aviso">Esta tabela é informativa e não substitui a consulta à lei do ente nem à orientação de um advogado. Os valores dependem de salário mínimo, unidades fiscais e leis que mudam. Confira sempre na lei do ente antes de usar o valor em um pedido.</p>
@@ -73,7 +73,8 @@
 <script id="motor-precatorio">/* Calculadoras de precatório do Átrio (docs/casos-calculadoras-precatorio.md).
  * previsao: precatório apresentado até a data de corte do ano A deve ser pago até 31/12 de A+1; depois dela, até 31/12
  *   de A+2 (CF, art. 100, §5º). Datas de corte por ano vêm de recebiveis/dados/data_corte.csv (bloco "dados-precatorio").
- *   Ente em regime especial (ADCT, art. 101): sem data pela regra do §5º.
+ *   Ente em regime especial (ADCT, art. 101): sem data pela regra do §5º. Estados, DF e municípios: a data vem sempre
+ *   com o aviso do limite anual por receita corrente líquida (CF, art. 100, §23, EC 136/2025); a União não tem esse limite.
  * superpreferencia: até 3 vezes o teto de RPV do ente (CF, art. 100, §2º); 5 vezes no regime especial (ADCT, art. 102,
  *   §2º), que não vale para a União. O restante volta para a ordem cronológica.
  */
@@ -113,12 +114,18 @@
     var corte = corteDoAno(dados.cortes, ano);
     if (!corte) return { erro: 'Data de corte não localizada para esse ano.' };
     var dentro = p.apresentacao <= corte;
-    if (p.regime) {
+    var subnacional = p.devedor !== 'federal';
+    if (p.regime && subnacional) {
       return { corte: corte, dentro: dentro, prazo: null,
         aviso: 'Ente em regime especial (ADCT, art. 101): o pagamento segue o plano anual do ente e a lista do tribunal, ' +
           'não o prazo do art. 100, §5º. Confira a posição do precatório no site do tribunal.' };
     }
-    return { corte: corte, dentro: dentro, prazo: (ano + (dentro ? 1 : 2)) + '-12-31', aviso: null };
+    var aviso = subnacional
+      ? 'Desde a EC 136/2025, o que estados, DF e municípios pagam de precatórios por ano é limitado a um percentual da ' +
+        'receita corrente líquida (CF, art. 100, §23), inclusive para quem não tem atraso. O pagamento pode ficar para depois ' +
+        'desta data: confira a posição do precatório na lista do tribunal.'
+      : null;
+    return { corte: corte, dentro: dentro, prazo: (ano + (dentro ? 1 : 2)) + '-12-31', aviso: aviso };
   }
 
   function superpreferencia(dados, p) {
@@ -136,7 +143,7 @@
       return base;
     }
     if (credito <= e.teto) {
-      base.aviso = 'O crédito cabe no teto de RPV (' + moeda(e.teto) + '): é pago por RPV. A superpreferência é para precatório.';
+      base.aviso = 'O crédito está dentro do teto de RPV (' + moeda(e.teto) + '): na expedição, ele é pago por RPV. A superpreferência é para precatório.';
       return base;
     }
     var regime = !!p.regime && e.tipo !== 'União';
@@ -178,16 +185,20 @@
 
     var fp = document.getElementById('form-pagamento');
     if (fp) {
+      var dev = document.getElementById('calc-devedor'), reg = document.getElementById('calc-regime');
+      var ajustarDevedor = function () { reg.disabled = dev.value === 'federal'; if (reg.disabled) reg.checked = false; };
+      dev.addEventListener('change', ajustarDevedor);
+      ajustarDevedor();
       fp.addEventListener('submit', function (ev) {
         ev.preventDefault();
         var r = previsao(dados, { apresentacao: document.getElementById('calc-apresentacao').value,
-          regime: document.getElementById('calc-regime').checked });
+          regime: document.getElementById('calc-regime').checked, devedor: document.getElementById('calc-devedor').value });
         if (r.erro) { saida.innerHTML = '<div class="calc-cartao calc-erro"><p>' + esc(r.erro) + '</p></div>'; return; }
         var html;
         if (r.prazo) {
           html = '<div class="calc-cartao calc-sim"><p class="calc-veredito">Pagamento até ' + dataBr(r.prazo) + '</p>' +
             '<p>Apresentado ' + (r.dentro ? 'até' : 'depois de') + ' ' + dataBr(r.corte) + ', a data de corte daquele ano: ' +
-            'entra no orçamento de ' + r.prazo.slice(0, 4) + '.</p>';
+            'entra no orçamento de ' + r.prazo.slice(0, 4) + '.</p>' + (r.aviso ? '<p class="cartao-aviso">' + esc(r.aviso) + '</p>' : '');
         } else {
           html = '<div class="calc-cartao calc-incerto"><p class="calc-veredito">Sem data pela regra geral</p><p>' + esc(r.aviso) + '</p>';
         }
