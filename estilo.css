@@ -196,7 +196,21 @@ nav ul { padding-left: 1.2rem; }
 .menu a { display: block; padding: .55rem .7rem; border-radius: .4rem; color: #E6E9ED; text-decoration: none; font-weight: 600; font-size: .95rem; border-left: 3px solid transparent; }
 .menu a:hover { background: rgba(255, 255, 255, .07); color: #ffffff; }
 .menu a[aria-current="page"] { background: rgba(255, 255, 255, .1); border-left-color: var(--coral); color: #ffffff; }
-.lateral-pe { margin-top: auto; padding-top: 1rem; border-top: 1px solid rgba(255, 255, 255, .12); font-size: .85rem; }
+.menu-secao { margin: 1.3rem 0 .15rem .7rem; font-size: .72rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: #8A939E; }
+.menu-secao + .menu { margin-top: 0; }
+.menu-breve a { color: #98A1AC; font-weight: 500; }
+.menu-breve a span { font-size: .72rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: #F0A58C; margin-left: .3rem; }
+.lateral-pe { margin-top: auto; padding-top: 1rem; border-top: 1px solid rgba(255, 255, 255, .12); font-size: .85rem; line-height: 1.7; }
+/* rodapé da marca (igual em todas as páginas) */
+.rodape-site { margin-top: 2.5rem; padding: 1.6rem 0 2.2rem; border-top: 2px solid var(--destaque); font-size: .9rem; }
+.rodape-colunas { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.2rem 2rem; }
+.rodape-site h2 { margin: 0 0 .4rem; font-size: .8rem; letter-spacing: .08em; text-transform: uppercase; color: var(--suave); }
+.rodape-site h2::after { display: none; }
+.rodape-site ul { list-style: none; margin: 0; padding: 0; display: grid; gap: .25rem; }
+.rodape-site a { color: var(--texto); text-decoration: none; }
+.rodape-site a:hover { color: var(--coral-forte); text-decoration: underline; }
+.rodape-marca { margin: 1.4rem 0 0; color: var(--suave); font-size: .85rem; max-width: 70ch; }
+@media (max-width: 899px) { .rodape-colunas { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .lateral-pe a { color: #DADEE3; text-decoration-color: var(--coral); }
 .lateral a:focus-visible { outline: 3px solid var(--coral); outline-offset: 2px; }
 .principal { margin-left: 16rem; min-height: 100vh; }
@@ -244,9 +258,12 @@ nav ul { padding-left: 1.2rem; }
 .card-nota { font-size: .88rem; color: var(--suave); }
 .card a { font-weight: 700; }
 .atalhos h2 { font-size: 1.1rem; }
+.ir-tabela { margin: .2rem 0 1.4rem; }
+.ir-tabela .botao { margin: 0; }
 a.sigla { display: block; text-align: center; text-decoration: none; }
 .destaque-produto { margin: 2rem 0 1rem; background: var(--destaque); color: #E6E9ED; border-radius: .7rem; padding: 1.4rem 1.5rem; }
-.destaque-produto h2 { color: #ffffff; margin-top: .2rem; }
+.destaque-produto h2, .destaque-produto h3 { color: #ffffff; margin-top: .2rem; }
+.destaque-produto h3 { font-size: 1.6rem; }
 .destaque-produto .card-rotulo { color: #F0A58C; }
 .destaque-produto p { max-width: 70ch; }
 .lista-check { list-style: none; padding: 0; margin: .8rem 0; display: grid; gap: .35rem; }
@@ -414,8 +431,18 @@ pre.codigo { background: #F5F6F7; border: 1px solid var(--linha); border-radius:
 .hero .hero-dados div { display: block; padding: 0; border: 0; background: none; }
 .hero .hero-dados dt { font-size: .82rem; font-weight: 400; color: #98A1AC; padding: 0; border: 0; background: none; }
 .hero .hero-dados dd { margin: .1rem 0 0; padding: 0; border: 0; background: none; font-size: 1.15rem; font-weight: 700; color: #FFFFFF; font-variant-numeric: tabular-nums; }
-.ferramentas, .metodo { margin: 0 0 2.6rem; }
+.ferramentas, .metodo, .produtos { margin: 0 0 2.6rem; }
+.produtos h2 { font-size: 1.45rem; letter-spacing: -.02em; margin: 0 0 1rem; }
+.produtos .destaque-produto { margin: 0 0 1rem; }
+.produtos-grade { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 1rem; }
+.produto-cartao { display: flex; flex-direction: column; gap: .4rem; padding: 1.2rem 1.2rem 1rem; background: var(--papel); border: 1px solid var(--linha); border-radius: .7rem; }
+.produto-cartao.breve { border-style: dashed; }
+.produto-cartao h3 { margin: 0; font-size: 1.15rem; color: var(--destaque-escuro); }
+.produto-cartao p { margin: 0; color: var(--suave); }
+.produto-cartao .comprar { margin-top: auto; padding-top: .6rem; }
+.produto-cartao .botao { margin: 0; }
 .ferramentas h2, .metodo h2 { font-size: 1.45rem; letter-spacing: -.02em; margin: 0 0 1rem; }
+.inicio .aviso-teto { margin-top: 0; }
 .ferramentas-grade { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
 .ferramenta { display: flex; flex-direction: column; justify-content: space-between; gap: 1rem; padding: 1.2rem 1.2rem 1rem; background: var(--papel); border: 1px solid var(--linha); border-radius: .7rem; }
 .ferramenta h3 { margin: 0 0 .4rem; font-size: 1.1rem; }
