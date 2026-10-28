@@ -328,7 +328,11 @@ pre.codigo { background: #F5F6F7; border: 1px solid var(--linha); border-radius:
 .tabela-indices .num { text-align: right; font-variant-numeric: tabular-nums; }
 .linha-acumulado th, .linha-acumulado td { font-weight: 700; background: #F5F6F7; }
 .calc-check label { display: flex; gap: .6rem; align-items: flex-start; }
-.calc-campo.calc-check input { width: 1.15rem; height: 1.15rem; padding: 0; margin: .2rem 0 0; flex: none; accent-color: var(--destaque); }
+.calc-campo input[type=checkbox], .calc-campo input[type=radio] { width: 1.15rem; min-width: 0; height: 1.15rem; padding: 0; margin: .2rem 0 0; flex: none; accent-color: var(--destaque); }
+fieldset.calc-campo { border: 0; padding: 0; margin: 0 0 1rem; min-width: 0; }
+fieldset.calc-campo legend { font-weight: 700; color: var(--destaque-escuro); margin-bottom: .3rem; padding: 0; }
+fieldset.calc-campo label { display: flex; gap: .6rem; align-items: flex-start; font-weight: 400; color: var(--texto); text-align: left; }
+.calc-pulados { margin: .8rem 0; } .calc-pulados summary { cursor: pointer; font-weight: 700; } .calc-pulados li { text-align: left; }
 .calc-campo select:focus, .calc-campo input:focus { outline: 3px solid var(--coral); outline-offset: 1px; }
 .calc-dica { margin: .3rem 0 0; font-size: .85rem; color: var(--suave); }
 .calc-form .botao { font: inherit; font-weight: 700; cursor: pointer; padding: .65rem 1.4rem; }
