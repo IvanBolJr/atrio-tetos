@@ -77,6 +77,8 @@
  *   com o aviso do limite anual por receita corrente líquida (CF, art. 100, §23, EC 136/2025); a União não tem esse limite.
  * superpreferencia: até 3 vezes o teto de RPV do ente (CF, art. 100, §2º); 5 vezes no regime especial (ADCT, art. 102,
  *   §2º), que não vale para a União. O restante volta para a ordem cronológica.
+ * honorarios: faixas do CPC, art. 85, §3º, em salários mínimos (bloco "dados-honorarios"), escalonadas pelo §5º; o salário
+ *   mínimo é o vigente na data da sentença líquida ou da decisão de liquidação (§4º, IV). Mínimo e máximo de cada faixa.
  */
 (function (raiz) {
   'use strict';
@@ -159,7 +161,35 @@
     return base;
   }
 
-  var api = { previsao: previsao, superpreferencia: superpreferencia, moeda: moeda };
+  function salarioNaData(salarios, data) {
+    var v = null;
+    for (var i = 0; i < salarios.length; i++) { if (salarios[i].inicio <= data) v = salarios[i].valor; }
+    return v;
+  }
+
+  function honorarios(dados, p) {
+    var base = Number(p.base);
+    if (!(base > 0)) return { erro: 'Informe o valor da condenação, do proveito econômico ou da causa.' };
+    if (!dataValida(p.data)) return { erro: 'Informe a data da sentença líquida ou da decisão de liquidação.' };
+    var sm = salarioNaData(dados.salarios, p.data);
+    if (sm === null) return { erro: 'Salário mínimo não localizado para essa data.' };
+    var faixas = [], anterior = 0, tMin = 0, tMax = 0;
+    for (var i = 0; i < dados.faixas.length; i++) {
+      var f = dados.faixas[i];
+      var limite = f.ate_sm === null ? null : r2(f.ate_sm * sm);
+      var ate = limite === null ? base : Math.min(base, limite);
+      var parte = r2(ate - anterior);
+      if (!(parte > 0)) break;
+      var mn = r2(parte * f.minimo / 100), mx = r2(parte * f.maximo / 100);
+      faixas.push({ inciso: f.inciso, parte: parte, pmin: f.minimo, pmax: f.maximo, minimo: mn, maximo: mx });
+      tMin += mn; tMax += mx;
+      if (limite === null || base <= limite) break;
+      anterior = limite;
+    }
+    return { salario: sm, base: r2(base), faixas: faixas, total_minimo: r2(tMin), total_maximo: r2(tMax) };
+  }
+
+  var api = { previsao: previsao, superpreferencia: superpreferencia, honorarios: honorarios, moeda: moeda };
   if (typeof module !== 'undefined' && module.exports) module.exports = api;
   raiz.AtrioPrecatorio = api;
 
@@ -177,7 +207,27 @@
     return /^\d+(\.\d+)?$/.test(t) ? Number(t) : NaN;
   }
 
+  function iniciarHonorarios() {
+    var bloco = document.getElementById('dados-honorarios'), fh = document.getElementById('form-honorarios');
+    if (!bloco || !fh) return;
+    var dados = JSON.parse(bloco.textContent), saida = document.getElementById('calc-resultado');
+    fh.addEventListener('submit', function (ev) {
+      ev.preventDefault();
+      var v = lerValor(document.getElementById('calc-base').value);
+      var r = honorarios(dados, { base: isNaN(v) ? -1 : v, data: document.getElementById('calc-data').value });
+      if (r.erro) { saida.innerHTML = '<div class="calc-cartao calc-erro"><p>' + esc(r.erro) + '</p></div>'; return; }
+      var linhas = r.faixas.map(function (f) {
+        return '<tr><td data-label="Faixa">' + esc(f.inciso) + ' (' + f.pmin + '% a ' + f.pmax + '%)</td><td class="num" data-label="Parcela">' +
+          moeda(f.parte) + '</td><td class="num" data-label="Mínimo">' + moeda(f.minimo) + '</td><td class="num" data-label="Máximo">' + moeda(f.maximo) + '</td></tr>';
+      }).join('');
+      saida.innerHTML = '<div class="calc-cartao calc-sim"><p class="calc-veredito">Entre ' + moeda(r.total_minimo) + ' e ' + moeda(r.total_maximo) + '</p>' +
+        '<p>Salário mínimo na data informada: ' + moeda(r.salario) + '. O percentual dentro de cada faixa é fixado pelo juiz (CPC, art. 85, §2º).</p>' +
+        '<table class="tabela-indices"><thead><tr><th>Faixa</th><th>Parcela da base</th><th>Mínimo</th><th>Máximo</th></tr></thead><tbody>' + linhas + '</tbody></table></div>';
+    });
+  }
+
   function iniciar() {
+    iniciarHonorarios();
     var bloco = document.getElementById('dados-precatorio');
     if (!bloco) return;
     var dados = JSON.parse(bloco.textContent);
@@ -248,7 +298,7 @@
 })(typeof window !== 'undefined' ? window : globalThis);
 </script>
 <footer><p>Dados conferidos até 27/10/2026. Um serviço gratuito do <strong>Átrio</strong>, ferramentas para escritórios de advocacia · <a href="tetos-de-rpv.html">Tetos de RPV</a> · <a href="guia.html">Guia</a> · <a href="indices-mensais.html">Índices mês a mês</a> · <a href="salario-minimo-e-teto-do-rgps.html">Salário mínimo e RGPS</a> · <a href="https://instagram.com/atriojur">@atriojur</a></p></footer>
-<footer class="rodape-site" aria-label="Rodapé do site"><div class="rodape-colunas"><div><h2>Ferramentas gratuitas</h2><ul><li><a href="tetos-de-rpv.html">Tetos de RPV</a></li><li><a href="calculadora-rpv.html">Cabe em RPV?</a></li><li><a href="atualizar-valor-ipca.html">Atualizar pelo IPCA</a></li><li><a href="quando-o-precatorio-e-pago.html">Prazo do precatório</a></li><li><a href="historico.html">Histórico de tetos</a></li><li><a href="limite-superpreferencia.html">Limite da superpreferência</a></li><li><a href="indices-mensais.html">Índices mensais</a></li><li><a href="salario-minimo-e-teto-do-rgps.html">Salário mínimo e teto do RGPS</a></li></ul></div><div><h2>Produtos</h2><ul><li><a href="planilha-atrio-recebiveis.html">Átrio Recebíveis (planilha)</a></li><li><a href="index.html#produtos">Átrio Acordos · em breve</a></li><li><a href="index.html#produtos">Átrio Calculadora · em breve</a></li></ul></div><div><h2>Conteúdo</h2><ul><li><a href="guia.html">Guia de RPV e precatório</a></li><li><a href="dados-abertos.html">Dados abertos</a></li><li><a href="modelo-peticao-rpv.html">Modelo de petição de RPV</a></li></ul></div><div><h2>Átrio</h2><ul><li><a href="mailto:suporte.atrio.br@gmail.com">Suporte por e-mail</a></li><li><a href="https://instagram.com/atriojur">Instagram @atriojur</a></li><li><a href="https://www.youtube.com/@atriojur">YouTube @atriojur</a></li><li><a href="privacidade.html">Política de privacidade</a></li></ul></div></div><p class="rodape-marca"><strong>Átrio</strong>, ferramentas para escritórios de advocacia. Conteúdo informativo: não substitui a lei do ente nem a orientação de um advogado.</p></footer>
+<footer class="rodape-site" aria-label="Rodapé do site"><div class="rodape-colunas"><div><h2>Ferramentas gratuitas</h2><ul><li><a href="tetos-de-rpv.html">Tetos de RPV</a></li><li><a href="calculadora-rpv.html">Cabe em RPV?</a></li><li><a href="atualizar-valor-ipca.html">Atualizar pelo IPCA</a></li><li><a href="quando-o-precatorio-e-pago.html">Prazo do precatório</a></li><li><a href="historico.html">Histórico de tetos</a></li><li><a href="limite-superpreferencia.html">Limite da superpreferência</a></li><li><a href="honorarios-fazenda-publica.html">Honorários contra a Fazenda</a></li><li><a href="indices-mensais.html">Índices mensais</a></li><li><a href="salario-minimo-e-teto-do-rgps.html">Salário mínimo e teto do RGPS</a></li></ul></div><div><h2>Produtos</h2><ul><li><a href="planilha-atrio-recebiveis.html">Átrio Recebíveis (planilha)</a></li><li><a href="index.html#produtos">Átrio Acordos · em breve</a></li><li><a href="index.html#produtos">Átrio Calculadora · em breve</a></li></ul></div><div><h2>Conteúdo</h2><ul><li><a href="guia.html">Guia de RPV e precatório</a></li><li><a href="dados-abertos.html">Dados abertos</a></li><li><a href="modelo-peticao-rpv.html">Modelo de petição de RPV</a></li></ul></div><div><h2>Átrio</h2><ul><li><a href="mailto:suporte.atrio.br@gmail.com">Suporte por e-mail</a></li><li><a href="https://instagram.com/atriojur">Instagram @atriojur</a></li><li><a href="https://www.youtube.com/@atriojur">YouTube @atriojur</a></li><li><a href="privacidade.html">Política de privacidade</a></li></ul></div></div><p class="rodape-marca"><strong>Átrio</strong>, ferramentas para escritórios de advocacia. Conteúdo informativo: não substitui a lei do ente nem a orientação de um advogado.</p></footer>
 </div></div>
 <script>
 (function () {
