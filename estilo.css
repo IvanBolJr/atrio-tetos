@@ -34,6 +34,8 @@ h1::after { content: ""; display: block; width: 3.5rem; height: 4px; background:
 h1 { font-size: 2rem; margin: 1.6rem 0 .8rem; }
 h2 { font-size: 1.35rem; margin: 2rem 0 .5rem; }
 p { max-width: 70ch; }
+main p, main li, footer p { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+.tile-nota, .previa-hist, .chips, .veredito, .rotulo-mono, .selo-base, .selo-venda, .preco-bento, .comprar, .calc-veredito, .cartao-valor { text-align: left !important; }
 a { color: var(--destaque); text-decoration-thickness: 1px; text-underline-offset: 2px; text-decoration-color: var(--coral); }
 a:hover { color: var(--coral); }
 a:focus-visible, button:focus-visible, select:focus-visible, input:focus-visible { outline: 3px solid var(--coral); outline-offset: 2px; }
@@ -62,7 +64,12 @@ a:focus-visible, button:focus-visible, select:focus-visible, input:focus-visible
 .artigo p { line-height: 1.65; }
 .artigo-fontes ul { padding-left: 1.2rem; } .artigo-fontes li { margin-bottom: .3rem; font-size: .95rem; }
 .minis .mini h3 a { text-decoration: none; color: inherit; } .minis .mini h3 a:hover { color: var(--coral); }
-.produto { margin-top: 2.5rem; padding: .9rem 1.1rem; background: var(--papel); border: 1px solid var(--linha); border-radius: .4rem; color: var(--suave); font-size: .95rem; }
+.produto { margin-top: 2.5rem; padding: 1.2rem 1.4rem; background: linear-gradient(135deg, #FFF6F2 0%, #FFFFFF 60%); border: 2px solid var(--coral-forte); border-radius: var(--raio); color: var(--texto); font-size: 1rem; box-shadow: 0 8px 24px rgba(228, 87, 46, .12); }
+.produto-selo { font-family: var(--mono); font-size: .75rem !important; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--coral-forte); margin-bottom: .4rem !important; text-align: left !important; }
+.produto-preco { margin-top: .6rem !important; font-family: var(--mono); font-size: 1.6rem; font-weight: 700; color: var(--texto); text-align: left !important; }
+.produto-preco span { display: block; font-family: var(--sans); font-size: .8rem; font-weight: 500; color: var(--suave); }
+.produto .botao { background: var(--coral-forte); border-color: var(--coral-forte); color: #FFFFFF; font-size: 1.02rem; padding: .65rem 1.2rem; }
+.produto .botao.secundario { background: #FFFFFF; color: var(--coral-forte); }
 .produto p { margin: 0; max-width: none; }
 .produto .comprar { margin-top: .7rem; }
 .botao { display: inline-block; padding: .55rem 1rem; margin-right: .4rem; margin-top: .3rem; border: 1px solid var(--destaque); border-radius: .4rem; background: var(--destaque); color: #F5F6F7; font-weight: 700; text-decoration: none; }
@@ -234,7 +241,7 @@ nav ul { padding-left: 1.2rem; }
 .ente-topo .selo-conf { border: 0; background: none; padding: 0; margin: 0 0 1.4rem; font-size: 1rem; }
 .ente-acoes { margin: 0; }
 .ente-acoes .botao { margin: 0; padding: .7rem 1.2rem; }
-.ente-planilha { margin: .9rem 0 0; font-size: .95rem; color: var(--suave); }
+.ente-planilha { margin: .9rem 0 0; font-size: .95rem; color: var(--texto); background: #FFF6F2; border: 1px solid var(--coral-forte); border-radius: .7rem; padding: .7rem .9rem; }
 .ente-planilha a { font-weight: 600; }
 .ente-dados h2 { margin-top: .9rem; }
 .ente-dados dl { margin: .4rem 0 0; grid-template-columns: 8.5rem 1fr; }
@@ -446,10 +453,24 @@ pre.codigo { background: #F5F6F7; border: 1px solid var(--linha); border-radius:
 .tile-produto h2::after { display: none; }
 .tile-produto-texto p { margin: 0; font-size: .95rem; color: var(--suave); }
 .preco-bento { margin-top: auto !important; font-family: var(--mono); font-size: 1.9rem !important; font-weight: 600; letter-spacing: -.02em; color: var(--texto) !important; }
-.preco-bento span { font-family: var(--sans); font-size: .78rem; font-weight: 500; color: var(--suave); }
+.preco-bento span { display: block; margin-top: .2rem; font-family: var(--sans); font-size: .78rem; font-weight: 500; color: var(--suave); }
 .tile-produto .comprar { margin: 0; }
 .tile-produto .botao { margin: 0; border-radius: .8rem; background: var(--coral-forte); border-color: var(--coral-forte); color: #FFFFFF; }
 .tile-produto .botao:hover { background: var(--destaque); border-color: var(--destaque); }
+.tile-produto { grid-column: 1 / -1 !important; grid-row: auto !important; border: 2px solid var(--coral-forte); background: linear-gradient(135deg, #FFF6F2 0%, #FFFFFF 55%); box-shadow: 0 10px 30px rgba(228, 87, 46, .14); position: relative; }
+.tile-produto::before { content: "LANÇAMENTO"; position: absolute; top: 1rem; right: 1rem; font-family: var(--mono); font-size: .72rem; font-weight: 700; letter-spacing: .08em; color: #FFFFFF; background: var(--coral-forte); padding: .25rem .6rem; border-radius: 999px; z-index: 1; }
+.tile-produto h2 { font-size: 2.3rem; }
+.produto-promessa { color: var(--texto) !important; font-size: 1.02rem !important; }
+.produto-lista { margin: 0; padding: 0; list-style: none; display: grid; gap: .3rem; font-size: .92rem; }
+.produto-lista li { padding-left: 1.4rem; position: relative; text-align: left; }
+.produto-lista li::before { content: "✓"; position: absolute; left: 0; color: var(--coral-forte); font-weight: 800; }
+.tile-produto .comprar { display: flex; flex-wrap: wrap; gap: .5rem; }
+.tile-produto .botao { font-size: 1.05rem; padding: .75rem 1.3rem; }
+.tile-produto .botao-secundario { background: #FFFFFF; color: var(--coral-forte); border-color: var(--coral-forte); }
+.tile-produto .botao-secundario:hover { background: var(--coral-forte); color: #FFFFFF; }
+.produto-garantia { font-size: .8rem !important; text-align: left !important; }
+.lead-caixa { align-self: flex-end; max-width: 24rem !important; background: #FFFFFF; border: 1px solid var(--linha); border-left: 4px solid var(--coral-forte); border-radius: var(--raio); padding: 1rem 1.2rem; max-width: 30rem; box-shadow: 0 4px 14px rgba(31, 35, 40, .05); }
+.lead-caixa .lead-bento { color: var(--texto); }
 .tile-busca form { margin-top: auto; }
 .tile-produto-imagem { display: block; align-self: stretch; min-height: 0; }
 .tile-produto-imagem img { display: block; width: 140%; height: 100%; max-height: 24rem; object-fit: cover; object-position: left top; border-radius: .9rem; border: 1px solid var(--linha); }
@@ -480,6 +501,7 @@ pre.codigo { background: #F5F6F7; border: 1px solid var(--linha); border-radius:
   .bento { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-rows: auto; }
   .tile, .tile-busca, .tile-produto, .tile-guia, .tile-tabela { grid-column: span 2; grid-row: auto; }
   .tile-produto { grid-template-columns: minmax(0, 1fr); }
+  .tile-produto::before { position: static; justify-self: start; }
   .tile-produto-imagem img { width: 100%; height: auto; max-height: 14rem; }
   .tile-guia { flex-wrap: wrap; }
   .tile-guia .tile-link { margin-left: 0; }

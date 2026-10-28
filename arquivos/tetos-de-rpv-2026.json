@@ -3,7 +3,7 @@
  "fonte": "Átrio (atriojur.com.br)",
  "licenca": "CC BY 4.0",
  "credito_obrigatorio": "Fonte: Átrio, https://atriojur.com.br/tetos-de-rpv.html",
- "conferido_ate": "2026-10-27",
+ "ano": 2026,
  "aviso": "Esta tabela é informativa e não substitui a consulta à lei do ente nem à orientação de um advogado. Os valores dependem de salário mínimo, unidades fiscais e leis que mudam. Confira sempre na lei do ente antes de usar o valor em um pedido.",
  "entes": [
   {
@@ -13,8 +13,7 @@
    "teto": "97260.00",
    "base": "Valor fixado na lei do ente",
    "lei": "Lei 10.259/2001, art. 3º e art. 17, §1º",
-   "situacao": "Lei conferida no texto oficial",
-   "conferido_em": "2026-09-24",
+   "situacao": "Pela lei do ente",
    "fonte": "https://www.planalto.gov.br/ccivil_03/leis/leis_2001/l10259.htm",
    "pagina": "https://atriojur.com.br/teto-rpv-uniao.html"
   },
@@ -25,8 +24,7 @@
    "teto": "16913.05",
    "base": "Valor fixado na lei do ente",
    "lei": "Lei 17.205/2019, art. 1º",
-   "situacao": "Lei conferida no texto oficial",
-   "conferido_em": "2026-09-24",
+   "situacao": "Pela lei do ente",
    "fonte": "https://www.al.sp.gov.br/repositorio/legislacao/lei/2019/lei-17205-07.11.2019.html",
    "pagina": "https://atriojur.com.br/teto-rpv-sao-paulo.html"
   },
@@ -37,8 +35,7 @@
    "teto": "27345.70",
    "base": "Valor fixado na lei do ente",
    "lei": "Lei 14.699/2003, art. 9º, §3º, com redação dada pela Lei 20.540/2012",
-   "situacao": "Lei conferida no texto oficial",
-   "conferido_em": "2026-09-24",
+   "situacao": "Pela lei do ente",
    "fonte": "https://www.almg.gov.br/legislacao-mineira/texto/LEI/14699/2003/",
    "pagina": "https://atriojur.com.br/teto-rpv-minas-gerais.html"
   },
@@ -49,8 +46,7 @@
    "teto": "32420.00",
    "base": "Valor fixado na lei do ente",
    "lei": "Lei 7.507/2016, art. 1º",
-   "situacao": "Lei conferida no texto oficial",
-   "conferido_em": "2026-10-19",
+   "situacao": "Pela lei do ente",
    "fonte": "http://alerjln1.alerj.rj.gov.br/CONTLEI.NSF/e9589b9aabd9cac8032564fe0065abb4/71396658fb8eceb28325809d005a3f0f",
    "pagina": "https://atriojur.com.br/teto-rpv-rio-de-janeiro.html"
   },
@@ -61,8 +57,7 @@
    "teto": "16210.00",
    "base": "Valor fixado na lei do ente",
    "lei": "Lei 14.260/2020, art. 1º",
-   "situacao": "Lei conferida no texto oficial",
-   "conferido_em": "2026-09-24",
+   "situacao": "Pela lei do ente",
    "fonte": "https://www.legislabahia.ba.gov.br/documentos/lei-no-14260-de-16-de-abril-de-2020",
    "pagina": "https://atriojur.com.br/teto-rpv-bahia.html"
   },
@@ -73,8 +68,7 @@
    "teto": "24782.81",
    "base": "Valor fixado na lei do ente",
    "lei": "Lei 18.664/2015, art. 1º, com redação dada pela Lei 20.038/2019",
-   "situacao": "Lei conferida no texto oficial",
-   "conferido_em": "2026-09-24",
+   "situacao": "Pela lei do ente",
    "fonte": "https://www.legislacao.pr.gov.br/legislacao/pesquisarAto.do?action=exibir&codAto=151109",
    "pagina": "https://atriojur.com.br/teto-rpv-parana.html"
   },
@@ -85,8 +79,7 @@
    "teto": "16210.00",
    "base": "Valor fixado na lei do ente",
    "lei": "Lei 14.757/2015, art. 1º",
-   "situacao": "Lei conferida no texto oficial",
-   "conferido_em": "2026-09-24",
+   "situacao": "Pela lei do ente",
    "fonte": "http://www.al.rs.gov.br/filerepository/repLegis/arquivos/LEI%2014.757.pdf",
    "pagina": "https://atriojur.com.br/teto-rpv-rio-grande-do-sul.html"
   },
@@ -97,8 +90,7 @@
    "teto": "64840.00",
    "base": "Valor fixado na lei do ente",
    "lei": "Lei Complementar 401/2018, art. 10",
-   "situacao": "Lei conferida no texto oficial",
-   "conferido_em": "2026-10-19",
+   "situacao": "Pela lei do ente",
    "fonte": "https://legis.alepe.pe.gov.br/texto.aspx?id=41411",
    "pagina": "https://atriojur.com.br/teto-rpv-pernambuco.html"
   },
@@ -109,8 +101,7 @@
    "teto": "15746.80",
    "base": "Valor fixado na lei do ente",
    "lei": "Lei 16.382/2017, art. 1º",
-   "situacao": "Lei conferida no texto oficial",
-   "conferido_em": "2026-10-19",
+   "situacao": "Pela lei do ente",
    "fonte": "https://belt.al.ce.gov.br/index.php/legislacao-do-ceara/organizacao-tematica/orcamento-financas-e-tributacao/item/5959-lei-n-16-382-de-25-10-17-d-o-27-10-17",
    "pagina": "https://atriojur.com.br/teto-rpv-ceara.html"
   },
@@ -121,8 +112,7 @@
    "teto": "48630.00",
    "base": "Valor fixado na lei do ente",
    "lei": "Lei nº 11.091, de 08/07/2025",
-   "situacao": "Lei conferida em fonte secundária",
-   "conferido_em": "2026-10-19",
+   "situacao": "Pela lei do ente",
    "fonte": "https://www.tjpa.jus.br/PortalExterno/imprensa/noticias/Informes/2405186-rvm-devida-pela-fazenda-publica-do-estado-tem-teto-reduzido.xhtml",
    "pagina": "https://atriojur.com.br/teto-rpv-para.html"
   },
@@ -133,8 +123,7 @@
    "teto": "32420.00",
    "base": "Valor fixado na lei do ente",
    "lei": "Lei 8.112, de 06/05/2004, com as alterações da Lei 8.202, de 21/12/2004",
-   "situacao": "Teto confirmado em ato oficial do TJMA (Res.-GP 17/2023, art. 55, § 2º); texto da lei não lido",
-   "conferido_em": "2026-10-19",
+   "situacao": "Pela lei do ente",
    "fonte": "https://leisestaduais.com.br/ma/lei-ordinaria-n-8112-2004-maranhao-define-obrigacao-de-pequeno-valor-para-a-fazenda-publica-do-estado-do-maranhao-regulamentando-o-disposto-no-art-100-3-e-4-da-constituicao-federal-e-da-outras-providencias",
    "pagina": "https://atriojur.com.br/teto-rpv-maranhao.html"
   },
@@ -145,8 +134,7 @@
    "teto": "16210.00",
    "base": "Valor fixado na lei do ente",
    "lei": "Lei 13.120/2004, art. 1º, com redação dada pela Lei 15.945/2013",
-   "situacao": "Lei conferida no texto oficial",
-   "conferido_em": "2026-09-24",
+   "situacao": "Pela lei do ente",
    "fonte": "http://leis.alesc.sc.gov.br/html/2013/15945_2013_Lei.html",
    "pagina": "https://atriojur.com.br/teto-rpv-santa-catarina.html"
   },
@@ -157,8 +145,7 @@
    "teto": "16210.00",
    "base": "Valor fixado na lei do ente",
    "lei": "Lei 17.034/2010, art. 3º, com redação dada pela Lei 23.848/2025",
-   "situacao": "Lei conferida no texto oficial",
-   "conferido_em": "2026-10-19",
+   "situacao": "Pela lei do ente",
    "fonte": "https://legisla.casacivil.go.gov.br/pesquisa_legislacao/111593/lei-23848",
    "pagina": "https://atriojur.com.br/teto-rpv-goias.html"
   },
@@ -169,8 +156,7 @@
    "teto": "32420.00",
    "base": "Valor fixado na lei do ente",
    "lei": "Lei 2.748/2002, art. 1º, I",
-   "situacao": "Lei conferida no texto oficial",
-   "conferido_em": "2026-09-24",
+   "situacao": "Pela lei do ente",
    "fonte": "https://sapl.al.am.leg.br/norma/7203",
    "pagina": "https://atriojur.com.br/teto-rpv-amazonas.html"
   },
@@ -181,8 +167,7 @@
    "teto": "21827.29",
    "base": "Valor fixado na lei do ente",
    "lei": "Lei 7.674/2003, art. 2º",
-   "situacao": "Lei conferida no texto oficial",
-   "conferido_em": "2026-09-24",
+   "situacao": "Pela lei do ente",
    "fonte": "https://www3.al.es.gov.br/Arquivo/Documents/legislacao/html/LO7674.html",
    "pagina": "https://atriojur.com.br/teto-rpv-espirito-santo.html"
   },
@@ -193,8 +178,7 @@
    "teto": "16210.00",
    "base": "Valor fixado na lei do ente",
    "lei": "Lei 7.486/2003, art. 1º",
-   "situacao": "Lei conferida em fonte secundária",
-   "conferido_em": "2026-09-24",
+   "situacao": "Pela lei do ente",
    "fonte": "https://sapl3.al.pb.leg.br/media/sapl/public/materialegislativa/2024/124605/124605_texto_integral.pdf",
    "pagina": "https://atriojur.com.br/teto-rpv-paraiba.html"
   },
@@ -205,8 +189,7 @@
    "teto": "32420.00",
    "base": "Valor fixado na lei do ente",
    "lei": "Lei 8.428/2003, art. 1º, com redação dada pela Lei 10.166/2017",
-   "situacao": "Lei conferida no texto oficial",
-   "conferido_em": "2026-09-24",
+   "situacao": "Pela lei do ente",
    "fonte": "https://www.al.rn.leg.br/storage/legislacao/2019/05/15/f190c163c2e09efe7bc59781801d0f67.pdf",
    "pagina": "https://atriojur.com.br/teto-rpv-rio-grande-do-norte.html"
   },
@@ -217,8 +200,7 @@
    "teto": "26312.00",
    "base": "Valor fixado na lei do ente",
    "lei": "Lei 10.656/2017, art. 1º",
-   "situacao": "Lei conferida no texto oficial",
-   "conferido_em": "2026-09-24",
+   "situacao": "Pela lei do ente",
    "fonte": "http://app1.sefaz.mt.gov.br/0325677500623408/7C7B6A9347C50F55032569140065EBBF/D08C9AD18B5176C48425820B005579CC",
    "pagina": "https://atriojur.com.br/teto-rpv-mato-grosso.html"
   },
@@ -229,8 +211,7 @@
    "teto": "8475.55",
    "base": "Piso do RGPS (maior benefício do RGPS)",
    "lei": "Lei 7.154/2010, art. 1º",
-   "situacao": "Lei conferida no texto oficial",
-   "conferido_em": "2026-09-24",
+   "situacao": "A lei adota o maior benefício do RGPS",
    "fonte": "https://sapl.al.al.leg.br/sapl_documentos/norma_juridica/270_texto_integral",
    "pagina": "https://atriojur.com.br/teto-rpv-alagoas.html"
   },
@@ -241,8 +222,7 @@
    "teto": "8475.55",
    "base": "Piso do RGPS (maior benefício do RGPS)",
    "lei": "Lei 5.250/2002, art. 1º, com redação dada pela Lei 6.009/2010",
-   "situacao": "Lei conferida no texto oficial",
-   "conferido_em": "2026-09-24",
+   "situacao": "A lei adota o maior benefício do RGPS",
    "fonte": "https://sapl.al.pi.leg.br/norma/1209",
    "pagina": "https://atriojur.com.br/teto-rpv-piaui.html"
   },
@@ -253,8 +233,7 @@
    "teto": "32420.00",
    "base": "Valor fixado na lei do ente",
    "lei": "Lei 3.624/2005, art. 1º, com redação dada pela Lei 6.618/2020",
-   "situacao": "Lei conferida no texto oficial",
-   "conferido_em": "2026-09-24",
+   "situacao": "Pela lei do ente",
    "fonte": "https://www.sinj.df.gov.br/sinj/Norma/45c789ad639042068831ed234ac4db6e/Lei_6618_2020.html",
    "pagina": "https://atriojur.com.br/teto-rpv-distrito-federal.html"
   },
@@ -265,8 +244,7 @@
    "teto": "28582.50",
    "base": "Valor fixado na lei do ente",
    "lei": "Lei 2.586, de 23/12/2002, art. 1º",
-   "situacao": "Lei conferida no texto oficial",
-   "conferido_em": "2026-10-19",
+   "situacao": "Pela lei do ente",
    "fonte": "https://aacpdappls.net.ms.gov.br/appls/legislacao/secoge/govato.nsf/448b683bce4ca84704256c0b00651e9d/ff83830895e0d86d04256cd9004cf246?OpenDocument=",
    "pagina": "https://atriojur.com.br/teto-rpv-mato-grosso-do-sul.html"
   },
@@ -277,8 +255,7 @@
    "teto": "8475.55",
    "base": "Piso do RGPS (maior benefício do RGPS)",
    "lei": "Lei Complementar 66/2001",
-   "situacao": "Valor confirmado em ato oficial do TJSE (Ato 630/2007, art. 1º); texto da lei não lido · Teto da lei abaixo do piso: aplicado o maior benefício do RGPS",
-   "conferido_em": "2026-10-27",
+   "situacao": "Piso do RGPS aplicado",
    "fonte": "https://agencia.tjse.jus.br/noticias/item/990-ato-dispoe-sobre-requisicoes-de-pequeno-valor-contra-fazenda-publica",
    "pagina": "https://atriojur.com.br/teto-rpv-sergipe.html"
   },
@@ -289,8 +266,7 @@
    "teto": "16210.00",
    "base": "Valor fixado na lei do ente",
    "lei": "Lei 1.788/2007, art. 1º",
-   "situacao": "Lei conferida em fonte secundária",
-   "conferido_em": "2026-09-24",
+   "situacao": "Pela lei do ente",
    "fonte": "https://sapl.al.ro.leg.br/norma/3768",
    "pagina": "https://atriojur.com.br/teto-rpv-rondonia.html"
   },
@@ -301,8 +277,7 @@
    "teto": "16210.00",
    "base": "Valor fixado na lei do ente",
    "lei": "Lei Complementar 69/2010, art. 3º",
-   "situacao": "Lei conferida no texto oficial",
-   "conferido_em": "2026-09-27",
+   "situacao": "Pela lei do ente",
    "fonte": "https://al.to.leg.br/arquivo/26191/visualizar",
    "pagina": "https://atriojur.com.br/teto-rpv-tocantins.html"
   },
@@ -313,8 +288,7 @@
    "teto": "11347.00",
    "base": "Valor fixado na lei do ente",
    "lei": "Lei 1.481/2003, art. 1º, com redação dada pela Lei 3.157/2016",
-   "situacao": "Lei conferida no texto oficial",
-   "conferido_em": "2026-09-24",
+   "situacao": "Pela lei do ente",
    "fonte": "https://legis.ac.gov.br/detalhar/3789",
    "pagina": "https://atriojur.com.br/teto-rpv-acre.html"
   },
@@ -325,8 +299,7 @@
    "teto": "16210.00",
    "base": "Valor fixado na lei do ente",
    "lei": "Lei 810/2004, art. 1º",
-   "situacao": "Lei conferida em fonte secundária",
-   "conferido_em": "2026-09-24",
+   "situacao": "Pela lei do ente",
    "fonte": "https://www.tjap.jus.br/portal/precatorio-secretaria/precatorio-legislacao.html",
    "pagina": "https://atriojur.com.br/teto-rpv-amapa.html"
   },
@@ -337,8 +310,7 @@
    "teto": "27557.00",
    "base": "Valor fixado na lei do ente",
    "lei": "Lei 862/2012, art. 3º, com redação da Lei 1.635/2022",
-   "situacao": "Lei conferida no texto oficial",
-   "conferido_em": "2026-10-03",
+   "situacao": "Pela lei do ente",
    "fonte": "https://transparencia.tjrr.jus.br/index.php/precatorios/precatorios-17-legislacao-sobre-rpv-entes-devedores",
    "pagina": "https://atriojur.com.br/teto-rpv-roraima.html"
   },
@@ -349,8 +321,7 @@
    "teto": "16210.00",
    "base": "Valor fixado na lei do ente",
    "lei": "Lei Municipal 1.562/2005, art. 1º",
-   "situacao": "Lei conferida no texto oficial",
-   "conferido_em": "2026-10-19",
+   "situacao": "Pela lei do ente",
    "fonte": "https://sapl.riobranco.ac.leg.br/norma/67",
    "pagina": "https://atriojur.com.br/teto-rpv-rio-branco.html"
   },
@@ -361,8 +332,7 @@
    "teto": "21073.00",
    "base": "Valor fixado na lei do ente",
    "lei": "Lei Municipal nº 5.760, de 22/04/2009, art. 1º",
-   "situacao": "Lei conferida em fonte secundária",
-   "conferido_em": "2026-09-27",
+   "situacao": "Pela lei do ente",
    "fonte": "https://www.legisweb.com.br/legislacao/?id=175564",
    "pagina": "https://atriojur.com.br/teto-rpv-maceio.html"
   },
@@ -373,8 +343,7 @@
    "teto": "8475.55",
    "base": "Piso do RGPS (maior benefício do RGPS)",
    "lei": "Lei Municipal 1.803/2010",
-   "situacao": "Lei conferida no texto oficial",
-   "conferido_em": "2026-10-27",
+   "situacao": "A lei adota o maior benefício do RGPS",
    "fonte": "https://www.tjap.jus.br/portal/images/PRECATORIOS/Legislacao/leis-rpv/lei_municipal_n_1803-2010_-_municpio_de_macap.pdf",
    "pagina": "https://atriojur.com.br/teto-rpv-macapa.html"
   },
@@ -385,8 +354,7 @@
    "teto": "24315.00",
    "base": "Valor fixado na lei do ente",
    "lei": "Lei Municipal 716/2003, art. 1º",
-   "situacao": "Lei conferida no texto oficial",
-   "conferido_em": "2026-10-03",
+   "situacao": "Pela lei do ente",
    "fonte": "https://sapl.cmm.am.gov.br/media/sapl/public/normajuridica/2003/4117/lei_n_716__de_04_nov_2003.pdf",
    "pagina": "https://atriojur.com.br/teto-rpv-manaus.html"
   },
@@ -397,8 +365,7 @@
    "teto": "8475.55",
    "base": "Piso do RGPS (maior benefício do RGPS)",
    "lei": "Lei Municipal nº 8.723/2014, com redação dada pela Lei Complementar nº 72/2018",
-   "situacao": "Lei conferida em fonte secundária",
-   "conferido_em": "2026-09-27",
+   "situacao": "A lei adota o maior benefício do RGPS",
    "fonte": "https://www2.sefaz.salvador.ba.gov.br/legislacao/portaria/limite-de-pagamento-de-rpv",
    "pagina": "https://atriojur.com.br/teto-rpv-salvador.html"
   },
@@ -409,8 +376,7 @@
    "teto": "8475.55",
    "base": "Piso do RGPS (maior benefício do RGPS)",
    "lei": "Lei Municipal nº 10.562/2017, art. 1º",
-   "situacao": "Lei conferida no texto oficial",
-   "conferido_em": "2026-10-19",
+   "situacao": "A lei adota o maior benefício do RGPS",
    "fonte": "https://sapl.fortaleza.ce.leg.br/media/sapl/public/normajuridica/2017/4910/4910_texto_integral.pdf",
    "pagina": "https://atriojur.com.br/teto-rpv-fortaleza.html"
   },
@@ -421,8 +387,7 @@
    "teto": "48630.00",
    "base": "Padrão do ADCT, art. 87 (lei própria não localizada)",
    "lei": "não localizado",
-   "situacao": "Lei própria não localizada (TJES, tabela OPV 2025: sem regulamentação, 30 SM): aplicado o padrão do ADCT, art. 87",
-   "conferido_em": "2026-10-27",
+   "situacao": "Padrão do ADCT: lei própria não localizada",
    "fonte": "https://www.tjes.jus.br/wp-content/uploads/OPV-2025.pdf",
    "pagina": "https://atriojur.com.br/teto-rpv-vitoria.html"
   },
@@ -433,8 +398,7 @@
    "teto": "48630.00",
    "base": "Padrão do ADCT, art. 87 (lei própria não localizada)",
    "lei": "não localizado",
-   "situacao": "Lei própria não localizada: aplicado o padrão do ADCT, art. 87",
-   "conferido_em": "2026-10-27",
+   "situacao": "Padrão do ADCT: lei própria não localizada",
    "fonte": "",
    "pagina": "https://atriojur.com.br/teto-rpv-goiania.html"
   },
@@ -445,8 +409,7 @@
    "teto": "16210.00",
    "base": "Valor fixado na lei do ente",
    "lei": "Lei Municipal 4.476/2005, art. 1º",
-   "situacao": "Teto confirmado em ato oficial do TJMA (Res.-GP 17/2023, art. 55, § 3º); texto da lei não lido",
-   "conferido_em": "2026-10-19",
+   "situacao": "Pela lei do ente",
    "fonte": "https://novogerenciador.tjma.jus.br/storage/arquivos/resolucoes_2023/resolucao_gp_n_17_de_28_de_fevereiro_de_2023_referendada_e_republicada_22_03_2023_19_57_24.pdf",
    "pagina": "https://atriojur.com.br/teto-rpv-sao-luis.html"
   },
@@ -457,8 +420,7 @@
    "teto": "8475.55",
    "base": "Piso do RGPS (maior benefício do RGPS)",
    "lei": "Lei Municipal nº 5.953/2015, art. 1º, com redação dada pela Lei nº 6.837, de 24/06/2022",
-   "situacao": "Lei conferida no texto oficial · Teto da lei abaixo do piso: aplicado o maior benefício do RGPS",
-   "conferido_em": "2026-10-27",
+   "situacao": "Piso do RGPS aplicado",
    "fonte": "https://legislativo.camaracuiaba.mt.gov.br/Arquivo/Documents/legislacao/html/L68372022.html",
    "pagina": "https://atriojur.com.br/teto-rpv-cuiaba.html"
   },
@@ -469,8 +431,7 @@
    "teto": "10099.18",
    "base": "Valor fixado na lei do ente",
    "lei": "Lei Municipal nº 4.498, de 27/07/2007, art. 1º",
-   "situacao": "Lei conferida em fonte secundária",
-   "conferido_em": "2026-09-27",
+   "situacao": "Pela lei do ente",
    "fonte": "https://www.legisweb.com.br/legislacao/?id=472794",
    "pagina": "https://atriojur.com.br/teto-rpv-campo-grande.html"
   },
@@ -481,8 +442,7 @@
    "teto": "8475.55",
    "base": "Piso do RGPS (maior benefício do RGPS)",
    "lei": "Lei Municipal nº 11.158/2019",
-   "situacao": "Lei conferida em fonte secundária",
-   "conferido_em": "2026-09-27",
+   "situacao": "A lei adota o maior benefício do RGPS",
    "fonte": "https://leismunicipais.com.br/a/mg/b/belo-horizonte/lei-ordinaria/2019/1116/11158/lei-ordinaria-n-11158-2019-dispoe-sobre-requisicoes-de-pequeno-valor-no-municipio",
    "pagina": "https://atriojur.com.br/teto-rpv-belo-horizonte.html"
   },
@@ -493,8 +453,7 @@
    "teto": "16210.00",
    "base": "Valor fixado na lei do ente",
    "lei": "Lei Municipal 10.336/2026",
-   "situacao": "Lei conferida no texto oficial",
-   "conferido_em": "2026-10-07",
+   "situacao": "Pela lei do ente",
    "fonte": "https://drive.google.com/file/d/1Q1OpH6YHrCx6ZB3B04m__QfjypF8B8fF/view",
    "pagina": "https://atriojur.com.br/teto-rpv-belem.html"
   },
@@ -505,8 +464,7 @@
    "teto": "8475.55",
    "base": "Piso do RGPS (maior benefício do RGPS)",
    "lei": "Lei Municipal 10.459/2005, art. 1º, com redação da Lei 11.983/2010",
-   "situacao": "Lei conferida em fonte secundária",
-   "conferido_em": "2026-10-03",
+   "situacao": "A lei adota o maior benefício do RGPS",
    "fonte": "https://sapl.joaopessoa.pb.leg.br/norma/14748",
    "pagina": "https://atriojur.com.br/teto-rpv-joao-pessoa.html"
   },
@@ -517,8 +475,7 @@
    "teto": "8475.55",
    "base": "Piso do RGPS (maior benefício do RGPS)",
    "lei": "Lei Municipal 10.235/2001, art. 1º e art. 5º; Decreto 789/2025",
-   "situacao": "Lei localizada no texto oficial; valor atualizado por decreto, cujo texto não foi lido · Teto da lei abaixo do piso: aplicado o maior benefício do RGPS",
-   "conferido_em": "2026-10-27",
+   "situacao": "Piso do RGPS aplicado",
    "fonte": "https://legisladocexterno.curitiba.pr.gov.br/VisualizarHTML.aspx?id=449574",
    "pagina": "https://atriojur.com.br/teto-rpv-curitiba.html"
   },
@@ -529,8 +486,7 @@
    "teto": "48630.00",
    "base": "Valor fixado na lei do ente",
    "lei": "Lei Municipal nº 18.364, de 26/07/2017, art. 9º",
-   "situacao": "Lei conferida em fonte secundária",
-   "conferido_em": "2026-09-27",
+   "situacao": "Pela lei do ente",
    "fonte": "https://leismunicipais.com.br/a/pe/r/recife/lei-ordinaria/2017/1836/18364/lei-ordinaria-n-18364-2017-dispoe-sobre-a-transacao-judicial-e-administrativa-da-adjudicacao-de-bens-moveis-e-imoveis-da-compensacao-de-creditos-inscritos-em-precatorios-e-das-requisicoes-de-pequeno-valor-no-ambito-da-administracao-direta-das-autarquias-e-das-fundacoes-no-municipio-do-recife-e-altera-o-art-1-da-lei-n-17973-de-10-de-janeiro-de-2014",
    "pagina": "https://atriojur.com.br/teto-rpv-recife.html"
   },
@@ -541,8 +497,7 @@
    "teto": "11347.00",
    "base": "Valor fixado na lei do ente",
    "lei": "Lei Municipal nº 3.871, de 05/06/2009",
-   "situacao": "Lei conferida em fonte secundária",
-   "conferido_em": "2026-09-27",
+   "situacao": "Pela lei do ente",
    "fonte": "",
    "pagina": "https://atriojur.com.br/teto-rpv-teresina.html"
   },
@@ -553,8 +508,7 @@
    "teto": "16210.00",
    "base": "Valor fixado na lei do ente",
    "lei": "Lei Municipal nº 9.005, de 18/08/2025, art. 1º",
-   "situacao": "Lei conferida em fonte secundária",
-   "conferido_em": "2026-09-27",
+   "situacao": "Pela lei do ente",
    "fonte": "https://www.legisweb.com.br/legislacao/?id=482393",
    "pagina": "https://atriojur.com.br/teto-rpv-rio-de-janeiro-capital.html"
   },
@@ -565,8 +519,7 @@
    "teto": "16210.00",
    "base": "Valor fixado na lei do ente",
    "lei": "Lei Municipal 5.509/2003, art. 1º",
-   "situacao": "Lei conferida no texto oficial",
-   "conferido_em": "2026-10-03",
+   "situacao": "Pela lei do ente",
    "fonte": "https://sapl.natal.rn.leg.br/norma/7494",
    "pagina": "https://atriojur.com.br/teto-rpv-natal.html"
   },
@@ -577,8 +530,7 @@
    "teto": "48630.00",
    "base": "Padrão do ADCT, art. 87 (lei própria não localizada)",
    "lei": "não localizado",
-   "situacao": "Lei própria não localizada: aplicado o padrão do ADCT, art. 87",
-   "conferido_em": "2026-10-27",
+   "situacao": "Padrão do ADCT: lei própria não localizada",
    "fonte": "https://camarapoa.rs.gov.br/draco/processos/140223/SEICAM_3.PDF",
    "pagina": "https://atriojur.com.br/teto-rpv-porto-alegre.html"
   },
@@ -589,8 +541,7 @@
    "teto": "16210.00",
    "base": "Valor fixado na lei do ente",
    "lei": "LC Municipal 134/2001, art. 1º, com redação da LC 837/2021",
-   "situacao": "Lei conferida no texto oficial",
-   "conferido_em": "2026-10-19",
+   "situacao": "Pela lei do ente",
    "fonte": "https://sapl.portovelho.ro.leg.br/norma/135",
    "pagina": "https://atriojur.com.br/teto-rpv-porto-velho.html"
   },
@@ -601,8 +552,7 @@
    "teto": "24315.00",
    "base": "Valor fixado na lei do ente",
    "lei": "Lei Municipal 1.249/2010, art. 1º e parágrafo único",
-   "situacao": "Lei conferida no texto oficial",
-   "conferido_em": "2026-10-03",
+   "situacao": "Pela lei do ente",
    "fonte": "https://sapl.boavista.rr.leg.br/media/sapl/public/materialegislativa/2010/14745/lei_no_1249_de_18_de_maio_de_2010.pdf",
    "pagina": "https://atriojur.com.br/teto-rpv-boa-vista.html"
   },
@@ -613,8 +563,7 @@
    "teto": "8475.55",
    "base": "Piso do RGPS (maior benefício do RGPS)",
    "lei": "Lei Municipal 8.258/2010, art. 1º",
-   "situacao": "Lei conferida em fonte secundária",
-   "conferido_em": "2026-10-03",
+   "situacao": "A lei adota o maior benefício do RGPS",
    "fonte": "https://www.normasbrasil.com.br/norma/lei-8258-2010-florianopolis_173964.html",
    "pagina": "https://atriojur.com.br/teto-rpv-florianopolis.html"
   },
@@ -625,8 +574,7 @@
    "teto": "31667.41",
    "base": "Valor fixado na lei do ente",
    "lei": "Lei Municipal nº 13.179, de 25/09/2001, art. 1º, com redação dada pela Lei nº 17.914/2023",
-   "situacao": "Lei conferida no texto oficial",
-   "conferido_em": "2026-10-19",
+   "situacao": "Pela lei do ente",
    "fonte": "https://legislacao.prefeitura.sp.gov.br/leis/lei-13179-de-25-de-setembro-de-2001",
    "pagina": "https://atriojur.com.br/teto-rpv-sao-paulo-capital.html"
   },
@@ -637,8 +585,7 @@
    "teto": "8475.55",
    "base": "Piso do RGPS (maior benefício do RGPS)",
    "lei": "Lei Municipal 6.176/2025 (LDO 2026), art. 30, §4º",
-   "situacao": "Lei conferida no texto oficial",
-   "conferido_em": "2026-10-03",
+   "situacao": "A lei adota o maior benefício do RGPS",
    "fonte": "https://transparencia.aracaju.se.gov.br/wp-content/uploads/orcamentos/ldo/2026/Lei_n_6_176_LDO.pdf",
    "pagina": "https://atriojur.com.br/teto-rpv-aracaju.html"
   },
@@ -649,8 +596,7 @@
    "teto": "24315.00",
    "base": "Valor fixado na lei do ente",
    "lei": "Lei Municipal nº 2.328, de 13/07/2017, art. 1º, com redação dada pela Lei nº 2.861, de 17/05/2023",
-   "situacao": "Lei conferida no texto oficial",
-   "conferido_em": "2026-10-19",
+   "situacao": "Pela lei do ente",
    "fonte": "https://legislativo.palmas.to.gov.br/media/leis/lei-ordinaria-2.861-2023-05-17-18-5-2023-17-23-54.pdf",
    "pagina": "https://atriojur.com.br/teto-rpv-palmas.html"
   }

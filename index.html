@@ -5,10 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#2D333B">
 <title>Átrio: ferramentas para escritórios de advocacia</title>
-<meta name="description" content="Tetos de RPV de 54 entes com a lei e a data de conferência, calculadoras gratuitas (cabe em RPV, IPCA, precatório) e a planilha Átrio Recebíveis para controlar RPV, precatório e alvará.">
+<meta name="description" content="Tetos de RPV de 54 entes com a lei e a fonte, calculadoras gratuitas (cabe em RPV, IPCA, precatório) e a planilha Átrio Recebíveis para controlar RPV, precatório e alvará.">
 <meta name="robots" content="index, follow">
 <meta property="og:title" content="Átrio: ferramentas para escritórios de advocacia">
-<meta property="og:description" content="Tetos de RPV de 54 entes com a lei e a data de conferência, calculadoras gratuitas (cabe em RPV, IPCA, precatório) e a planilha Átrio Recebíveis para controlar RPV, precatório e alvará.">
+<meta property="og:description" content="Tetos de RPV de 54 entes com a lei e a fonte, calculadoras gratuitas (cabe em RPV, IPCA, precatório) e a planilha Átrio Recebíveis para controlar RPV, precatório e alvará.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://atriojur.com.br/">
 <link rel="canonical" href="https://atriojur.com.br/">
@@ -18,7 +18,7 @@
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="estilo.css?v=91811ef5">
+<link rel="stylesheet" href="estilo.css?v=6ed2119b">
 <style>.intro { display: none; } .com-intro .intro { display: flex; position: fixed; inset: 0; z-index: 100; flex-direction: column; align-items: center; justify-content: center; background-color: #262B32; background-image: radial-gradient(rgba(255, 255, 255, .07) 1px, transparent 1px); background-size: 18px 18px; cursor: pointer; transition: opacity .3s ease, transform .3s ease; } .com-intro { overflow: hidden; } .intro-fim .intro { opacity: 0; transform: translateY(-2%); pointer-events: none; } .intro-simbolo { width: 6.5rem; height: 6.5rem; } .intro-haste { fill: transparent; stroke: #F5F6F7; stroke-width: 10; stroke-dasharray: 1700; stroke-dashoffset: 1700; animation: haste-traco .45s ease-out forwards, haste-cor .2s ease-out .4s forwards; } .intro-traco { stroke: #E4572E; stroke-width: 92; stroke-dasharray: 400; stroke-dashoffset: 400; animation: traco .25s ease-out .45s forwards; } .intro-nome { margin: 1.1rem 0 0; font-size: 2.2rem; font-weight: 800; letter-spacing: -.03em; color: #FFFFFF; opacity: 0; animation: surgir .25s ease-out .55s forwards; } .intro-frase { margin: .3rem 0 0; font-size: .95rem; color: #AEB5BE; opacity: 0; animation: surgir .25s ease-out .62s forwards; } .intro-pular { position: absolute; right: 1.2rem; bottom: 1.2rem; font: inherit; font-size: .85rem; color: #AEB5BE; background: transparent; border: 1px solid #525B67; border-radius: .4rem; padding: .35rem .8rem; cursor: pointer; } .intro-pular:focus-visible { outline: 3px solid #E4572E; outline-offset: 2px; } @keyframes haste-traco { to { stroke-dashoffset: 0; } } @keyframes haste-cor { to { fill: #F5F6F7; } } @keyframes traco { to { stroke-dashoffset: 0; } } @keyframes surgir { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } } .com-intro:not(.intro-fim) .uf-inicio { animation-play-state: paused; } /* o mapa acende depois da abertura */ @media (prefers-reduced-motion: reduce) { .com-intro .intro { display: none; } .com-intro { overflow: auto; } }</style>
 <script>
 try {
@@ -61,10 +61,10 @@ try {
 <main class="inicio">
 <header class="abertura-bento">
 <div>
-<p class="selo-base"><span class="ponto"></span>tabela conferida em 27/10/2026 · 54 entes</p>
+<p class="selo-base"><span class="ponto"></span>tetos de RPV 2026 · 54 entes · sem cadastro</p>
 <h1>Ferramentas para quem advoga contra a Fazenda.</h1>
 </div>
-<p class="lead-bento">Tetos de RPV com a lei, calculadoras gratuitas e a planilha de controle de RPV, precatório e alvará. Um lugar só, sem cadastro.</p>
+<div class="lead-caixa"><p class="lead-bento">Tetos de RPV com a lei, calculadoras gratuitas e a planilha de controle de RPV, precatório e alvará. Um lugar só, sem cadastro.</p></div>
 </header>
 
 <div class="bento">
@@ -88,6 +88,7 @@ try {
 </div>
 </section>
 
+
 <article class="tile">
 <h2 class="tile-titulo"><a href="calculadora-rpv.html">Cabe em RPV?</a></h2>
 <p class="veredito coral">Passa do teto</p>
@@ -99,6 +100,24 @@ try {
 <p class="veredito">R$ 1.042,64</p>
 <p class="tile-nota">R$ 1.000,00 de 01/2025 a 01/2026 · 12 índices do IBGE</p>
 </article>
+
+<section class="tile tile-produto" aria-labelledby="titulo-planilha" id="produtos">
+<div class="tile-produto-texto" id="planilha">
+<p class="selo-venda"><span class="ponto verde"></span>À venda agora · Preço de lançamento</p>
+<h2 id="titulo-planilha">Átrio Recebíveis</h2>
+<p class="produto-promessa">Cada RPV, precatório e alvará do escritório numa planilha só: o teto do ente, o prazo, os honorários, o repasse ao cliente e o recibo, calculados sozinhos.</p>
+<ul class="produto-lista">
+<li>Tabela dos 54 tetos de RPV já dentro</li>
+<li>Painel com o que vence e o que está parado</li>
+<li>Kit com 8 petições em Word e PDF de bônus</li>
+<li>Excel ou Google Sheets, sem mensalidade</li>
+</ul>
+<p class="preco-bento">R$ 97 <span>preço de lançamento até 31/12/2026, com a Edição 2027 incluída; depois, R$ 147</span></p>
+<p class="comprar"><a class="botao" href="https://pay.kiwify.com.br/rdKXnQG?src=site-inicio">Comprar agora</a> <a class="botao botao-secundario" href="planilha-atrio-recebiveis.html">Ver por dentro</a></p>
+<p class="produto-garantia">Pagamento único · 7 dias para pedir reembolso · Kiwify ou <a href="https://pay.hotmart.com/V108061227Y?src=site-inicio">Hotmart</a></p>
+</div>
+<a class="tile-produto-imagem" href="planilha-atrio-recebiveis.html" tabindex="-1" aria-hidden="true"><img src="imagens/planilha-painel.jpg" alt="" loading="lazy" decoding="async"></a>
+</section>
 
 <article class="tile">
 <h2 class="tile-titulo"><a href="quando-o-precatorio-e-pago.html">Prazo do precatório</a></h2>
@@ -117,16 +136,7 @@ try {
 <p class="previa-hist"><strong>Belém</strong> passou de 30 salários mínimos para 10 salários mínimos em 25/06/2026.</p><p class="previa-nota">Lei Municipal 10.336/2026</p>
 </article>
 
-<section class="tile tile-produto" aria-labelledby="titulo-planilha" id="produtos">
-<div class="tile-produto-texto" id="planilha">
-<p class="selo-venda"><span class="ponto verde"></span>À venda · Planilha · Edição 2026</p>
-<h2 id="titulo-planilha">Átrio Recebíveis</h2>
-<p>A planilha que faz a conta do teto, do prazo, dos honorários e do repasse em cada RPV, precatório e alvará do escritório. Excel ou Google Sheets.</p>
-<p class="preco-bento">R$ 97 <span>até 31/12/2026 · Edição 2027 incluída</span></p>
-<p class="comprar"><a class="botao" href="planilha-atrio-recebiveis.html">Ver a planilha por dentro</a></p>
-</div>
-<a class="tile-produto-imagem" href="planilha-atrio-recebiveis.html" tabindex="-1" aria-hidden="true"><img src="imagens/planilha-painel.jpg" alt="" loading="lazy" decoding="async"></a>
-</section>
+
 
 <article class="tile tile-breve">
 <p class="rotulo-breve">Em breve · dezembro de 2026</p>
@@ -154,10 +164,10 @@ try {
 </div>
 
 <section class="metodo" aria-labelledby="titulo-metodo">
-<h2 id="titulo-metodo">Como a tabela é conferida</h2>
+<h2 id="titulo-metodo">Como a tabela é feita</h2>
 <div class="metodo-grade">
-<div><p class="rotulo-mono coral">01</p><h3>Com a lei</h3><p>Cada teto mostra a lei do ente e o link de onde o valor foi conferido. Sem lei localizada, vale o padrão da Constituição; sem fonte, o valor não entra e aparece como "não localizado".</p></div>
-<div><p class="rotulo-mono coral">02</p><h3>Com data e situação</h3><p>Cada ente mostra a data da última conferência e a situação dela: lei conferida no texto oficial, conferida em fonte secundária ou padrão da Constituição.</p></div>
+<div><p class="rotulo-mono coral">01</p><h3>Com a lei</h3><p>Cada teto mostra a lei do ente e o link da fonte. Sem lei localizada, vale o padrão da Constituição; sem fonte, o valor não entra e aparece como "não localizado".</p></div>
+<div><p class="rotulo-mono coral">02</p><h3>Com a regra certa</h3><p>Cada ente mostra a base do valor: a lei do ente, o piso do maior benefício do RGPS ou o padrão da Constituição, e os avisos que mudam a conta, como projetos de lei e regras de transição.</p></div>
 <div><p class="rotulo-mono coral">03</p><h3>Com memória</h3><p>Quando um teto muda, a mudança vai para o histórico com a regra para quem teve trânsito em julgado antes da lei nova.</p></div>
 </div>
 </section>
