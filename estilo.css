@@ -351,6 +351,10 @@ fieldset.calc-campo label { display: flex; gap: .6rem; align-items: flex-start; 
 .calc-detalhe { display: grid; grid-template-columns: max-content 1fr; gap: .3rem 1rem; margin: 1rem 0 0; font-size: .92rem; }
 .calc-detalhe dt { font-weight: 700; color: var(--suave); }
 .calc-detalhe dd { margin: 0; }
+.calc-detalhe.calc-verbas { grid-template-columns: minmax(0, 1fr) max-content !important; align-items: baseline; }
+.calc-verbas dt { font-weight: 600; color: var(--texto); }
+.calc-verbas dd { text-align: right !important; white-space: nowrap; font-family: var(--mono); margin-bottom: 0 !important; }
+.calc-verbas dt, .calc-verbas dd { padding: .35rem 0; border-bottom: 1px solid var(--linha); }
 .calc-avisos { margin: 1rem 0 0; padding: .7rem 1rem .7rem 2rem; background: #FFF8E6; border-radius: .4rem; font-size: .9rem; }
 .calc-links { margin: 1rem 0 0; font-size: .92rem; }
 .corr-mes { border: 0; padding: 0; margin: 0; min-width: 0; }
