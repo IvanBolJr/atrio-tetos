@@ -367,7 +367,7 @@ fieldset.calc-campo label { display: flex; gap: .6rem; align-items: flex-start; 
 .so-impressao { display: none; }
 @media print {
   .so-impressao { display: block !important; font-size: 9pt; color: #555; margin-top: 1rem; }
-  .lateral, .barra-movel, .fundo-menu, .pular, .calc-form, .corr-acoes, .corr-explica, footer, .calc-pagina > .lead { display: none !important; }
+  .lateral, .barra-movel, .fundo-menu, .pular, .calc-form, .corr-acoes, .corr-explica, .memoria-peticao, footer, .calc-pagina > .lead { display: none !important; }
   .principal { margin: 0 !important; padding: 0 !important; }
   .calc-grade { display: block !important; }
   .corr-memoria table { font-size: 10pt; display: table !important; }
@@ -377,6 +377,13 @@ fieldset.calc-campo label { display: flex; gap: .6rem; align-items: flex-start; 
   .calc-cartao { border: 0 !important; box-shadow: none !important; }
 }
 .corr-memoria { margin-top: 1rem; } .corr-memoria summary { cursor: pointer; font-weight: 600; }
+.memoria-peticao { margin-top: 1.2rem; padding: 1rem 1.2rem; background: var(--papel); border: 1px solid var(--linha); border-left: 4px solid var(--coral); border-radius: .6rem; text-align: left !important; }
+.memoria-peticao[hidden] { display: none; }
+.memoria-peticao h2 { margin: 0 0 .3rem; font-size: 1.05rem; }
+.memoria-peticao p { margin: 0 0 .6rem; font-size: .92rem; text-align: left !important; }
+.memoria-campos { display: grid; grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr)); gap: .6rem; }
+.memoria-campos input { width: 100%; min-width: 0; }
+.memoria-dica { color: var(--suave); font-size: .82rem !important; margin-top: .5rem !important; }
 .corr-memoria table { margin-top: .6rem; border-collapse: collapse; width: 100%; font-size: .92rem; }
 .corr-memoria th, .corr-memoria td { padding: .3rem .5rem; border-bottom: 1px solid var(--linha); text-align: left; }
 .corr-memoria .num { text-align: right; font-variant-numeric: tabular-nums; }

@@ -18,7 +18,7 @@
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="estilo.css?v=4fead978">
+<link rel="stylesheet" href="estilo.css?v=17cef219">
 </head>
 <body>
 <a class="pular" href="#conteudo">Pular para o conteúdo</a>
@@ -189,7 +189,25 @@
     return { salario: sm, base: r2(base), faixas: faixas, total_minimo: r2(tMin), total_maximo: r2(tMax) };
   }
 
-  var api = { previsao: previsao, superpreferencia: superpreferencia, honorarios: honorarios, moeda: moeda };
+  /* Documento da memória para a petição (memoria.js): honorários em faixas contra a Fazenda Pública. */
+  function docHonorarios(r, data, link) {
+    return {
+      titulo: 'Honorários de sucumbência contra a Fazenda Pública', subtitulo: 'Entre ' + moeda(r.total_minimo) + ' e ' + moeda(r.total_maximo) + ' (CPC, art. 85, §§3º e 5º)',
+      campos: [['Base de cálculo', moeda(r.base)], ['Data da sentença líquida ou da decisão de liquidação', dataBr(data)],
+        ['Salário mínimo nessa data', moeda(r.salario)], ['Honorários no mínimo de cada faixa', moeda(r.total_minimo)],
+        ['Honorários no máximo de cada faixa', moeda(r.total_maximo)]],
+      tabela: { titulo: 'Cálculo por faixa', colunas: ['Faixa', 'Parcela da base', 'Mínimo', 'Máximo'], direita: [1, 2, 3],
+        linhas: r.faixas.map(function (f) { return [f.inciso + ' (' + f.pmin + '% a ' + f.pmax + '%)', moeda(f.parte), moeda(f.minimo), moeda(f.maximo)]; })
+          .concat([['Total', moeda(r.base), moeda(r.total_minimo), moeda(r.total_maximo)]]) },
+      notas: ['Percentuais do CPC, art. 85, §3º, aplicados de forma escalonada: cada faixa incide só sobre a parte da base que cabe nela (art. 85, §5º).',
+        'Faixas em salários mínimos pelo valor vigente na data da sentença líquida ou da decisão de liquidação (art. 85, §4º, IV).',
+        'O percentual dentro de cada faixa é fixado pelo juiz, pelos critérios do art. 85, §2º.'],
+      fontes: ['Código de Processo Civil (Lei 13.105/2015), art. 85.', 'Salário mínimo: decretos anuais do Poder Executivo federal.'],
+      link: link, arquivo: 'memoria-honorarios-fazenda'
+    };
+  }
+
+  var api = { previsao: previsao, superpreferencia: superpreferencia, honorarios: honorarios, moeda: moeda, docHonorarios: docHonorarios };
   if (typeof module !== 'undefined' && module.exports) module.exports = api;
   raiz.AtrioPrecatorio = api;
 
@@ -211,11 +229,17 @@
     var bloco = document.getElementById('dados-honorarios'), fh = document.getElementById('form-honorarios');
     if (!bloco || !fh) return;
     var dados = JSON.parse(bloco.textContent), saida = document.getElementById('calc-resultado');
+    var ultimo = null, painel = document.getElementById('mem-hon');
+    if (raiz.AtrioMemoria) raiz.AtrioMemoria.ligar('mem-hon', function () {
+      return ultimo ? docHonorarios(ultimo.r, ultimo.data, location.origin + location.pathname) : null;
+    });
     fh.addEventListener('submit', function (ev) {
       ev.preventDefault();
       var v = lerValor(document.getElementById('calc-base').value);
       var r = honorarios(dados, { base: isNaN(v) ? -1 : v, data: document.getElementById('calc-data').value });
-      if (r.erro) { saida.innerHTML = '<div class="calc-cartao calc-erro"><p>' + esc(r.erro) + '</p></div>'; return; }
+      if (r.erro) { ultimo = null; if (painel) painel.hidden = true; saida.innerHTML = '<div class="calc-cartao calc-erro"><p>' + esc(r.erro) + '</p></div>'; return; }
+      ultimo = { r: r, data: document.getElementById('calc-data').value };
+      if (painel) painel.hidden = false;
       var linhas = r.faixas.map(function (f) {
         return '<tr><td data-label="Faixa">' + esc(f.inciso) + ' (' + f.pmin + '% a ' + f.pmax + '%)</td><td class="num" data-label="Parcela">' +
           moeda(f.parte) + '</td><td class="num" data-label="Mínimo">' + moeda(f.minimo) + '</td><td class="num" data-label="Máximo">' + moeda(f.maximo) + '</td></tr>';

@@ -18,7 +18,7 @@
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="estilo.css?v=4fead978">
+<link rel="stylesheet" href="estilo.css?v=17cef219">
 </head>
 <body>
 <a class="pular" href="#conteudo">Pular para o conteúdo</a>
@@ -91,6 +91,7 @@
 <div class="calc-cartao calc-vazio"><p>O vencimento aparece aqui, com a lista dos dias que não contaram.</p></div>
 </div>
 </div>
+<section class="memoria-peticao" id="mem-prazo" hidden aria-labelledby="mem-prazo-titulo"><h2 id="mem-prazo-titulo">Memória de cálculo para a petição</h2><p>Um documento A4 com a contagem dia a dia, os dias que não contaram, os critérios e as fontes, pronto para juntar aos autos. No rodapé vai o link para conferir a mesma conta. Processo e parte são opcionais e ficam só no seu navegador.</p><div class="memoria-campos"><div class="calc-campo"><label for="mem-prazo-processo">Processo nº (opcional)</label><input type="text" id="mem-prazo-processo" autocomplete="off" placeholder="0000000-00.0000.0.00.0000"></div><div class="calc-campo"><label for="mem-prazo-parte">Parte (opcional)</label><input type="text" id="mem-prazo-parte" autocomplete="off"></div></div><div class="corr-acoes"><button type="button" class="botao" id="mem-prazo-pdf">Baixar em PDF</button><button type="button" class="botao secundario" id="mem-prazo-word">Baixar em Word</button><p class="corr-aviso-acao" id="mem-prazo-aviso" role="status"></p></div><p class="memoria-dica">No PDF, escolha "Salvar como PDF" na janela de impressão.</p></section>
 <noscript><p class="cartao-aviso">A calculadora precisa de JavaScript ligado no navegador.</p></noscript>
 <h2>Como a calculadora conta</h2>
 <ul class="lista-check">
@@ -111,6 +112,141 @@
 <!--aviso-inicio--><section class="aviso-teto" aria-labelledby="aviso-titulo"><h2 id="aviso-titulo">Avise-me quando o teto mudar</h2><p>Quando a lei de um ente mudar ou o salário mínimo e o teto do RGPS do ano saírem, você recebe um e-mail com o que mudou e o valor novo. Sem propaganda toda semana: só quando houver mudança, e um aviso quando sair a Edição 2027 da planilha.</p><form class="form-aviso" method="post" action="https://2626deaf.sibforms.com/serve/MUIFADu8YkLtNAUAzElSMQkqYBKV3XmFan1PAfeMvMLR2bW4Lx2J5RF0lFcu_NBHLnuyX4YNQ2QsshiPB1rcaZSnDbOiQWaDqHE9FmhXehOt2Y6hYBMOaN37PCsvb7czYoR5HU44rsTJCpZNAtVFgiJFZoxjFbouRmFxEtgoD768H9MYl4SfW0gBeKTTOXwgKb-1QXwwH31NKP302w==" target="_blank" rel="noopener"><div class="form-linha"><label for="aviso-email">Seu e-mail</label><input type="email" id="aviso-email" name="EMAIL" required autocomplete="email" placeholder="nome@escritorio.adv.br"></div><div class="form-linha"><label for="aviso-ente">Ente que você mais usa (opcional)</label><input type="text" id="aviso-ente" name="ENTE" placeholder="Ex.: INSS, Goiás, Recife"></div><p class="form-consentimento"><input type="checkbox" id="aviso-ok" name="OPT_IN" value="1" required> <label for="aviso-ok">Concordo em receber os avisos por e-mail. Posso cancelar em qualquer mensagem. <a href="privacidade.html">Como os dados são usados</a>.</label></p><input type="text" name="email_address_check" value="" hidden tabindex="-1" autocomplete="off" aria-hidden="true"><input type="hidden" name="locale" value="pt"><input type="hidden" name="html_type" value="simple"><p class="comprar"><button type="submit" class="botao">Quero ser avisado</button></p><p class="form-retorno" role="status" aria-live="polite" hidden></p></form><script>(function(){var f=document.querySelector('.form-aviso');if(!f||!window.fetch||!window.FormData)return;f.addEventListener('submit',function(e){e.preventDefault();var b=f.querySelector('button'),r=f.querySelector('.form-retorno');b.disabled=true;fetch(f.action,{method:'POST',body:new FormData(f),mode:'no-cors'}).then(function(){r.textContent='Quase pronto: enviamos um e-mail para você confirmar o cadastro. Se não chegar em alguns minutos, confira o spam.';r.hidden=false;f.reset();}).catch(function(){r.textContent='Não foi possível enviar agora. Tente de novo em instantes.';r.hidden=false;}).then(function(){b.disabled=false;});});})();</script></section><!--aviso-fim-->
 </main>
 <script type="application/json" id="dados-prazos">{"nacionais": [{"dia": "01-01", "nome": "Confraternização Universal", "fonte": "Lei 662/1949", "desde": 0}, {"dia": "04-21", "nome": "Tiradentes", "fonte": "Lei 662/1949", "desde": 0}, {"dia": "05-01", "nome": "Dia do Trabalho", "fonte": "Lei 662/1949", "desde": 0}, {"dia": "09-07", "nome": "Independência", "fonte": "Lei 662/1949", "desde": 0}, {"dia": "10-12", "nome": "Nossa Senhora Aparecida", "fonte": "Lei 6.802/1980", "desde": 1980}, {"dia": "11-02", "nome": "Finados", "fonte": "Lei 662/1949", "desde": 0}, {"dia": "11-15", "nome": "Proclamação da República", "fonte": "Lei 662/1949", "desde": 0}, {"dia": "11-20", "nome": "Dia Nacional de Zumbi e da Consciência Negra", "fonte": "Lei 14.759/2023", "desde": 2024}, {"dia": "12-25", "nome": "Natal", "fonte": "Lei 662/1949", "desde": 0}], "federal": [{"dia": "08-11", "nome": "Dia dos Cursos Jurídicos"}, {"dia": "11-01", "nome": "Dia de Todos os Santos"}, {"dia": "11-02", "nome": "Finados"}, {"dia": "12-08", "nome": "Dia da Justiça"}], "suspensao": {"inicio": "12-20", "fim": "01-20"}, "recesso": {"inicio": "12-20", "fim": "01-06"}}</script>
+<script id="motor-memoria">/* Memória de cálculo para juntar na petição (29/10/2026).
+   Cada calculadora do site monta um objeto "doc" com o resultado; este arquivo transforma o objeto num documento A4
+   sóbrio (cabeçalho, quadro de dados, tabela, notas, fontes) e entrega de dois jeitos:
+   - PDF: abre o documento num quadro escondido e chama a impressão do navegador ("Salvar como PDF");
+   - Word: baixa um arquivo .doc (HTML que o Word e o LibreOffice abrem e editam).
+   No rodapé vão o endereço do Átrio e o link para conferir o mesmo cálculo: quem recebe a petição pode refazer a conta.
+   Formato do doc: {titulo, subtitulo, processo, parte, campos: [[rótulo, valor]], tabela: {colunas: [], linhas: [[]],
+   direita: [índices]}, notas: [texto], fontes: [texto], link: endereço, arquivo: nome sem extensão}. */
+(function (raiz) {
+  'use strict';
+
+  function esc(s) {
+    return String(s === undefined || s === null ? '' : s).replace(/[&<>"']/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+  }
+
+  function hojeBr(d) {
+    d = d || new Date();
+    var dd = d.getDate(), mm = d.getMonth() + 1;
+    return (dd < 10 ? '0' : '') + dd + '/' + (mm < 10 ? '0' : '') + mm + '/' + d.getFullYear();
+  }
+
+  var ESTILO = '@page{size:A4;margin:22mm 20mm 20mm 20mm}' +
+    'body{font-family:Arial,Helvetica,sans-serif;font-size:11pt;color:#1F2328;line-height:1.4;margin:0}' +
+    '.marca{font-size:8.5pt;color:#525A64;border-bottom:1px solid #DADEE3;padding-bottom:4pt;margin-bottom:14pt}' +
+    'h1{font-size:14pt;margin:0 0 2pt 0;text-transform:uppercase;letter-spacing:.02em}' +
+    '.sub{margin:0 0 12pt 0;color:#525A64}' +
+    'table{border-collapse:collapse;width:100%;margin:0 0 12pt 0}' +
+    'th,td{border:1px solid #BFC5CC;padding:3pt 6pt;text-align:left;vertical-align:top;font-size:10pt}' +
+    'th{background:#EEF0F2}' +
+    'table.dados th{width:38%;font-weight:bold;background:#F5F6F7}' +
+    'td.num,th.num{text-align:right}' +
+    'h2{font-size:11pt;margin:12pt 0 4pt 0}' +
+    'ul{margin:0 0 10pt 16pt;padding:0} li{margin:0 0 3pt 0;font-size:10pt}' +
+    '.rodape{margin-top:16pt;border-top:1px solid #DADEE3;padding-top:5pt;font-size:8.5pt;color:#525A64}' +
+    '.rodape a{color:#525A64}';
+
+  function corpoHtml(doc) {
+    var h = '<p class="marca">Memória de cálculo · Átrio, ferramentas para advogados · atriojur.com.br</p>';
+    h += '<h' + '1>' + esc(doc.titulo) + '</h' + '1>';  /* partido: a página do site tem um título principal só */
+    if (doc.subtitulo) h += '<p class="sub">' + esc(doc.subtitulo) + '</p>';
+    var campos = [];
+    if (doc.processo) campos.push(['Processo', doc.processo]);
+    if (doc.parte) campos.push(['Parte', doc.parte]);
+    campos = campos.concat(doc.campos || []);
+    if (campos.length) {
+      h += '<table class="dados"><tbody>' + campos.map(function (c) {
+        return '<tr><th scope="row">' + esc(c[0]) + '</th><td>' + esc(c[1]) + '</td></tr>';
+      }).join('') + '</tbody></table>';
+    }
+    var t = doc.tabela;
+    if (t && t.linhas && t.linhas.length) {
+      var dir = t.direita || [];
+      var classe = function (i) { return dir.indexOf(i) >= 0 ? ' class="num"' : ''; };
+      if (t.titulo) h += '<h2>' + esc(t.titulo) + '</h2>';
+      h += '<table><thead><tr>' + t.colunas.map(function (c, i) { return '<th' + classe(i) + '>' + esc(c) + '</th>'; }).join('') +
+        '</tr></thead><tbody>' + t.linhas.map(function (l) {
+          return '<tr>' + l.map(function (v, i) { return '<td' + classe(i) + '>' + esc(v) + '</td>'; }).join('') + '</tr>';
+        }).join('') + '</tbody></table>';
+    }
+    if (doc.notas && doc.notas.length) {
+      h += '<h2>Critérios</h2><ul>' + doc.notas.map(function (n) { return '<li>' + esc(n) + '</li>'; }).join('') + '</ul>';
+    }
+    if (doc.fontes && doc.fontes.length) {
+      h += '<h2>Fontes</h2><ul>' + doc.fontes.map(function (n) { return '<li>' + esc(n) + '</li>'; }).join('') + '</ul>';
+    }
+    h += '<p class="rodape">Elaborada em ' + esc(doc.data || hojeBr()) + ' com a calculadora gratuita do Átrio (atriojur.com.br).' +
+      (doc.link ? ' Para conferir este cálculo, acesse: <a href="' + esc(doc.link) + '">' + esc(doc.link) + '</a>.' : '') +
+      ' Ferramenta de apoio: a conferência dos critérios do título e dos dados do processo é do advogado responsável.</p>';
+    return h;
+  }
+
+  function montarHtml(doc, paraWord) {
+    var cab = paraWord
+      ? '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns="http://www.w3.org/TR/REC-html40">'
+      : '<!DOCTYPE html><html lang="pt-BR">';
+    return cab + '<head><meta charset="utf-8"><title>' + esc(doc.titulo) + '</title><style>' + ESTILO + '</style></head><body>' +
+      corpoHtml(doc) + '</body></html>';
+  }
+
+  function nomeArquivo(doc) {
+    var base = (doc.arquivo || 'memoria-de-calculo').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '')
+      .replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+    return base || 'memoria-de-calculo';
+  }
+
+  function pdf(doc) {
+    var quadro = document.createElement('iframe');
+    quadro.setAttribute('aria-hidden', 'true');
+    quadro.style.cssText = 'position:fixed;right:0;bottom:0;width:0;height:0;border:0;visibility:hidden';
+    document.body.appendChild(quadro);
+    var d = quadro.contentWindow.document;
+    d.open(); d.write(montarHtml(doc, false)); d.close();
+    setTimeout(function () {
+      quadro.contentWindow.focus();
+      quadro.contentWindow.print();
+      setTimeout(function () { if (quadro.parentNode) quadro.parentNode.removeChild(quadro); }, 60000);
+    }, 250);
+  }
+
+  function word(doc) {
+    var blob = new Blob(['﻿' + montarHtml(doc, true)], { type: 'application/msword' });
+    var a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = nomeArquivo(doc) + '.doc';
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    setTimeout(function () { URL.revokeObjectURL(a.href); }, 10000);
+  }
+
+  /* Liga o painel "Memória para a petição" de uma calculadora: prefixo é o começo dos ids (ex.: "mem-corr");
+     obterDoc() devolve o doc do último cálculo (ou null, se ainda não há resultado). */
+  function ligar(prefixo, obterDoc) {
+    var bPdf = document.getElementById(prefixo + '-pdf'), bWord = document.getElementById(prefixo + '-word');
+    var proc = document.getElementById(prefixo + '-processo'), parte = document.getElementById(prefixo + '-parte');
+    var aviso = document.getElementById(prefixo + '-aviso');
+    function completo() {
+      var doc = obterDoc();
+      if (!doc) { if (aviso) aviso.textContent = 'Faça o cálculo primeiro.'; return null; }
+      if (aviso) aviso.textContent = '';
+      doc.processo = proc ? proc.value.trim() : '';
+      doc.parte = parte ? parte.value.trim() : '';
+      return doc;
+    }
+    if (bPdf) bPdf.addEventListener('click', function () { var d = completo(); if (d) pdf(d); });
+    if (bWord) bWord.addEventListener('click', function () {
+      var d = completo(); if (d) { word(d); if (aviso) aviso.textContent = 'Arquivo do Word baixado: confira a pasta de downloads.'; }
+    });
+  }
+
+  var api = { montarHtml: montarHtml, nomeArquivo: nomeArquivo, hojeBr: hojeBr, pdf: pdf, word: word, ligar: ligar };
+  if (typeof module !== 'undefined' && module.exports) module.exports = api;
+  raiz.AtrioMemoria = api;
+})(typeof window !== 'undefined' ? window : globalThis);
+</script>
 <script id="motor-prazos">/* Calculadora de prazo processual do Átrio (docs/casos-calculadora-prazos.md).
  * Dias úteis (CPC, art. 219; CLT, art. 775; Lei 9.099, art. 12-A) ou corridos no penal (CPP, art. 798).
  * Exclui o dia do começo e inclui o do vencimento (CPC, art. 224). DJe: publicação no primeiro dia útil depois da
@@ -251,7 +387,54 @@
       corridos: p.tipo === 'penal', pulados: pulados, n_pulados: n_pulados };
   }
 
-  var api = { calcular: calcular, pascoa: function (a) { return iso(pascoa(a)); } };
+  var SEMANA = ['domingo', 'segunda-feira', 'terça-feira', 'quarta-feira', 'quinta-feira', 'sexta-feira', 'sábado'];
+  var BASE_LEGAL = {
+    civel: 'Dias úteis (CPC, art. 219); exclui o dia do começo e inclui o do vencimento (CPC, art. 224).',
+    juizado: 'Dias úteis (Lei 9.099/1995, art. 12-A); exclui o dia do começo e inclui o do vencimento.',
+    trabalhista: 'Dias úteis (CLT, art. 775); exclui o dia do começo e inclui o do vencimento.',
+    penal: 'Dias corridos (CPP, art. 798); não se conta o dia do começo e conta-se o do vencimento (art. 798, §1º).'
+  };
+
+  /* Documento da memória (memoria.js): dados da contagem, dias contados um a um e dias que não contaram.
+     rotulos: {tipo, justica} com o texto escolhido nos campos. */
+  function docMemoria(r, p, rotulos, link) {
+    var campos = [['Tipo de processo', rotulos.tipo], ['Justiça', rotulos.justica],
+      [p.marco === 'dje' ? 'Disponibilização no DJe' : 'Intimação', dataBr(p.data)]];
+    if (r.publicacao) campos.push(['Publicação (dia útil seguinte)', dataBr(r.publicacao)]);
+    campos.push(['Dia do começo (não conta)', dataBr(r.comeco)], ['Primeiro dia contado', dataBr(r.inicio)],
+      ['Prazo', r.dias_contados + ' dias ' + (r.corridos ? 'corridos' : 'úteis') + (p.dobro ? ' (em dobro)' : '')],
+      ['Vencimento', dataBr(r.vencimento) + ' (' + SEMANA[paraData(r.vencimento).getUTCDay()] + ')']);
+    var fora = {}, contados = [];
+    r.pulados.forEach(function (x) { fora[x.data] = x.motivo; });
+    for (var d = paraData(r.inicio); iso(d) <= r.vencimento && contados.length <= 400; d = mais(d, 1)) {
+      if (!(iso(d) in fora)) contados.push(d);
+    }
+    var tabela = null;
+    if (contados.length === r.dias_contados && r.n_pulados === r.pulados.length) {
+      tabela = { titulo: 'Contagem dia a dia', colunas: ['Dia do prazo', 'Data', 'Dia da semana'], direita: [],
+        linhas: contados.map(function (x, i) { return [String(i + 1), dataBr(iso(x)), SEMANA[x.getUTCDay()]]; }) };
+    }
+    var notas = [BASE_LEGAL[p.tipo] || ''];
+    if (p.marco === 'dje') notas.push('Publicação no primeiro dia útil seguinte à disponibilização no DJe; o prazo começa no primeiro dia útil seguinte à publicação (Lei 11.419/2006, art. 4º, §§3º e 4º).');
+    if (p.tipo === 'penal') notas.push('Intimação na sexta-feira: o prazo começa a correr no primeiro dia útil seguinte (STF, Súmula 310).');
+    var grupos = [];  /* dias seguidos com o mesmo motivo viram um intervalo */
+    r.pulados.filter(function (x) { return x.data >= r.inicio; }).forEach(function (x) {
+      var g = grupos[grupos.length - 1];
+      if (g && g.motivo === x.motivo && Date.parse(x.data) - Date.parse(g.fim) === UM_DIA) g.fim = x.data;
+      else grupos.push({ ini: x.data, fim: x.data, motivo: x.motivo });
+    });
+    if (grupos.length) {
+      notas.push('Dias que não contaram: ' + grupos.map(function (g) {
+        return dataBr(g.ini) + (g.fim !== g.ini ? ' a ' + dataBr(g.fim) : '') + ' (' + g.motivo + ')'; }).join('; ') + '.');
+    }
+    notas.push('Feriados estaduais e municipais, portarias do tribunal e indisponibilidades do sistema só entram na conta quando informados. Feriado local que prorroga recurso deve ser comprovado no ato de interposição (CPC, art. 1.003, §6º).');
+    return { titulo: 'Demonstrativo de contagem de prazo', subtitulo: 'Prazo de ' + r.dias_contados + ' dias ' + (r.corridos ? 'corridos' : 'úteis') + ': vence em ' + dataBr(r.vencimento),
+      campos: campos, tabela: tabela, notas: notas.filter(Boolean),
+      fontes: ['Feriados nacionais (Lei 662/1949, Lei 6.802/1980, Lei 14.759/2023) e, na Justiça Federal, Lei 5.010/1966, art. 62.', 'Suspensão de 20/12 a 20/01: CPC, art. 220; CLT, art. 775-A; CPP, art. 798-A.'],
+      link: link, arquivo: 'memoria-prazo-vence-' + r.vencimento };
+  }
+
+  var api = { calcular: calcular, pascoa: function (a) { return iso(pascoa(a)); }, docMemoria: docMemoria };
   if (typeof module !== 'undefined' && module.exports) { module.exports = api; return; }
   raiz.AtrioPrazos = api;
 
@@ -284,15 +467,23 @@
       ajustar();
     });
     ajustar();
+    var ultimo = null, painel = $('mem-prazo');
+    if (raiz.AtrioMemoria) raiz.AtrioMemoria.ligar('mem-prazo', function () {
+      return ultimo ? docMemoria(ultimo.r, ultimo.p, ultimo.rotulos, location.origin + location.pathname) : null;
+    });
     form.addEventListener('submit', function (ev) {
       ev.preventDefault();
       var marco = form.querySelector('input[name="marco"]:checked');
-      var r = calcular(dados, { tipo: $('prazo-tipo').value, justica: $('prazo-justica').value, marco: marco ? marco.value : 'comeco',
+      var pedido = { tipo: $('prazo-tipo').value, justica: $('prazo-justica').value, marco: marco ? marco.value : 'comeco',
         data: $('prazo-data').value, dias: $('prazo-dias').value, dobro: $('prazo-dobro').checked,
         excecao_penal: $('prazo-excecao').checked && $('prazo-tipo').value === 'penal',
         dia_justica: $('prazo-justica-dia').checked, carnaval: $('prazo-carnaval').checked, paixao: $('prazo-paixao').checked, corpus: $('prazo-corpus').checked,
-        recesso_estadual: $('prazo-recesso').checked, outros: $('prazo-outros').value });
-      if (r.erro) { saida.innerHTML = '<div class="calc-cartao calc-erro"><p>' + esc(r.erro) + '</p></div>'; return; }
+        recesso_estadual: $('prazo-recesso').checked, outros: $('prazo-outros').value };
+      var r = calcular(dados, pedido);
+      if (r.erro) { ultimo = null; if (painel) painel.hidden = true; saida.innerHTML = '<div class="calc-cartao calc-erro"><p>' + esc(r.erro) + '</p></div>'; return; }
+      var texto = function (id) { var el = $(id); return el.options[el.selectedIndex].text; };
+      ultimo = { r: r, p: pedido, rotulos: { tipo: texto('prazo-tipo'), justica: texto('prazo-justica') } };
+      if (painel) painel.hidden = false;
       var html = '<div class="calc-cartao calc-sim"><p class="calc-veredito">Vence em ' + dataBr(r.vencimento) + '</p><dl class="calc-detalhe">';
       if (r.publicacao) html += '<dt>Publicação (dia útil seguinte à disponibilização)</dt><dd>' + dataBr(r.publicacao) + '</dd>';
       html += '<dt>Dia do começo (não conta)</dt><dd>' + dataBr(r.comeco) + '</dd>' +
