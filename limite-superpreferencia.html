@@ -52,6 +52,7 @@
 <div class="calc-cartao calc-vazio"><p>O resultado aparece aqui.</p></div>
 </div>
 </div>
+<section class="memoria-peticao" id="mem-super" hidden aria-labelledby="mem-super-titulo"><h2 id="mem-super-titulo">Memória de cálculo para a petição</h2><p>Um documento A4 com o teto do ente, o limite e a parcela preferencial, os critérios e as fontes, pronto para juntar aos autos. No rodapé vai o link para conferir a mesma conta. Processo e parte são opcionais e ficam só no seu navegador.</p><div class="memoria-campos"><div class="calc-campo"><label for="mem-super-processo">Processo nº (opcional)</label><input type="text" id="mem-super-processo" autocomplete="off" placeholder="0000000-00.0000.0.00.0000"></div><div class="calc-campo"><label for="mem-super-parte">Parte (opcional)</label><input type="text" id="mem-super-parte" autocomplete="off"></div></div><div class="corr-acoes"><button type="button" class="botao" id="mem-super-pdf">Baixar em PDF</button><button type="button" class="botao secundario" id="mem-super-word">Baixar em Word</button><p class="corr-aviso-acao" id="mem-super-aviso" role="status"></p></div><p class="memoria-dica">No PDF, escolha "Salvar como PDF" na janela de impressão.</p></section>
 <noscript><p class="cartao-aviso">A calculadora precisa de JavaScript ligado no navegador.</p></noscript>
 <h2>Como a calculadora decide</h2>
 <ul class="lista-check">
@@ -70,6 +71,141 @@
 <!--aviso-inicio--><section class="aviso-teto" aria-labelledby="aviso-titulo"><h2 id="aviso-titulo">Avise-me quando o teto mudar</h2><p>Quando a lei de um ente mudar ou o salário mínimo e o teto do RGPS do ano saírem, você recebe um e-mail com o que mudou e o valor novo. Sem propaganda toda semana: só quando houver mudança, e um aviso quando sair a Edição 2027 da planilha.</p><form class="form-aviso" method="post" action="https://2626deaf.sibforms.com/serve/MUIFADu8YkLtNAUAzElSMQkqYBKV3XmFan1PAfeMvMLR2bW4Lx2J5RF0lFcu_NBHLnuyX4YNQ2QsshiPB1rcaZSnDbOiQWaDqHE9FmhXehOt2Y6hYBMOaN37PCsvb7czYoR5HU44rsTJCpZNAtVFgiJFZoxjFbouRmFxEtgoD768H9MYl4SfW0gBeKTTOXwgKb-1QXwwH31NKP302w==" target="_blank" rel="noopener"><div class="form-linha"><label for="aviso-email">Seu e-mail</label><input type="email" id="aviso-email" name="EMAIL" required autocomplete="email" placeholder="nome@escritorio.adv.br"></div><div class="form-linha"><label for="aviso-ente">Ente que você mais usa (opcional)</label><input type="text" id="aviso-ente" name="ENTE" placeholder="Ex.: INSS, Goiás, Recife"></div><p class="form-consentimento"><input type="checkbox" id="aviso-ok" name="OPT_IN" value="1" required> <label for="aviso-ok">Concordo em receber os avisos por e-mail. Posso cancelar em qualquer mensagem. <a href="privacidade.html">Como os dados são usados</a>.</label></p><input type="text" name="email_address_check" value="" hidden tabindex="-1" autocomplete="off" aria-hidden="true"><input type="hidden" name="locale" value="pt"><input type="hidden" name="html_type" value="simple"><p class="comprar"><button type="submit" class="botao">Quero ser avisado</button></p><p class="form-retorno" role="status" aria-live="polite" hidden></p></form><script>(function(){var f=document.querySelector('.form-aviso');if(!f||!window.fetch||!window.FormData)return;f.addEventListener('submit',function(e){e.preventDefault();var b=f.querySelector('button'),r=f.querySelector('.form-retorno');b.disabled=true;fetch(f.action,{method:'POST',body:new FormData(f),mode:'no-cors'}).then(function(){r.textContent='Quase pronto: enviamos um e-mail para você confirmar o cadastro. Se não chegar em alguns minutos, confira o spam.';r.hidden=false;f.reset();}).catch(function(){r.textContent='Não foi possível enviar agora. Tente de novo em instantes.';r.hidden=false;}).then(function(){b.disabled=false;});});})();</script></section><!--aviso-fim-->
 </main>
 <script type="application/json" id="dados-precatorio">{"cortes": [{"inicio": null, "fim": 2021, "dia": 1, "mes": 7}, {"inicio": 2022, "fim": 2025, "dia": 2, "mes": 4}, {"inicio": 2026, "fim": null, "dia": 1, "mes": 2}], "entes": {"União": {"tipo": "União", "teto": 97260.0, "pagina": "teto-rpv-uniao.html"}, "São Paulo": {"tipo": "estado", "teto": 16913.05, "pagina": "teto-rpv-sao-paulo.html"}, "Minas Gerais": {"tipo": "estado", "teto": 27345.7, "pagina": "teto-rpv-minas-gerais.html"}, "Rio de Janeiro": {"tipo": "estado", "teto": 32420.0, "pagina": "teto-rpv-rio-de-janeiro.html"}, "Bahia": {"tipo": "estado", "teto": 16210.0, "pagina": "teto-rpv-bahia.html"}, "Paraná": {"tipo": "estado", "teto": 24782.81, "pagina": "teto-rpv-parana.html"}, "Rio Grande do Sul": {"tipo": "estado", "teto": 16210.0, "pagina": "teto-rpv-rio-grande-do-sul.html"}, "Pernambuco": {"tipo": "estado", "teto": 64840.0, "pagina": "teto-rpv-pernambuco.html"}, "Ceará": {"tipo": "estado", "teto": 15746.8, "pagina": "teto-rpv-ceara.html"}, "Pará": {"tipo": "estado", "teto": 48630.0, "pagina": "teto-rpv-para.html"}, "Maranhão": {"tipo": "estado", "teto": 32420.0, "pagina": "teto-rpv-maranhao.html"}, "Santa Catarina": {"tipo": "estado", "teto": 16210.0, "pagina": "teto-rpv-santa-catarina.html"}, "Goiás": {"tipo": "estado", "teto": 16210.0, "pagina": "teto-rpv-goias.html"}, "Amazonas": {"tipo": "estado", "teto": 32420.0, "pagina": "teto-rpv-amazonas.html"}, "Espírito Santo": {"tipo": "estado", "teto": 21827.29, "pagina": "teto-rpv-espirito-santo.html"}, "Paraíba": {"tipo": "estado", "teto": 16210.0, "pagina": "teto-rpv-paraiba.html"}, "Rio Grande do Norte": {"tipo": "estado", "teto": 32420.0, "pagina": "teto-rpv-rio-grande-do-norte.html"}, "Mato Grosso": {"tipo": "estado", "teto": 26312.0, "pagina": "teto-rpv-mato-grosso.html"}, "Alagoas": {"tipo": "estado", "teto": 8475.55, "pagina": "teto-rpv-alagoas.html"}, "Piauí": {"tipo": "estado", "teto": 8475.55, "pagina": "teto-rpv-piaui.html"}, "Distrito Federal": {"tipo": "distrito federal", "teto": 32420.0, "pagina": "teto-rpv-distrito-federal.html"}, "Mato Grosso do Sul": {"tipo": "estado", "teto": 28582.5, "pagina": "teto-rpv-mato-grosso-do-sul.html"}, "Sergipe": {"tipo": "estado", "teto": 8475.55, "pagina": "teto-rpv-sergipe.html"}, "Rondônia": {"tipo": "estado", "teto": 16210.0, "pagina": "teto-rpv-rondonia.html"}, "Tocantins": {"tipo": "estado", "teto": 16210.0, "pagina": "teto-rpv-tocantins.html"}, "Acre": {"tipo": "estado", "teto": 11347.0, "pagina": "teto-rpv-acre.html"}, "Amapá": {"tipo": "estado", "teto": 16210.0, "pagina": "teto-rpv-amapa.html"}, "Roraima": {"tipo": "estado", "teto": 27557.0, "pagina": "teto-rpv-roraima.html"}, "Rio Branco": {"tipo": "capital", "teto": 16210.0, "pagina": "teto-rpv-rio-branco.html"}, "Maceió": {"tipo": "capital", "teto": 21073.0, "pagina": "teto-rpv-maceio.html"}, "Macapá": {"tipo": "capital", "teto": 8475.55, "pagina": "teto-rpv-macapa.html"}, "Manaus": {"tipo": "capital", "teto": 24315.0, "pagina": "teto-rpv-manaus.html"}, "Salvador": {"tipo": "capital", "teto": 8475.55, "pagina": "teto-rpv-salvador.html"}, "Fortaleza": {"tipo": "capital", "teto": 8475.55, "pagina": "teto-rpv-fortaleza.html"}, "Vitória": {"tipo": "capital", "teto": 48630.0, "pagina": "teto-rpv-vitoria.html"}, "Goiânia": {"tipo": "capital", "teto": 48630.0, "pagina": "teto-rpv-goiania.html"}, "São Luís": {"tipo": "capital", "teto": 16210.0, "pagina": "teto-rpv-sao-luis.html"}, "Cuiabá": {"tipo": "capital", "teto": 8475.55, "pagina": "teto-rpv-cuiaba.html"}, "Campo Grande": {"tipo": "capital", "teto": 10099.18, "pagina": "teto-rpv-campo-grande.html"}, "Belo Horizonte": {"tipo": "capital", "teto": 8475.55, "pagina": "teto-rpv-belo-horizonte.html"}, "Belém": {"tipo": "capital", "teto": 16210.0, "pagina": "teto-rpv-belem.html"}, "João Pessoa": {"tipo": "capital", "teto": 8475.55, "pagina": "teto-rpv-joao-pessoa.html"}, "Curitiba": {"tipo": "capital", "teto": 8475.55, "pagina": "teto-rpv-curitiba.html"}, "Recife": {"tipo": "capital", "teto": 48630.0, "pagina": "teto-rpv-recife.html"}, "Teresina": {"tipo": "capital", "teto": 11347.0, "pagina": "teto-rpv-teresina.html"}, "Rio de Janeiro (capital)": {"tipo": "capital", "teto": 16210.0, "pagina": "teto-rpv-rio-de-janeiro-capital.html"}, "Natal": {"tipo": "capital", "teto": 16210.0, "pagina": "teto-rpv-natal.html"}, "Porto Alegre": {"tipo": "capital", "teto": 48630.0, "pagina": "teto-rpv-porto-alegre.html"}, "Porto Velho": {"tipo": "capital", "teto": 16210.0, "pagina": "teto-rpv-porto-velho.html"}, "Boa Vista": {"tipo": "capital", "teto": 24315.0, "pagina": "teto-rpv-boa-vista.html"}, "Florianópolis": {"tipo": "capital", "teto": 8475.55, "pagina": "teto-rpv-florianopolis.html"}, "São Paulo (capital)": {"tipo": "capital", "teto": 31667.41, "pagina": "teto-rpv-sao-paulo-capital.html"}, "Aracaju": {"tipo": "capital", "teto": 8475.55, "pagina": "teto-rpv-aracaju.html"}, "Palmas": {"tipo": "capital", "teto": 24315.0, "pagina": "teto-rpv-palmas.html"}}}</script>
+<script id="motor-memoria">/* Memória de cálculo para juntar na petição (29/10/2026).
+   Cada calculadora do site monta um objeto "doc" com o resultado; este arquivo transforma o objeto num documento A4
+   sóbrio (cabeçalho, quadro de dados, tabela, notas, fontes) e entrega de dois jeitos:
+   - PDF: abre o documento num quadro escondido e chama a impressão do navegador ("Salvar como PDF");
+   - Word: baixa um arquivo .doc (HTML que o Word e o LibreOffice abrem e editam).
+   No rodapé vão o endereço do Átrio e o link para conferir o mesmo cálculo: quem recebe a petição pode refazer a conta.
+   Formato do doc: {titulo, subtitulo, processo, parte, campos: [[rótulo, valor]], tabela: {colunas: [], linhas: [[]],
+   direita: [índices]}, notas: [texto], fontes: [texto], link: endereço, arquivo: nome sem extensão}. */
+(function (raiz) {
+  'use strict';
+
+  function esc(s) {
+    return String(s === undefined || s === null ? '' : s).replace(/[&<>"']/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+  }
+
+  function hojeBr(d) {
+    d = d || new Date();
+    var dd = d.getDate(), mm = d.getMonth() + 1;
+    return (dd < 10 ? '0' : '') + dd + '/' + (mm < 10 ? '0' : '') + mm + '/' + d.getFullYear();
+  }
+
+  var ESTILO = '@page{size:A4;margin:22mm 20mm 20mm 20mm}' +
+    'body{font-family:Arial,Helvetica,sans-serif;font-size:11pt;color:#1F2328;line-height:1.4;margin:0}' +
+    '.marca{font-size:8.5pt;color:#525A64;border-bottom:1px solid #DADEE3;padding-bottom:4pt;margin-bottom:14pt}' +
+    'h1{font-size:14pt;margin:0 0 2pt 0;text-transform:uppercase;letter-spacing:.02em}' +
+    '.sub{margin:0 0 12pt 0;color:#525A64}' +
+    'table{border-collapse:collapse;width:100%;margin:0 0 12pt 0}' +
+    'th,td{border:1px solid #BFC5CC;padding:3pt 6pt;text-align:left;vertical-align:top;font-size:10pt}' +
+    'th{background:#EEF0F2}' +
+    'table.dados th{width:38%;font-weight:bold;background:#F5F6F7}' +
+    'td.num,th.num{text-align:right}' +
+    'h2{font-size:11pt;margin:12pt 0 4pt 0}' +
+    'ul{margin:0 0 10pt 16pt;padding:0} li{margin:0 0 3pt 0;font-size:10pt}' +
+    '.rodape{margin-top:16pt;border-top:1px solid #DADEE3;padding-top:5pt;font-size:8.5pt;color:#525A64}' +
+    '.rodape a{color:#525A64}';
+
+  function corpoHtml(doc) {
+    var h = '<p class="marca">Memória de cálculo · Átrio, ferramentas para advogados · atriojur.com.br</p>';
+    h += '<h' + '1>' + esc(doc.titulo) + '</h' + '1>';  /* partido: a página do site tem um título principal só */
+    if (doc.subtitulo) h += '<p class="sub">' + esc(doc.subtitulo) + '</p>';
+    var campos = [];
+    if (doc.processo) campos.push(['Processo', doc.processo]);
+    if (doc.parte) campos.push(['Parte', doc.parte]);
+    campos = campos.concat(doc.campos || []);
+    if (campos.length) {
+      h += '<table class="dados"><tbody>' + campos.map(function (c) {
+        return '<tr><th scope="row">' + esc(c[0]) + '</th><td>' + esc(c[1]) + '</td></tr>';
+      }).join('') + '</tbody></table>';
+    }
+    var t = doc.tabela;
+    if (t && t.linhas && t.linhas.length) {
+      var dir = t.direita || [];
+      var classe = function (i) { return dir.indexOf(i) >= 0 ? ' class="num"' : ''; };
+      if (t.titulo) h += '<h2>' + esc(t.titulo) + '</h2>';
+      h += '<table><thead><tr>' + t.colunas.map(function (c, i) { return '<th' + classe(i) + '>' + esc(c) + '</th>'; }).join('') +
+        '</tr></thead><tbody>' + t.linhas.map(function (l) {
+          return '<tr>' + l.map(function (v, i) { return '<td' + classe(i) + '>' + esc(v) + '</td>'; }).join('') + '</tr>';
+        }).join('') + '</tbody></table>';
+    }
+    if (doc.notas && doc.notas.length) {
+      h += '<h2>Critérios</h2><ul>' + doc.notas.map(function (n) { return '<li>' + esc(n) + '</li>'; }).join('') + '</ul>';
+    }
+    if (doc.fontes && doc.fontes.length) {
+      h += '<h2>Fontes</h2><ul>' + doc.fontes.map(function (n) { return '<li>' + esc(n) + '</li>'; }).join('') + '</ul>';
+    }
+    h += '<p class="rodape">Elaborada em ' + esc(doc.data || hojeBr()) + ' com a calculadora gratuita do Átrio (atriojur.com.br).' +
+      (doc.link ? ' Para conferir este cálculo, acesse: <a href="' + esc(doc.link) + '">' + esc(doc.link) + '</a>.' : '') +
+      ' Ferramenta de apoio: a conferência dos critérios do título e dos dados do processo é do advogado responsável.</p>';
+    return h;
+  }
+
+  function montarHtml(doc, paraWord) {
+    var cab = paraWord
+      ? '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns="http://www.w3.org/TR/REC-html40">'
+      : '<!DOCTYPE html><html lang="pt-BR">';
+    return cab + '<head><meta charset="utf-8"><title>' + esc(doc.titulo) + '</title><style>' + ESTILO + '</style></head><body>' +
+      corpoHtml(doc) + '</body></html>';
+  }
+
+  function nomeArquivo(doc) {
+    var base = (doc.arquivo || 'memoria-de-calculo').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '')
+      .replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+    return base || 'memoria-de-calculo';
+  }
+
+  function pdf(doc) {
+    var quadro = document.createElement('iframe');
+    quadro.setAttribute('aria-hidden', 'true');
+    quadro.style.cssText = 'position:fixed;right:0;bottom:0;width:0;height:0;border:0;visibility:hidden';
+    document.body.appendChild(quadro);
+    var d = quadro.contentWindow.document;
+    d.open(); d.write(montarHtml(doc, false)); d.close();
+    setTimeout(function () {
+      quadro.contentWindow.focus();
+      quadro.contentWindow.print();
+      setTimeout(function () { if (quadro.parentNode) quadro.parentNode.removeChild(quadro); }, 60000);
+    }, 250);
+  }
+
+  function word(doc) {
+    var blob = new Blob(['﻿' + montarHtml(doc, true)], { type: 'application/msword' });
+    var a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = nomeArquivo(doc) + '.doc';
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    setTimeout(function () { URL.revokeObjectURL(a.href); }, 10000);
+  }
+
+  /* Liga o painel "Memória para a petição" de uma calculadora: prefixo é o começo dos ids (ex.: "mem-corr");
+     obterDoc() devolve o doc do último cálculo (ou null, se ainda não há resultado). */
+  function ligar(prefixo, obterDoc) {
+    var bPdf = document.getElementById(prefixo + '-pdf'), bWord = document.getElementById(prefixo + '-word');
+    var proc = document.getElementById(prefixo + '-processo'), parte = document.getElementById(prefixo + '-parte');
+    var aviso = document.getElementById(prefixo + '-aviso');
+    function completo() {
+      var doc = obterDoc();
+      if (!doc) { if (aviso) aviso.textContent = 'Faça o cálculo primeiro.'; return null; }
+      if (aviso) aviso.textContent = '';
+      doc.processo = proc ? proc.value.trim() : '';
+      doc.parte = parte ? parte.value.trim() : '';
+      return doc;
+    }
+    if (bPdf) bPdf.addEventListener('click', function () { var d = completo(); if (d) pdf(d); });
+    if (bWord) bWord.addEventListener('click', function () {
+      var d = completo(); if (d) { word(d); if (aviso) aviso.textContent = 'Arquivo do Word baixado: confira a pasta de downloads.'; }
+    });
+  }
+
+  var api = { montarHtml: montarHtml, nomeArquivo: nomeArquivo, hojeBr: hojeBr, pdf: pdf, word: word, ligar: ligar };
+  if (typeof module !== 'undefined' && module.exports) module.exports = api;
+  raiz.AtrioMemoria = api;
+})(typeof window !== 'undefined' ? window : globalThis);
+</script>
 <script id="motor-precatorio">/* Calculadoras de precatório do Átrio (docs/casos-calculadoras-precatorio.md).
  * previsao: precatório apresentado até a data de corte do ano A deve ser pago até 31/12 de A+1; depois dela, até 31/12
  *   de A+2 (CF, art. 100, §5º). Datas de corte por ano vêm de recebiveis/dados/data_corte.csv (bloco "dados-precatorio").
@@ -207,7 +343,23 @@
     };
   }
 
-  var api = { previsao: previsao, superpreferencia: superpreferencia, honorarios: honorarios, moeda: moeda, docHonorarios: docHonorarios };
+  /* Documento da memória para a petição: limite da superpreferência (CF, art. 100, §2º; ADCT, art. 102, §2º). */
+  function docSuperpreferencia(r, link) {
+    return {
+      titulo: 'Superpreferência no precatório: ' + r.ente, subtitulo: 'Parcela preferencial de ' + moeda(r.preferencial),
+      campos: [['Ente devedor', r.ente], ['Crédito alimentar', moeda(r.credito)], ['Teto de RPV do ente', moeda(r.teto)],
+        ['Limite', r.multiplicador + ' × o teto = ' + moeda(r.limite) + (r.regime ? ' (regime especial do ADCT)' : '')],
+        ['Parcela preferencial', moeda(r.preferencial)], ['Restante, na ordem cronológica', moeda(r.restante)]],
+      tabela: null,
+      notas: ['Precatório alimentar de credor com 60 anos ou mais, com doença grave ou com deficiência é pago com preferência, até o triplo do teto de RPV do ente, admitido o fracionamento; o restante segue a ordem cronológica (CF, art. 100, §2º).',
+        'No regime especial do ADCT, o limite é de 5 vezes o teto (ADCT, art. 102, §2º).',
+        'Teto de RPV do ente conforme a tabela vigente do site, com a lei de cada ente.'],
+      fontes: ['Constituição Federal, art. 100, §2º; ADCT, art. 102, §2º.', 'Tabela de tetos de RPV do Átrio, com a lei e a fonte de cada ente.'],
+      link: link, arquivo: 'memoria-superpreferencia-' + r.ente
+    };
+  }
+
+  var api = { previsao: previsao, superpreferencia: superpreferencia, honorarios: honorarios, moeda: moeda, docHonorarios: docHonorarios, docSuperpreferencia: docSuperpreferencia };
   if (typeof module !== 'undefined' && module.exports) module.exports = api;
   raiz.AtrioPrecatorio = api;
 
@@ -292,13 +444,19 @@
         if (uniao) campoRegime.checked = false;
       };
       campoEnte.addEventListener('change', ajustar);
+      var ultimoSuper = null, painelSuper = document.getElementById('mem-super');
+      if (raiz.AtrioMemoria) raiz.AtrioMemoria.ligar('mem-super', function () {
+        return ultimoSuper ? docSuperpreferencia(ultimoSuper, location.origin + location.pathname + '?ente=' + encodeURIComponent(ultimoSuper.ente)) : null;
+      });
       fs.addEventListener('submit', function (ev) {
         ev.preventDefault();
         var v = lerValor(document.getElementById('calc-valor').value);
         var r = superpreferencia(dados, { ente: campoEnte.value, credito: isNaN(v) ? -1 : v,
           alimentar: document.getElementById('calc-alimentar').checked, regime: campoRegime.checked });
-        if (r.erro) { saida.innerHTML = '<div class="calc-cartao calc-erro"><p>' + esc(r.erro) + '</p></div>'; return; }
+        if (r.erro) { ultimoSuper = null; if (painelSuper) painelSuper.hidden = true; saida.innerHTML = '<div class="calc-cartao calc-erro"><p>' + esc(r.erro) + '</p></div>'; return; }
         var html;
+        ultimoSuper = r.aviso ? null : r;
+        if (painelSuper) painelSuper.hidden = !!r.aviso;
         if (r.aviso) {
           html = '<div class="calc-cartao calc-incerto"><p class="calc-veredito">Sem parcela preferencial</p><p>' + esc(r.aviso) + '</p>';
         } else {

@@ -337,7 +337,23 @@
     };
   }
 
-  var api = { previsao: previsao, superpreferencia: superpreferencia, honorarios: honorarios, moeda: moeda, docHonorarios: docHonorarios };
+  /* Documento da memória para a petição: limite da superpreferência (CF, art. 100, §2º; ADCT, art. 102, §2º). */
+  function docSuperpreferencia(r, link) {
+    return {
+      titulo: 'Superpreferência no precatório: ' + r.ente, subtitulo: 'Parcela preferencial de ' + moeda(r.preferencial),
+      campos: [['Ente devedor', r.ente], ['Crédito alimentar', moeda(r.credito)], ['Teto de RPV do ente', moeda(r.teto)],
+        ['Limite', r.multiplicador + ' × o teto = ' + moeda(r.limite) + (r.regime ? ' (regime especial do ADCT)' : '')],
+        ['Parcela preferencial', moeda(r.preferencial)], ['Restante, na ordem cronológica', moeda(r.restante)]],
+      tabela: null,
+      notas: ['Precatório alimentar de credor com 60 anos ou mais, com doença grave ou com deficiência é pago com preferência, até o triplo do teto de RPV do ente, admitido o fracionamento; o restante segue a ordem cronológica (CF, art. 100, §2º).',
+        'No regime especial do ADCT, o limite é de 5 vezes o teto (ADCT, art. 102, §2º).',
+        'Teto de RPV do ente conforme a tabela vigente do site, com a lei de cada ente.'],
+      fontes: ['Constituição Federal, art. 100, §2º; ADCT, art. 102, §2º.', 'Tabela de tetos de RPV do Átrio, com a lei e a fonte de cada ente.'],
+      link: link, arquivo: 'memoria-superpreferencia-' + r.ente
+    };
+  }
+
+  var api = { previsao: previsao, superpreferencia: superpreferencia, honorarios: honorarios, moeda: moeda, docHonorarios: docHonorarios, docSuperpreferencia: docSuperpreferencia };
   if (typeof module !== 'undefined' && module.exports) module.exports = api;
   raiz.AtrioPrecatorio = api;
 
@@ -422,13 +438,19 @@
         if (uniao) campoRegime.checked = false;
       };
       campoEnte.addEventListener('change', ajustar);
+      var ultimoSuper = null, painelSuper = document.getElementById('mem-super');
+      if (raiz.AtrioMemoria) raiz.AtrioMemoria.ligar('mem-super', function () {
+        return ultimoSuper ? docSuperpreferencia(ultimoSuper, location.origin + location.pathname + '?ente=' + encodeURIComponent(ultimoSuper.ente)) : null;
+      });
       fs.addEventListener('submit', function (ev) {
         ev.preventDefault();
         var v = lerValor(document.getElementById('calc-valor').value);
         var r = superpreferencia(dados, { ente: campoEnte.value, credito: isNaN(v) ? -1 : v,
           alimentar: document.getElementById('calc-alimentar').checked, regime: campoRegime.checked });
-        if (r.erro) { saida.innerHTML = '<div class="calc-cartao calc-erro"><p>' + esc(r.erro) + '</p></div>'; return; }
+        if (r.erro) { ultimoSuper = null; if (painelSuper) painelSuper.hidden = true; saida.innerHTML = '<div class="calc-cartao calc-erro"><p>' + esc(r.erro) + '</p></div>'; return; }
         var html;
+        ultimoSuper = r.aviso ? null : r;
+        if (painelSuper) painelSuper.hidden = !!r.aviso;
         if (r.aviso) {
           html = '<div class="calc-cartao calc-incerto"><p class="calc-veredito">Sem parcela preferencial</p><p>' + esc(r.aviso) + '</p>';
         } else {
