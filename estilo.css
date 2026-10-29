@@ -467,6 +467,16 @@ fieldset.calc-campo label { display: flex; gap: .6rem; align-items: flex-start; 
 .tile-produto h2 { margin: 0; font-size: 1.9rem; letter-spacing: -.03em; }
 .tile-produto h2::after { display: none; }
 .tile-produto-texto p { margin: 0; font-size: .95rem; color: var(--suave); }
+.vitrine-faixa { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem 1rem; margin: 0 0 1.2rem; padding: .7rem 1rem; background: var(--papel); border: 2px solid var(--coral-forte); border-radius: var(--raio, .8rem); }
+.vitrine-faixa p { margin: 0; text-align: left !important; }
+.vitrine-rotulo { font-size: .82rem; font-weight: 600; color: var(--suave); }
+.vitrine-rotulo .ponto { margin-right: .4rem; }
+.vitrine-item { display: flex; align-items: baseline; gap: .5rem; padding: .35rem .7rem; border: 1px solid var(--linha); border-radius: .5rem; text-decoration: none; color: var(--texto); }
+.vitrine-item:hover, .vitrine-item:focus-visible { border-color: var(--coral-forte); }
+.vitrine-item span { font-size: .85rem; color: var(--suave); }
+.vitrine-item b { font-family: var(--mono); color: var(--coral-forte); }
+.vitrine-kit { font-size: .85rem; color: var(--suave); }
+@media (max-width: 600px) { .vitrine-item { flex-wrap: wrap; width: 100%; } .vitrine-item b { margin-left: auto; } }
 .preco-bento { margin-top: auto !important; font-family: var(--mono); font-size: 1.9rem !important; font-weight: 600; letter-spacing: -.02em; color: var(--texto) !important; }
 .preco-bento span { display: block; margin-top: .2rem; font-family: var(--sans); font-size: .78rem; font-weight: 500; color: var(--suave); }
 .tile-produto .comprar { margin: 0; }
