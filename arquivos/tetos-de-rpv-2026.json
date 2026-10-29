@@ -111,9 +111,9 @@
    "tipo": "estado",
    "teto": "48630.00",
    "base": "Valor fixado na lei do ente",
-   "lei": "Lei nº 11.091, de 08/07/2025",
+   "lei": "Lei nº 11.091, de 08/07/2025 (nova redação do art. 1º da Lei 6.624/2004)",
    "situacao": "Pela lei do ente",
-   "fonte": "https://www.tjpa.jus.br/PortalExterno/imprensa/noticias/Informes/2405186-rvm-devida-pela-fazenda-publica-do-estado-tem-teto-reduzido.xhtml",
+   "fonte": "https://ioepa.com.br/pages/2025/2025.07.09.DOE.pdf",
    "pagina": "https://atriojur.com.br/teto-rpv-para.html"
   },
   {
@@ -179,7 +179,7 @@
    "base": "Valor fixado na lei do ente",
    "lei": "Lei 7.486/2003, art. 1º",
    "situacao": "Pela lei do ente",
-   "fonte": "https://sapl3.al.pb.leg.br/media/sapl/public/materialegislativa/2024/124605/124605_texto_integral.pdf",
+   "fonte": "https://sapl.al.pb.leg.br/media/sapl/public/normajuridica/2003/7320/7320_texto_integral.pdf",
    "pagina": "https://atriojur.com.br/teto-rpv-paraiba.html"
   },
   {
@@ -267,7 +267,7 @@
    "base": "Valor fixado na lei do ente",
    "lei": "Lei 1.788/2007, art. 1º",
    "situacao": "Pela lei do ente",
-   "fonte": "https://sapl.al.ro.leg.br/norma/3768",
+   "fonte": "https://sapl.al.ro.leg.br/media/sapl/public/normajuridica/2007/3768/3768_texto_integral.pdf",
    "pagina": "https://atriojur.com.br/teto-rpv-rondonia.html"
   },
   {
@@ -452,9 +452,9 @@
    "tipo": "capital",
    "teto": "16210.00",
    "base": "Valor fixado na lei do ente",
-   "lei": "Lei Municipal 10.336/2026",
+   "lei": "Lei Municipal 10.336/2026 (DOM nº 15.456, de 25/06/2026)",
    "situacao": "Pela lei do ente",
-   "fonte": "https://drive.google.com/file/d/1Q1OpH6YHrCx6ZB3B04m__QfjypF8B8fF/view",
+   "fonte": "https://sistemas.belem.pa.gov.br/diario/painel",
    "pagina": "https://atriojur.com.br/teto-rpv-belem.html"
   },
   {
