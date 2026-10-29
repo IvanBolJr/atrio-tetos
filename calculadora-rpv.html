@@ -52,7 +52,7 @@
 </div>
 <button type="submit" class="botao">Calcular</button>
 </form>
-<div id="calc-resultado" class="calc-resultado" aria-live="polite" data-link-produto="planilha-atrio-recebiveis.html" data-link-kiwify="https://pay.kiwify.com.br/rdKXnQG?src=site-calc" data-link-hotmart="https://pay.hotmart.com/V108061227Y?src=site-calc">
+<div id="calc-resultado" class="calc-resultado" aria-live="polite" data-link-produto="planilha-atrio-recebiveis.html" data-link-kiwify="https://pay.kiwify.com.br/rdKXnQG?src=site-calc" data-link-hotmart="">
 <div class="calc-cartao calc-vazio"><p>O resultado aparece aqui.</p></div>
 </div>
 </div>
@@ -315,7 +315,7 @@
         html += '<div class="calc-compra"><p>' + frase + '</p><p class="comprar">' +
           '<a class="botao" href="' + esc(saida.getAttribute('data-link-produto')) + '">Ver a planilha por dentro</a> ' +
           '<a class="botao secundario" href="' + esc(saida.getAttribute('data-link-kiwify')) + '">Comprar na Kiwify</a> ' +
-          '<a class="botao secundario" href="' + esc(saida.getAttribute('data-link-hotmart')) + '">Comprar na Hotmart</a></p></div>';
+          (saida.getAttribute('data-link-hotmart') ? '<a class="botao secundario" href="' + esc(saida.getAttribute('data-link-hotmart')) + '">Comprar na Hotmart</a>' : '') + '</p></div>';
       }
       saida.innerHTML = html;
     }
