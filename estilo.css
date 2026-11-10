@@ -254,6 +254,32 @@ nav ul { padding-left: 1.2rem; }
 .ente-acoes .botao { margin: 0; padding: .7rem 1.2rem; }
 .ente-planilha { margin: .9rem 0 0; font-size: .95rem; color: var(--texto); background: #FFF6F2; border: 1px solid var(--coral-forte); border-radius: .7rem; padding: .7rem .9rem; }
 .ente-planilha a { font-weight: 600; }
+.ente-cabe { margin: .4rem 0 0; padding: .9rem 1rem; background: var(--papel); border: 1px solid var(--linha); border-radius: .7rem; }
+.ente-cabe label, .outro-ente label { display: block; font-weight: 600; font-size: .95rem; margin-bottom: .45rem; text-align: left; }
+.ente-cabe-linha { display: flex; gap: .5rem; flex-wrap: wrap; }
+.outro-ente .ente-cabe-linha input { font-family: var(--sans); }
+.ente-cabe-linha input { flex: 1 1 11rem; min-width: 0; font: inherit; font-family: var(--mono); padding: .6rem .7rem; border: 1px solid #BFC5CC; border-radius: .5rem; background: var(--entrada); }
+.ente-cabe-linha .botao { margin: 0; padding: .6rem 1.1rem; }
+.ente-cabe-resultado { margin: .6rem 0 0; font-weight: 600; text-align: left; }
+.ente-cabe-resultado:empty { display: none; }
+.ente-cabe-resultado.cabe { color: #1E7B45; }
+.ente-cabe-resultado.passa { color: var(--coral-forte); }
+.ente-cabe-resultado.erro { color: var(--suave); font-weight: 500; }
+.ente-cabe-nota { margin: .55rem 0 0; font-size: .85rem; color: var(--suave); text-align: left; }
+.complementar { margin: 1.6rem 0 1.4rem; padding: 1rem 1.2rem; background: #FFF6F2; border: 1px solid #F0C9BB; border-left: 4px solid var(--coral); border-radius: .7rem; }
+.complementar p { margin: .35rem 0; }
+.complementar-selo { font-size: .72rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--coral-forte); text-align: left; }
+.complementar-titulo { font-weight: 700; font-size: 1.05rem; text-align: left; }
+.complementar-preco { font-size: .92rem; color: var(--suave); text-align: left; }
+.complementar-preco strong { color: var(--texto); font-family: var(--mono); font-size: 1.05rem; }
+.complementar .comprar { margin: .7rem 0 0; }
+.continue { margin-top: 2rem; }
+.continue-lista { list-style: none; padding: 0; margin: .6rem 0 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr)); gap: .6rem; }
+.continue-lista a { display: block; height: 100%; padding: .75rem .9rem; background: var(--papel); border: 1px solid var(--linha); border-radius: .6rem; text-decoration: none; color: var(--texto); }
+.continue-lista a:hover { border-color: var(--coral); }
+.continue-papel { display: block; font-size: .72rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--suave); margin-bottom: .2rem; }
+.continue-nome { display: block; font-weight: 600; line-height: 1.35; }
+.outro-ente { margin: 1.6rem 0 1rem; padding: .9rem 1rem; background: var(--zebra); border-radius: .7rem; }
 .ente-dados h2 { margin-top: .9rem; }
 .ente-dados dl { margin: .4rem 0 0; grid-template-columns: 8.5rem 1fr; }
 .ente-topo + .cartao-aviso, .historico-ente .historico { max-width: 75ch; }

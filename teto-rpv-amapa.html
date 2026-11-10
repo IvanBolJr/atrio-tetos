@@ -18,7 +18,7 @@
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="estilo.css?v=dddaf293">
+<link rel="stylesheet" href="estilo.css?v=d70172eb">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Início", "item": "https://atriojur.com.br/"}, {"@type": "ListItem", "position": 2, "name": "Tetos de RPV", "item": "https://atriojur.com.br/tetos-de-rpv.html"}, {"@type": "ListItem", "position": 3, "name": "Amapá", "item": "https://atriojur.com.br/teto-rpv-amapa.html"}]}</script>
 </head>
 <body>
@@ -35,8 +35,7 @@
 <p class="valor" data-valor="16210.00"><span class="sr">Teto de RPV: </span><span class="valor-num">R$ 16.210,00</span></p>
 <p class="valor-base">Valor fixado na lei do ente · Lei 810/2004, art. 1º</p>
 <p class="selo-conf selo-oficial"><svg class="icone" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><circle cx="10" cy="10" r="10"/><path d="M5.5 10.3l3 3 6-6.6" fill="none" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span><strong>Pela lei do ente</strong> · <a href="https://www.tjap.jus.br/portal/precatorio-secretaria/precatorio-legislacao.html">ver a fonte</a></span></p>
-<p class="ente-acoes"><a class="botao" href="calculadora-rpv.html?ente=Amap%C3%A1">Calcular se um crédito cabe em RPV</a></p>
-<p class="ente-planilha">Na planilha Átrio Recebíveis, este teto já vem com os de todos os entes, calculado em cada RPV. <a href="planilha-atrio-recebiveis.html">Ver a planilha</a> · <a href="https://pay.kiwify.com.br/rdKXnQG?src=site-ente">Comprar (R$ 47)</a></p>
+<form id="ente-cabe" class="ente-cabe" data-teto="16210.00" action="calculadora-rpv.html?ente=Amap%C3%A1" novalidate><label for="ente-cabe-valor">Cabe em RPV? Digite o crédito do credor, já com os honorários contratuais destacados</label><div class="ente-cabe-linha"><input id="ente-cabe-valor" name="valor" inputmode="decimal" autocomplete="off" placeholder="15.000,00"><button class="botao" type="submit">Verificar</button></div><p id="ente-cabe-resultado" class="ente-cabe-resultado" role="status" aria-live="polite"></p><p class="ente-cabe-nota">Compara com o teto de 2026 desta página. Expedição em outro ano, ou trânsito em julgado com lei anterior: <a href="calculadora-rpv.html?ente=Amap%C3%A1">calculadora completa</a>.</p></form>
 </div>
 <div class="ente-dados">
 <h2>Dados do ente</h2>
@@ -49,6 +48,7 @@
 </dl>
 </div>
 </section>
+<aside class="complementar" aria-label="Ferramenta complementar"><p class="complementar-selo">Ferramenta complementar</p><p class="complementar-titulo">Você já consultou o teto. E como controla as requisições do escritório?</p><p><strong>Átrio Recebíveis</strong> reúne RPV, precatório e alvará num só controle: o teto de todos os entes, os prazos, os honorários, os repasses e o recibo, em Excel ou Google Sheets.</p><p class="complementar-preco"><strong>R$ 47</strong> pagamento único · Edição 2027 incluída nas compras até 31/12/2026; depois, R$ 97</p><p class="comprar"><a class="botao" href="planilha-atrio-recebiveis.html">Conhecer o Átrio Recebíveis</a> <a class="botao secundario" href="https://pay.kiwify.com.br/rdKXnQG?src=site-ente">Comprar</a></p></aside>
 
 <h2>Como o valor é calculado</h2>
 <p>A lei fixa o limite em 10 salários mínimos.</p>
@@ -56,12 +56,80 @@
 
 <section class="perguntas" aria-labelledby="titulo-perguntas"><h2 id="titulo-perguntas">Perguntas frequentes</h2><h3>Qual é o teto de RPV no Amapá em 2026?</h3><p>R$ 16.210,00, pela Lei 810/2004, art. 1º.</p><h3>E se o crédito passar do teto?</h3><p>Vai para precatório, a menos que o credor renuncie ao valor que passa do teto para receber por RPV. <a href="guia-renuncia-ao-excedente.html">Quando a renúncia compensa</a>.</p><h3>Qual data define o teto?</h3><p>A lei é a vigente na data do trânsito em julgado da fase de conhecimento (Resolução CNJ 303/2019, art. 47, §3º). Quando o teto é em salários mínimos, vale o salário mínimo da data da expedição (CNJ, Consulta 0000621-21.2023).</p><h3>Em quanto tempo a RPV é paga?</h3><p>Em regra, em 2 meses contados da entrega da requisição (CPC, art. 535, §3º, II); nos juizados, em 60 dias (Lei 10.259/2001, art. 17; Lei 12.153/2009, art. 13, I). <a href="guia-quando-cai-a-rpv.html">Prazos por tipo de devedor</a>.</p></section>
 <p class="aviso">Esta tabela é informativa e não substitui a consulta à lei do ente nem à orientação de um advogado. Os valores dependem de salário mínimo, unidades fiscais e leis que mudam. Confira sempre na lei do ente antes de usar o valor em um pedido.</p>
-<nav aria-label="Leia também"><h2>Leia também</h2><ul><li><a href="guia-quando-cai-a-rpv.html">Quando cai a RPV? Prazos de pagamento por tipo</a></li><li><a href="guia-renuncia-ao-excedente.html">Renúncia ao excedente do teto de RPV: quando compensa</a></li><li><a href="guia-fracionamento-litisconsorcio-rpv.html">Fracionamento: litisconsórcio, honorários e o teto de RPV</a></li><li><a href="guia-lista-de-precatorios-tj-posicao.html">Precatório estadual e municipal: onde ver a posição na lista do TJ</a></li></ul></nav>
-<nav aria-label="Outros entes do mesmo estado"><h2>Do mesmo estado</h2><ul><li><a href="teto-rpv-macapa.html">Teto de RPV em Macapá em 2026</a></li></ul></nav>
+<section class="continue" id="continue" aria-labelledby="titulo-continue"><h2 id="titulo-continue">Continue sua consulta</h2><ul class="continue-lista"><li><a href="teto-rpv-macapa.html"><span class="continue-papel">Teto da capital</span><span class="continue-nome">Teto de RPV em Macapá em 2026</span></a></li><li><a href="calculadora-rpv.html?ente=Amap%C3%A1"><span class="continue-papel">Com a data do trânsito em julgado e da expedição</span><span class="continue-nome">Cabe em RPV? Calculadora completa</span></a></li><li><a href="guia-quando-cai-a-rpv.html"><span class="continue-papel">Guia</span><span class="continue-nome">Quando cai a RPV? Prazos de pagamento por tipo</span></a></li><li><a href="guia-renuncia-ao-excedente.html"><span class="continue-papel">Guia</span><span class="continue-nome">Renúncia ao excedente do teto de RPV: quando compensa</span></a></li><li><a href="guia-fracionamento-litisconsorcio-rpv.html"><span class="continue-papel">Guia</span><span class="continue-nome">Fracionamento: litisconsórcio, honorários e o teto de RPV</span></a></li><li><a href="guia-lista-de-precatorios-tj-posicao.html"><span class="continue-papel">Guia</span><span class="continue-nome">Precatório estadual e municipal: onde ver a posição na lista do TJ</span></a></li><li><a href="limite-superpreferencia.html"><span class="continue-papel">Idoso, doença grave ou deficiência</span><span class="continue-nome">Limite da superpreferência</span></a></li></ul></section>
+<form id="outro-ente" class="outro-ente" action="tetos-de-rpv.html"><label for="outro-ente-campo">Consultar outro teto de RPV</label><div class="ente-cabe-linha"><input id="outro-ente-campo" list="outro-ente-lista" autocomplete="off" placeholder="Ex.: Goiás, Recife, União"><button class="botao secundario" type="submit">Abrir</button></div><datalist id="outro-ente-lista"><option value="União" data-href="teto-rpv-uniao.html"></option><option value="São Paulo" data-href="teto-rpv-sao-paulo.html"></option><option value="Minas Gerais" data-href="teto-rpv-minas-gerais.html"></option><option value="Rio de Janeiro" data-href="teto-rpv-rio-de-janeiro.html"></option><option value="Bahia" data-href="teto-rpv-bahia.html"></option><option value="Paraná" data-href="teto-rpv-parana.html"></option><option value="Rio Grande do Sul" data-href="teto-rpv-rio-grande-do-sul.html"></option><option value="Pernambuco" data-href="teto-rpv-pernambuco.html"></option><option value="Ceará" data-href="teto-rpv-ceara.html"></option><option value="Pará" data-href="teto-rpv-para.html"></option><option value="Maranhão" data-href="teto-rpv-maranhao.html"></option><option value="Santa Catarina" data-href="teto-rpv-santa-catarina.html"></option><option value="Goiás" data-href="teto-rpv-goias.html"></option><option value="Amazonas" data-href="teto-rpv-amazonas.html"></option><option value="Espírito Santo" data-href="teto-rpv-espirito-santo.html"></option><option value="Paraíba" data-href="teto-rpv-paraiba.html"></option><option value="Rio Grande do Norte" data-href="teto-rpv-rio-grande-do-norte.html"></option><option value="Mato Grosso" data-href="teto-rpv-mato-grosso.html"></option><option value="Alagoas" data-href="teto-rpv-alagoas.html"></option><option value="Piauí" data-href="teto-rpv-piaui.html"></option><option value="Distrito Federal" data-href="teto-rpv-distrito-federal.html"></option><option value="Mato Grosso do Sul" data-href="teto-rpv-mato-grosso-do-sul.html"></option><option value="Sergipe" data-href="teto-rpv-sergipe.html"></option><option value="Rondônia" data-href="teto-rpv-rondonia.html"></option><option value="Tocantins" data-href="teto-rpv-tocantins.html"></option><option value="Acre" data-href="teto-rpv-acre.html"></option><option value="Roraima" data-href="teto-rpv-roraima.html"></option><option value="Rio Branco" data-href="teto-rpv-rio-branco.html"></option><option value="Maceió" data-href="teto-rpv-maceio.html"></option><option value="Macapá" data-href="teto-rpv-macapa.html"></option><option value="Manaus" data-href="teto-rpv-manaus.html"></option><option value="Salvador" data-href="teto-rpv-salvador.html"></option><option value="Fortaleza" data-href="teto-rpv-fortaleza.html"></option><option value="Vitória" data-href="teto-rpv-vitoria.html"></option><option value="Goiânia" data-href="teto-rpv-goiania.html"></option><option value="São Luís" data-href="teto-rpv-sao-luis.html"></option><option value="Cuiabá" data-href="teto-rpv-cuiaba.html"></option><option value="Campo Grande" data-href="teto-rpv-campo-grande.html"></option><option value="Belo Horizonte" data-href="teto-rpv-belo-horizonte.html"></option><option value="Belém" data-href="teto-rpv-belem.html"></option><option value="João Pessoa" data-href="teto-rpv-joao-pessoa.html"></option><option value="Curitiba" data-href="teto-rpv-curitiba.html"></option><option value="Recife" data-href="teto-rpv-recife.html"></option><option value="Teresina" data-href="teto-rpv-teresina.html"></option><option value="Rio de Janeiro (capital)" data-href="teto-rpv-rio-de-janeiro-capital.html"></option><option value="Natal" data-href="teto-rpv-natal.html"></option><option value="Porto Alegre" data-href="teto-rpv-porto-alegre.html"></option><option value="Porto Velho" data-href="teto-rpv-porto-velho.html"></option><option value="Boa Vista" data-href="teto-rpv-boa-vista.html"></option><option value="Florianópolis" data-href="teto-rpv-florianopolis.html"></option><option value="São Paulo (capital)" data-href="teto-rpv-sao-paulo-capital.html"></option><option value="Aracaju" data-href="teto-rpv-aracaju.html"></option><option value="Palmas" data-href="teto-rpv-palmas.html"></option></datalist></form>
 <p><a class="voltar" href="tetos-de-rpv.html">&larr; Voltar para o mapa e a tabela</a></p>
 <!--aviso-inicio--><section class="aviso-teto" aria-labelledby="aviso-titulo"><h2 id="aviso-titulo">Avise-me quando o teto mudar</h2><p>Quando a lei de um ente mudar ou o salário mínimo e o teto do RGPS do ano saírem, você recebe um e-mail com o que mudou e o valor novo. Sem propaganda toda semana: só quando houver mudança, e um aviso quando sair a Edição 2027 da planilha.</p><form class="form-aviso" method="post" action="https://2626deaf.sibforms.com/serve/MUIFADu8YkLtNAUAzElSMQkqYBKV3XmFan1PAfeMvMLR2bW4Lx2J5RF0lFcu_NBHLnuyX4YNQ2QsshiPB1rcaZSnDbOiQWaDqHE9FmhXehOt2Y6hYBMOaN37PCsvb7czYoR5HU44rsTJCpZNAtVFgiJFZoxjFbouRmFxEtgoD768H9MYl4SfW0gBeKTTOXwgKb-1QXwwH31NKP302w==" target="_blank" rel="noopener"><div class="form-linha"><label for="aviso-email">Seu e-mail</label><input type="email" id="aviso-email" name="EMAIL" required autocomplete="email" placeholder="nome@escritorio.adv.br"></div><div class="form-linha"><label for="aviso-ente">Ente que você mais usa (opcional)</label><input type="text" id="aviso-ente" name="ENTE" placeholder="Ex.: INSS, Goiás, Recife"></div><p class="form-consentimento"><input type="checkbox" id="aviso-ok" name="OPT_IN" value="1" required> <label for="aviso-ok">Concordo em receber os avisos por e-mail. Posso cancelar em qualquer mensagem. <a href="privacidade.html">Como os dados são usados</a>.</label></p><input type="text" name="email_address_check" value="" hidden tabindex="-1" autocomplete="off" aria-hidden="true"><input type="hidden" name="locale" value="pt"><input type="hidden" name="html_type" value="simple"><p class="comprar"><button type="submit" class="botao">Quero ser avisado</button></p><p class="form-retorno" role="status" aria-live="polite" hidden></p></form><script>(function(){var f=document.querySelector('.form-aviso');if(!f||!window.fetch||!window.FormData)return;f.addEventListener('submit',function(e){e.preventDefault();var b=f.querySelector('button'),r=f.querySelector('.form-retorno');b.disabled=true;fetch(f.action,{method:'POST',body:new FormData(f),mode:'no-cors'}).then(function(){r.textContent='Quase pronto: enviamos um e-mail para você confirmar o cadastro. Se não chegar em alguns minutos, confira o spam.';r.hidden=false;f.reset();}).catch(function(){r.textContent='Não foi possível enviar agora. Tente de novo em instantes.';r.hidden=false;}).then(function(){b.disabled=false;});});})();</script></section><!--aviso-fim-->
-<aside class="produto" aria-label="Sobre a planilha"><p class="produto-selo">À venda · preço de lançamento</p><p class="produto-nome"><strong>Átrio Recebíveis</strong> é a planilha para escritórios de advocacia controlarem RPV, precatório e alvará: o teto de cada ente, o prazo, os honorários, o repasse ao cliente e o recibo, em Excel ou Google Sheets.</p><p class="produto-preco">R$ 47 <span>preço de lançamento até 31/12/2026, com a Edição 2027 incluída; depois, R$ 97</span></p><p class="comprar"><a class="botao" href="https://pay.kiwify.com.br/rdKXnQG?src=site-ente">Comprar agora</a> <a class="botao secundario" href="planilha-atrio-recebiveis.html">Ver por dentro</a> <a class="botao secundario" href="https://pay.hotmart.com/V108061227Y?src=site-ente">Comprar na Hotmart</a></p></aside>
 </main>
+<script id="motor-ente">/* "Cabe em RPV?" na página do ente (10/11/2026; casos E1 a E7 em docs/casos-ente-cabe.md).
+   Compara o crédito digitado (já com os honorários contratuais destacados) com o teto vigente mostrado na página:
+   menor ou igual ao teto, cabe em RPV; acima, precatório ou renúncia ao excedente. Outras datas: calculadora completa. */
+(function (raiz) {
+  'use strict';
+
+  function num(s) {
+    s = String(s === undefined || s === null ? '' : s).replace(/[R$\s]/g, '');
+    if (!s) return NaN;
+    if (s.indexOf(',') >= 0) s = s.replace(/\./g, '').replace(',', '.');
+    else if (/^\d{1,3}(\.\d{3})+$/.test(s)) s = s.replace(/\./g, '');
+    var v = Number(s);
+    return isFinite(v) ? v : NaN;
+  }
+
+  function reais(v) {
+    var c = Math.round(v * 100), neg = c < 0; c = Math.abs(c);
+    var int = String(Math.floor(c / 100)).replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+    var cent = String(c % 100); if (cent.length < 2) cent = '0' + cent;
+    return (neg ? '-' : '') + 'R$ ' + int + ',' + cent;
+  }
+
+  function avaliar(teto, digitado) {
+    var credito = num(digitado);
+    if (!(credito > 0)) return { erro: 'Digite o valor do crédito, em reais (ex.: 15.000,00).' };
+    var centavos = Math.round(credito * 100), tetoC = Math.round(Number(teto) * 100);
+    var dif = Math.abs(tetoC - centavos) / 100;
+    if (centavos <= tetoC) {
+      return { cabe: true, credito: centavos / 100, diferenca: dif,
+               texto: 'Cabe em RPV: ' + reais(centavos / 100) + ' até o teto de ' + reais(tetoC / 100) +
+                      (dif > 0 ? ' (folga de ' + reais(dif) + ').' : ' (igual ao teto).') };
+    }
+    return { cabe: false, credito: centavos / 100, diferenca: dif,
+             texto: 'Passa do teto em ' + reais(dif) + ': vai para precatório, a menos que o credor faça a renúncia ao excedente para receber por RPV.' };
+  }
+
+  function ligar() {
+    var form = document.getElementById('ente-cabe');
+    if (form) {
+      var campo = document.getElementById('ente-cabe-valor'), saida = document.getElementById('ente-cabe-resultado');
+      form.addEventListener('submit', function (ev) {
+        ev.preventDefault();
+        var r = avaliar(form.getAttribute('data-teto'), campo.value);
+        saida.className = 'ente-cabe-resultado ' + (r.erro ? 'erro' : (r.cabe ? 'cabe' : 'passa'));
+        saida.textContent = r.erro || r.texto;
+      });
+    }
+    var outro = document.getElementById('outro-ente');
+    if (outro) {
+      outro.addEventListener('submit', function (ev) {
+        ev.preventDefault();
+        var v = document.getElementById('outro-ente-campo').value.trim().toLowerCase();
+        var ops = document.querySelectorAll('#outro-ente-lista option');
+        for (var i = 0; i < ops.length; i++) {
+          if (ops[i].value.toLowerCase() === v) { window.location.href = ops[i].getAttribute('data-href'); return; }
+        }
+        window.location.href = outro.getAttribute('action');
+      });
+    }
+  }
+
+  var api = { avaliar: avaliar, num: num, reais: reais, ligar: ligar };
+  if (typeof module !== 'undefined' && module.exports) module.exports = api;
+  raiz.AtrioEnte = api;
+  if (typeof document !== 'undefined') {
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', ligar); else ligar();
+  }
+})(typeof window !== 'undefined' ? window : globalThis);
+</script>
 <footer><p>Um serviço gratuito do <strong>Átrio</strong>, ferramentas para escritórios de advocacia · <a href="historico.html">Histórico de mudanças</a> · <a href="https://instagram.com/atriojur">@atriojur</a></p></footer>
 <footer class="rodape-site" aria-label="Rodapé do site"><div class="rodape-colunas"><div><h2>Ferramentas gratuitas</h2><ul><li><a href="tetos-de-rpv.html">Tetos de RPV</a></li><li><a href="calculadora-rpv.html">Cabe em RPV?</a></li><li><a href="limite-superpreferencia.html">Superpreferência</a></li><li><a href="quando-o-precatorio-e-pago.html">Prazo do precatório</a></li><li><a href="honorarios-fazenda-publica.html">Honorários contra a Fazenda</a></li><li><a href="historico.html">Histórico de tetos</a></li><li><a href="prazo-processual.html">Prazo processual</a></li><li><a href="calculadora-verbas-rescisorias.html">Verbas rescisórias</a></li><li><a href="atualizar-valor-ipca.html">Atualizar pelo IPCA</a></li><li><a href="indices-mensais.html">Índices de correção</a></li><li><a href="tabelas-oficiais.html">Tabelas oficiais 2026</a></li><li><a href="salario-minimo-e-teto-do-rgps.html">Salário mínimo e teto do RGPS</a></li></ul></div><div><h2>Planilhas</h2><ul><li><a href="planilha-atrio-recebiveis.html">Átrio Recebíveis · R$ 47</a></li><li><a href="planilha-atrio-acordos.html">Átrio Acordos · R$ 37</a></li><li><a href="planilha-atrio-acordos.html#preco">As duas planilhas · R$ 67</a></li><li><a href="index.html#produtos">Átrio Calculadora · em breve</a></li></ul></div><div><h2>Conteúdo</h2><ul><li><a href="guia.html">Guia de RPV e precatório</a></li><li><a href="modelos-gratuitos.html">Modelos gratuitos</a></li><li><a href="tabela-de-prazos-processuais.html">Tabela de prazos</a></li><li><a href="tabela-de-prescricao.html">Prescrição e decadência</a></li><li><a href="checklists-de-documentos.html">Checklists de documentos</a></li><li><a href="teses-vinculantes.html">Teses do STF e do STJ</a></li><li><a href="dados-abertos.html">Dados abertos</a></li><li><a href="modelo-peticao-rpv.html">Modelo de petição de RPV</a></li></ul></div><div><h2>Átrio</h2><ul><li><a href="mailto:suporte.atrio.br@gmail.com">Suporte por e-mail</a></li><li><a href="https://instagram.com/atriojur">Instagram @atriojur</a></li><li><a href="https://www.youtube.com/@atriojur">YouTube @atriojur</a></li><li><a href="privacidade.html">Política de privacidade</a></li></ul></div></div><p class="rodape-marca"><strong>Átrio</strong>, ferramentas para escritórios de advocacia. Conteúdo informativo: confira a lei do ente e a fonte indicada em cada página; não substitui a orientação de um advogado.</p></footer>
 </div></div>
