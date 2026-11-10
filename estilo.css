@@ -211,6 +211,17 @@ nav ul { padding-left: 1.2rem; }
 .menu-secao { margin: 1.3rem 0 .15rem .7rem; font-size: .72rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: #8A939E; }
 .menu-secao + .menu { margin-top: 0; }
 .menu-breve a { color: #98A1AC; font-weight: 500; }
+.menu-bloco { margin: 0; }
+.menu-bloco > summary { cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; padding-right: .7rem; }
+.menu-bloco > summary::-webkit-details-marker { display: none; }
+.menu-bloco > summary::after { content: "+"; font-size: 1rem; font-weight: 600; letter-spacing: 0; color: #8A939E; }
+.menu-bloco[open] > summary::after { content: "–"; }
+.menu-bloco > summary:hover { color: #DADEE3; }
+.menu-bloco > summary:focus-visible { outline: 3px solid var(--coral); outline-offset: 2px; border-radius: .3rem; }
+.menu-bloco > .menu { margin-top: 0; }
+.menu-grupo { margin: .55rem 0 0 .7rem; font-size: .74rem; font-weight: 600; color: #A9B1BB; }
+.menu-grupo:first-child { margin-top: .2rem; }
+.menu-secao-planilhas { color: #F0A58C; }
 .menu-breve a span { font-size: .72rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: #F0A58C; margin-left: .3rem; }
 .lateral-pe { margin-top: auto; padding-top: 1rem; border-top: 1px solid rgba(255, 255, 255, .12); font-size: .85rem; line-height: 1.7; }
 /* rodapé da marca (igual em todas as páginas) */
