@@ -5,10 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#2D333B">
 <title>Átrio: ferramentas para escritórios de advocacia</title>
-<meta name="description" content="Ferramentas gratuitas para advogados de todas as áreas: prazo processual, índices de correção, modelos em Word, tabelas oficiais e tetos de RPV com a lei e a fonte.">
+<meta name="description" content="Ferramentas gratuitas para advogados: tetos de RPV, prazo processual, índices de correção, verbas rescisórias e modelos em Word, com a lei e a fonte.">
 <meta name="robots" content="index, follow">
 <meta property="og:title" content="Átrio: ferramentas para escritórios de advocacia">
-<meta property="og:description" content="Ferramentas gratuitas para advogados de todas as áreas: prazo processual, índices de correção, modelos em Word, tabelas oficiais e tetos de RPV com a lei e a fonte.">
+<meta property="og:description" content="Ferramentas gratuitas para advogados: tetos de RPV, prazo processual, índices de correção, verbas rescisórias e modelos em Word, com a lei e a fonte.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://atriojur.com.br/">
 <link rel="canonical" href="https://atriojur.com.br/">
@@ -18,7 +18,7 @@
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="estilo.css?v=d70172eb">
+<link rel="stylesheet" href="estilo.css?v=f0bd8015">
 <style>.intro { display: none; } .com-intro .intro { display: flex; position: fixed; inset: 0; z-index: 100; flex-direction: column; align-items: center; justify-content: center; background-color: #262B32; background-image: radial-gradient(rgba(255, 255, 255, .07) 1px, transparent 1px); background-size: 18px 18px; cursor: pointer; transition: opacity .3s ease, transform .3s ease; } .com-intro { overflow: hidden; } .intro-fim .intro { opacity: 0; transform: translateY(-2%); pointer-events: none; } .intro-simbolo { width: 6.5rem; height: 6.5rem; } .intro-haste { fill: transparent; stroke: #F5F6F7; stroke-width: 10; stroke-dasharray: 1700; stroke-dashoffset: 1700; animation: haste-traco .45s ease-out forwards, haste-cor .2s ease-out .4s forwards; } .intro-traco { stroke: #E4572E; stroke-width: 92; stroke-dasharray: 400; stroke-dashoffset: 400; animation: traco .25s ease-out .45s forwards; } .intro-nome { margin: 1.1rem 0 0; font-size: 2.2rem; font-weight: 800; letter-spacing: -.03em; color: #FFFFFF; opacity: 0; animation: surgir .25s ease-out .55s forwards; } .intro-frase { margin: .3rem 0 0; font-size: .95rem; color: #AEB5BE; opacity: 0; animation: surgir .25s ease-out .62s forwards; } .intro-pular { position: absolute; right: 1.2rem; bottom: 1.2rem; font: inherit; font-size: .85rem; color: #AEB5BE; background: transparent; border: 1px solid #525B67; border-radius: .4rem; padding: .35rem .8rem; cursor: pointer; } .intro-pular:focus-visible { outline: 3px solid #E4572E; outline-offset: 2px; } @keyframes haste-traco { to { stroke-dashoffset: 0; } } @keyframes haste-cor { to { fill: #F5F6F7; } } @keyframes traco { to { stroke-dashoffset: 0; } } @keyframes surgir { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } } .com-intro:not(.intro-fim) .uf-inicio { animation-play-state: paused; } /* o mapa acende depois da abertura */ @media (prefers-reduced-motion: reduce) { .com-intro .intro { display: none; } .com-intro { overflow: auto; } }</style>
 <script>
 try {
@@ -58,187 +58,151 @@ try {
   document.addEventListener('keydown', function tecla() { pular(); document.removeEventListener('keydown', tecla); });
 })();
 </script>
-<main class="inicio">
-<header class="abertura-bento">
-<div>
-<p class="selo-base"><span class="ponto"></span>prazos · índices · modelos · tetos de RPV 2026 · sem cadastro</p>
-<h1>Ferramentas gratuitas para advogados de todas as áreas.</h1>
+<main class="inicio inicio-a">
+<header class="abertura-a">
+<p class="selo-base"><span class="ponto"></span>tetos de RPV 2026 · prazos · índices · modelos · sem cadastro</p>
+<h1>Informação jurídica. Cálculos. Controle.</h1>
+<p class="lead-a">Ferramentas gratuitas para a rotina do escritório, cada número com a lei e a fonte. Cível, trabalhista, previdenciário e contra a Fazenda Pública.</p>
+<form class="busca busca-geral" id="busca-geral" role="search" action="tetos-de-rpv.html">
+<label class="busca-pergunta" for="busca-campo">O que você precisa consultar?</label>
+<div class="busca-linha">
+<input id="busca-campo" name="q" autocomplete="off" placeholder="Ex.: teto da Bahia, prazo, IPCA" aria-describedby="busca-ajuda" aria-controls="busca-sugestoes">
+<button type="submit" class="botao">Buscar</button>
 </div>
-<div class="lead-caixa"><p class="lead-bento">Prazo processual, índices de correção, modelos em Word, tabelas oficiais e tetos de RPV, cada um com a lei e a fonte. Cível, trabalhista, penal, previdenciário e contra a Fazenda. Sem cadastro.</p></div>
+<p class="busca-resultado" id="busca-ajuda">Digite um estado, uma capital, uma ferramenta ou um assunto.</p>
+<ul class="busca-sugestoes" id="busca-sugestoes" aria-live="polite"></ul>
+</form>
+<nav class="chips" aria-label="Atalhos">
+<a class="chip" href="tetos-de-rpv.html">Tetos de RPV</a><a class="chip" href="prazo-processual.html">Prazo processual</a><a class="chip" href="atualizar-valor-ipca.html">Correção monetária</a><a class="chip" href="calculadora-verbas-rescisorias.html">Verbas rescisórias</a><a class="chip" href="teto-rpv-uniao.html">União · 97.260</a><a class="chip" href="teto-rpv-sao-paulo.html">SP · 16.913</a><a class="chip" href="teto-rpv-rio-grande-do-sul.html">RS · 16.210</a><a class="chip" href="teto-rpv-recife.html">Recife · 48.630</a>
+</nav>
 </header>
 
-<nav class="vitrine-faixa" aria-label="Planilhas à venda">
-<p class="vitrine-rotulo"><span class="ponto verde"></span>À venda · preço de lançamento</p>
-<a class="vitrine-item" href="planilha-atrio-recebiveis.html"><strong>Átrio Recebíveis</strong><span>RPV, precatório e alvará</span><b>R$ 47</b></a>
-<a class="vitrine-item" href="planilha-atrio-acordos.html"><strong>Átrio Acordos</strong><span>acordos judiciais parcelados</span><b>R$ 37</b></a>
-<p class="vitrine-kit">As duas por <b>R$ 67</b>, escolhendo no pagamento.</p>
-</nav>
-
-<div class="bento">
-<section class="tile tile-busca" aria-label="Buscar o teto">
-<div>
-<p class="rotulo-mono">TETOS DE RPV · 2026</p>
-<h2>Qual é o teto do seu ente?</h2>
-</div>
-<form class="busca" id="busca" role="search" action="tetos-de-rpv.html">
-<label for="busca-ente">Buscar um estado, capital ou a União</label>
-<div class="busca-linha">
-<input id="busca-ente" name="ente" list="lista-entes" autocomplete="off" placeholder="Goiás, Recife, União…" aria-describedby="busca-resultado">
-<button type="submit" class="botao">Abrir</button>
-</div>
-<datalist id="lista-entes"><option value="União"></option><option value="São Paulo"></option><option value="Minas Gerais"></option><option value="Rio de Janeiro"></option><option value="Bahia"></option><option value="Paraná"></option><option value="Rio Grande do Sul"></option><option value="Pernambuco"></option><option value="Ceará"></option><option value="Pará"></option><option value="Maranhão"></option><option value="Santa Catarina"></option><option value="Goiás"></option><option value="Amazonas"></option><option value="Espírito Santo"></option><option value="Paraíba"></option><option value="Rio Grande do Norte"></option><option value="Mato Grosso"></option><option value="Alagoas"></option><option value="Piauí"></option><option value="Distrito Federal"></option><option value="Mato Grosso do Sul"></option><option value="Sergipe"></option><option value="Rondônia"></option><option value="Tocantins"></option><option value="Acre"></option><option value="Amapá"></option><option value="Roraima"></option><option value="Rio Branco"></option><option value="Maceió"></option><option value="Macapá"></option><option value="Manaus"></option><option value="Salvador"></option><option value="Fortaleza"></option><option value="Vitória"></option><option value="Goiânia"></option><option value="São Luís"></option><option value="Cuiabá"></option><option value="Campo Grande"></option><option value="Belo Horizonte"></option><option value="Belém"></option><option value="João Pessoa"></option><option value="Curitiba"></option><option value="Recife"></option><option value="Teresina"></option><option value="Rio de Janeiro (capital)"></option><option value="Natal"></option><option value="Porto Alegre"></option><option value="Porto Velho"></option><option value="Boa Vista"></option><option value="Florianópolis"></option><option value="São Paulo (capital)"></option><option value="Aracaju"></option><option value="Palmas"></option></datalist>
-<p class="busca-resultado" id="busca-resultado" aria-live="polite">Comece a digitar: o teto aparece aqui.</p>
-</form>
-<div class="chips" aria-label="Atalhos">
-<a class="chip" href="teto-rpv-uniao.html">União · 97.260</a><a class="chip" href="teto-rpv-sao-paulo.html">SP · 16.913</a><a class="chip" href="teto-rpv-rio-grande-do-sul.html">RS · 16.210</a><a class="chip" href="teto-rpv-recife.html">Recife · 48.630</a>
-<a class="chip chip-coral" href="historico.html">Belém mudou ↓</a>
-</div>
+<section class="secao-a" id="mais-usadas" aria-labelledby="t-mais">
+<p class="rotulo-secao">Consultas mais usadas</p>
+<h2 id="t-mais">Comece por aqui</h2>
+<div class="grade-a"><article class="cartao-a"><h3 class="tile-titulo"><a href="tetos-de-rpv.html">Tetos de RPV</a></h3><p class="cartao-desc">Teto de cada estado, capital e da União, com a lei e a fonte.</p><p class="veredito">54 entes</p><p class="tile-nota">26 estados, o DF, as capitais e a União</p></article><article class="cartao-a"><h3 class="tile-titulo"><a href="prazo-processual.html">Prazo processual</a></h3><p class="cartao-desc">Vencimento em dias úteis, com feriados e recesso de 13 tribunais.</p><p class="veredito">Vence em 01/12/2026</p><p class="tile-nota">15 dias úteis do CPC a partir de 09/11/2026 · 20/11 é feriado nacional</p></article><article class="cartao-a"><h3 class="tile-titulo"><a href="calculadora-verbas-rescisorias.html">Verbas rescisórias</a></h3><p class="cartao-desc">Rescisão CLT e doméstico: aviso, férias, 13º e multa do FGTS.</p><p class="veredito">R$ 10.566,67</p><p class="tile-nota">salário de R$ 3.000,00 · dispensa sem justa causa em 15/09/2026</p></article><article class="cartao-a"><h3 class="tile-titulo"><a href="indices-mensais.html">Índices de correção</a></h3><p class="cartao-desc">IPCA, INPC, IPCA-E, IGP-M, SELIC, TR e outros, mês a mês.</p><p class="veredito">IPCA, IGP-M, SELIC</p><p class="tile-nota">com o acumulado em 12 meses</p></article><article class="cartao-a"><h3 class="tile-titulo"><a href="calculadora-rpv.html">Cabe em RPV?</a></h3><p class="cartao-desc">Confere se o crédito cabe no teto na data do trânsito em julgado.</p><p class="veredito">Passa do teto</p><p class="tile-nota">Goiás, trânsito em 01/10/2025, crédito de R$ 70.000,00 · teto R$ 60.720,00</p></article><article class="cartao-a"><h3 class="tile-titulo"><a href="atualizar-valor-ipca.html">Atualizar pelo IPCA</a></h3><p class="cartao-desc">Atualiza um valor pelo IPCA mês a mês, com a conta pronta.</p><p class="veredito">R$ 1.042,64</p><p class="tile-nota">R$ 1.000,00 de 01/2025 a 01/2026 · 12 índices do IBGE</p></article></div>
 </section>
 
-
-<article class="tile">
-<h2 class="tile-titulo"><a href="prazo-processual.html">Prazo processual</a></h2>
-<p class="veredito">Vence em 01/12/2026</p>
-<p class="tile-nota">15 dias úteis do CPC a partir de 09/11/2026 · 20/11 é feriado nacional · cível, trabalhista, penal e juizados</p>
-</article>
-
-<article class="tile">
-<h2 class="tile-titulo"><a href="calculadora-verbas-rescisorias.html">Verbas rescisórias</a></h2>
-<p class="veredito">R$ 10.566,67</p>
-<p class="tile-nota">salário de R$ 3.000,00 · admissão 10/03/2023 · dispensa sem justa causa em 15/09/2026 · aviso de 39 dias · CLT e doméstico</p>
-</article>
-
-<article class="tile">
-<h2 class="tile-titulo"><a href="indices-mensais.html">Índices de correção</a></h2>
-<p class="veredito">IPCA, IGP-M, SELIC</p>
-<p class="tile-nota">INPC, IPCA-E, TR, IGP-DI, INCC, taxa legal e TJLP mês a mês, com o acumulado em 12 meses</p>
-</article>
-
-<article class="tile">
-<h2 class="tile-titulo"><a href="teses-vinculantes.html">Teses do STF e do STJ</a></h2>
-<p class="veredito">1936 temas</p>
-<p class="tile-nota">repercussão geral e repetitivos com a tese oficial · busca por área: tributário, previdenciário, penal, servidor, processo civil</p>
-</article>
-
-<article class="tile">
-<h2 class="tile-titulo"><a href="modelos-gratuitos.html">Modelos em Word</a></h2>
-<p class="veredito">5 modelos</p>
-<p class="tile-nota">procuração ad judicia, hipossuficiência, contrato de honorários, notificação extrajudicial e pedido de RPV</p>
-</article>
-
-<article class="tile">
-<h2 class="tile-titulo"><a href="calculadora-rpv.html">Cabe em RPV?</a></h2>
-<p class="veredito coral">Passa do teto</p>
-<p class="tile-nota">Goiás, trânsito em 01/10/2025, crédito de R$ 70.000,00 · teto R$ 60.720,00 · excedente R$ 9.280,00</p>
-</article>
-
-<article class="tile">
-<h2 class="tile-titulo"><a href="atualizar-valor-ipca.html">Atualizar pelo IPCA</a></h2>
-<p class="veredito">R$ 1.042,64</p>
-<p class="tile-nota">R$ 1.000,00 de 01/2025 a 01/2026 · 12 índices do IBGE</p>
-</article>
-
-<section class="tile tile-produto" aria-labelledby="titulo-planilha" id="produtos">
-<div class="tile-produto-texto" id="planilha">
-<p class="selo-venda"><span class="ponto verde"></span>À venda agora · Preço de lançamento</p>
-<h2 id="titulo-planilha">Átrio Recebíveis</h2>
+<section class="secao-a produtos-a" id="produtos" aria-labelledby="t-produtos">
+<p class="rotulo-secao"><span class="ponto verde"></span>Planilhas à venda · preço de lançamento</p>
+<h2 id="t-produtos">Menos controle manual. Mais organização.</h2>
+<div class="produtos-grade">
+<article class="produto-a produto-principal" id="planilha" aria-labelledby="titulo-planilha">
+<div class="produto-a-texto">
+<h3 id="titulo-planilha"><a href="planilha-atrio-recebiveis.html">Átrio Recebíveis</a></h3>
+<p class="produto-sub">RPV, precatórios e alvarás</p>
 <p class="produto-promessa">Cada RPV, precatório e alvará do escritório numa planilha só: o teto do ente, o prazo, os honorários, o repasse ao cliente e o recibo, calculados sozinhos.</p>
 <ul class="produto-lista">
 <li>Tabela dos 54 tetos de RPV já dentro</li>
 <li>Painel com o que vence e o que está parado</li>
 <li>Kit com 8 petições em Word e PDF de bônus</li>
-<li>Excel ou Google Sheets, sem mensalidade</li>
 </ul>
-<p class="preco-bento">R$ 47 <span>preço de lançamento até 31/12/2026, com a Edição 2027 incluída; depois, R$ 97</span></p>
+<p class="preco-a">R$ 47 <span>até 31/12/2026, com a Edição 2027 incluída; depois, R$ 97</span></p>
 <p class="comprar"><a class="botao" href="https://pay.kiwify.com.br/rdKXnQG?src=site-inicio">Comprar agora</a> <a class="botao botao-secundario" href="planilha-atrio-recebiveis.html">Ver por dentro</a></p>
-<p class="produto-garantia">Pagamento único · 7 dias para pedir reembolso · Kiwify ou <a href="https://pay.hotmart.com/V108061227Y?src=site-inicio">Hotmart</a></p>
 </div>
-<a class="tile-produto-imagem" href="planilha-atrio-recebiveis.html" tabindex="-1" aria-hidden="true"><picture><source srcset="imagens/planilha-painel.webp" type="image/webp"><img src="imagens/planilha-painel.jpg" alt="" loading="lazy" decoding="async"></picture></a>
-</section>
-
-<article class="tile tile-acordos" aria-labelledby="titulo-acordos">
-<p class="selo-venda"><span class="ponto verde"></span>Novo · À venda</p>
-<h2 class="tile-titulo" id="titulo-acordos"><a href="planilha-atrio-acordos.html">Átrio Acordos</a></h2>
-<p class="tile-nota">Acordos judiciais parcelados: atrasos, multa da ata, honorários, repasse, recibo e texto-base da execução.</p>
-<p class="preco-bento">R$ 37 <span>pagamento único · as duas planilhas por R$ 67</span></p>
+<a class="produto-a-imagem" href="planilha-atrio-recebiveis.html" tabindex="-1" aria-hidden="true"><picture><source srcset="imagens/planilha-painel.webp" type="image/webp"><img src="imagens/planilha-painel.jpg" alt="" loading="lazy" decoding="async"></picture></a>
+</article>
+<article class="produto-a" aria-labelledby="titulo-acordos">
+<h3 id="titulo-acordos"><a href="planilha-atrio-acordos.html">Átrio Acordos</a></h3>
+<p class="produto-sub">Acordos judiciais parcelados</p>
+<p class="produto-promessa">Parcelas, atrasos, multa da ata, honorários, repasse ao cliente, recibo e o texto-base da execução quando o acordo é descumprido.</p>
+<p class="preco-a">R$ 37 <span>pagamento único</span></p>
 <p class="comprar"><a class="botao" href="https://pay.kiwify.com.br/Dqii1gi?src=site-inicio">Comprar</a> <a class="botao botao-secundario" href="planilha-atrio-acordos.html">Ver por dentro</a></p>
 </article>
+</div>
+<p class="produtos-nota">Pagamento único · sem mensalidade · Excel ou Google Sheets · 7 dias para pedir reembolso · Kiwify ou <a href="https://pay.hotmart.com/V108061227Y?src=site-inicio">Hotmart</a> · as duas planilhas por <b>R$ 67</b>, escolhendo no pagamento.</p>
+<p class="produtos-nota"><span class="em-breve">Em breve: <strong>Átrio Calculadora</strong> (em construção). Planilha de atualização de valores com vários credores e memória de cálculo.</span></p>
+</section>
 
-<article class="tile">
-<h2 class="tile-titulo"><a href="quando-o-precatorio-e-pago.html">Prazo do precatório</a></h2>
-<p class="veredito">Até 31/12/2028</p>
-<p class="tile-nota">apresentado em 02/02/2026 · corte 01/02 · CF, art. 100, §5º</p>
-</article>
+<section class="secao-a" id="outras-ferramentas" aria-labelledby="t-outras">
+<p class="rotulo-secao">Outras ferramentas gratuitas</p>
+<h2 id="t-outras">RPV, precatório e tabelas</h2>
+<div class="grade-a"><article class="cartao-a"><h3 class="tile-titulo"><a href="limite-superpreferencia.html">Superpreferência</a></h3><p class="cartao-desc">Quanto o idoso ou a pessoa com doença grave recebe antes da fila.</p><p class="veredito">R$ 194.520,00</p><p class="tile-nota">recebe antes · Pernambuco, crédito de R$ 250.000,00</p></article><article class="cartao-a"><h3 class="tile-titulo"><a href="quando-o-precatorio-e-pago.html">Prazo do precatório</a></h3><p class="cartao-desc">Até quando o ente tem de pagar, pela data de apresentação.</p><p class="veredito">Até 31/12/2028</p><p class="tile-nota">apresentado em 02/02/2026 · CF, art. 100, §5º</p></article><article class="cartao-a"><h3 class="tile-titulo"><a href="honorarios-fazenda-publica.html">Honorários contra a Fazenda</a></h3><p class="cartao-desc">Faixas do art. 85, §3º, do CPC sobre o valor da condenação.</p></article><article class="cartao-a"><h3 class="tile-titulo"><a href="historico.html">Histórico de tetos</a></h3><p class="cartao-desc">Cada mudança de teto, com a lei nova e a data.</p></article><article class="cartao-a"><h3 class="tile-titulo"><a href="tabelas-oficiais.html">Tabelas oficiais 2026</a></h3><p class="cartao-desc">Salário mínimo, INSS, IR, custas e outros valores do ano.</p></article><article class="cartao-a"><h3 class="tile-titulo"><a href="salario-minimo-e-teto-do-rgps.html">Salário mínimo e teto do RGPS</a></h3><p class="cartao-desc">Salário mínimo e maior benefício do RGPS, ano a ano.</p></article></div>
+</section>
 
-<article class="tile">
-<h2 class="tile-titulo"><a href="limite-superpreferencia.html">Superpreferência</a></h2>
-<p class="veredito">R$ 194.520,00</p>
-<p class="tile-nota">recebe antes · Pernambuco, crédito de R$ 250.000,00 · R$ 55.480,00 na fila</p>
-</article>
-
-<article class="tile tile-amarelo">
-<h2 class="tile-titulo"><a href="historico.html">Última mudança</a></h2>
-<p class="previa-hist"><strong>Belém</strong> passou de 30 salários mínimos para 10 salários mínimos em 25/06/2026.</p><p class="previa-nota">Lei Municipal 10.336/2026</p>
-</article>
-
-
-
-<article class="tile tile-breve">
-<p class="rotulo-breve">Em breve · em construção</p>
-<h2 class="tile-titulo">Átrio Calculadora</h2>
-<p class="tile-nota">Planilha de atualização de valores com vários credores e memória de cálculo.</p>
-<p class="tile-link"><a href="#aviso-titulo">Avise-me quando lançar</a></p>
-</article>
-
-<article class="tile tile-guia">
+<section class="secao-a" id="conteudo-juridico" aria-labelledby="t-conteudo">
+<p class="rotulo-secao">Conteúdo jurídico</p>
+<h2 id="t-conteudo">Entenda a regra antes de aplicar</h2>
+<div class="conteudo-grade">
+<div class="cartao-a conteudo-guia">
 <p class="numero-grande">24</p>
-<div><h2 class="tile-titulo">artigos no Guia</h2><p class="tile-nota">prazos, teto, honorários, superpreferência, data de corte, EC 136.</p></div>
-<p class="tile-link"><a href="guia.html">Abrir o Guia</a></p>
-</article>
-
-<article class="tile tile-tabela">
-<h2 class="tile-titulo"><a href="tetos-de-rpv.html">Mapa e tabela dos 54 entes</a></h2>
-<table class="previa-tabela" aria-label="Amostra da tabela de tetos"><tbody><tr><td>União</td><td class="num">R$ 97.260,00</td></tr><tr><td>São Paulo</td><td class="num">R$ 16.913,05</td></tr><tr><td>Rio Grande do Sul</td><td class="num">R$ 16.210,00</td></tr><tr><td>Recife</td><td class="num">R$ 48.630,00</td></tr></tbody></table>
-<p class="tile-link"><a href="tetos-de-rpv.html">Ver todos, com a lei e a fonte</a></p>
-</article>
+<h3 class="tile-titulo"><a href="guia.html">artigos no Guia</a></h3>
+<ul class="lista-artigos"><li><a href="guia-renuncia-ao-excedente.html">Renúncia ao excedente do teto de RPV: quando compensa</a></li><li><a href="guia-quando-cai-a-rpv.html">Quando cai a RPV? Prazos de pagamento por tipo</a></li><li><a href="guia-superpreferencia-precatorio.html">Superpreferência no precatório: quem tem direito e o limite</a></li><li><a href="guia-sequestro-precatorio-art-100-6.html">Sequestro no precatório: preterição da ordem e falta de verba no orçamento (CF, art. 100, §6º)</a></li></ul>
+<p class="tile-link"><a href="guia.html">Ver todos os artigos</a></p>
 </div>
+<ul class="lista-conteudo"><li><a href="modelos-gratuitos.html">Modelos gratuitos</a> <span>Procuração, hipossuficiência, contrato de honorários e mais, em Word.</span></li><li><a href="tabela-de-prazos-processuais.html">Tabela de prazos</a> <span>Prazos do CPC, da CLT e de outras leis por ato processual.</span></li><li><a href="tabela-de-prescricao.html">Prescrição e decadência</a> <span>Prazos de prescrição e decadência com o artigo de lei.</span></li><li><a href="checklists-de-documentos.html">Checklists de documentos</a> <span>Documentos para cada tipo de ação, em lista.</span></li><li><a href="teses-vinculantes.html">Teses do STF e do STJ</a> <span>Temas de repercussão geral e repetitivos com a tese oficial.</span></li><li><a href="dados-abertos.html">Dados abertos</a> <span>A tabela de tetos em CSV e JSON, para usar em outros sistemas.</span></li></ul>
+</div>
+</section>
 
-<section class="metodo" aria-labelledby="titulo-metodo">
-<h2 id="titulo-metodo">Como a tabela é feita</h2>
+<section class="secao-a metodo" id="fontes" aria-labelledby="titulo-metodo">
+<p class="rotulo-secao">Fontes e atualização</p>
+<h2 id="titulo-metodo">Como os números são feitos</h2>
 <div class="metodo-grade">
-<div><p class="rotulo-mono coral">01</p><h3>Com a lei</h3><p>Cada teto mostra a lei do ente e o link da fonte. Sem lei localizada, vale o padrão da Constituição; sem fonte, o valor não entra e aparece como "não localizado".</p></div>
-<div><p class="rotulo-mono coral">02</p><h3>Com a regra certa</h3><p>Cada ente mostra a base do valor: a lei do ente, o piso do maior benefício do RGPS ou o padrão da Constituição, e os avisos que mudam a conta, como projetos de lei e regras de transição.</p></div>
-<div><p class="rotulo-mono coral">03</p><h3>Com memória</h3><p>Quando um teto muda, a mudança vai para o histórico com a regra para quem teve trânsito em julgado antes da lei nova.</p></div>
+<div><p class="rotulo-mono coral">01</p><h3>Com a lei</h3><p>Cada teto, prazo e índice mostra a norma e o link de onde veio. Sem fonte localizada, o valor não entra e aparece como "não localizado".</p></div>
+<div><p class="rotulo-mono coral">02</p><h3>Com testes</h3><p>As calculadoras são conferidas por testes automáticos com casos escritos antes do código, incluindo os casos de borda.</p></div>
+<div><p class="rotulo-mono coral">03</p><h3>Com memória</h3><p>Quando um teto muda, a mudança vai para o <a href="historico.html">histórico</a> com a lei nova e a regra para quem teve trânsito em julgado antes dela.</p></div>
 </div>
+<p class="tile-link"><a href="fontes-e-metodologia.html">Como o Átrio pesquisa e confere: fontes e metodologia</a></p>
+</section>
+
+<section class="secao-a" id="mudancas" aria-labelledby="t-mudancas">
+<p class="rotulo-secao">Mudanças</p>
+<h2 id="t-mudancas">Última mudança de teto</h2>
+<div class="tile tile-amarelo"><p class="previa-hist"><strong>Belém</strong> passou de 30 salários mínimos para 10 salários mínimos em 25/06/2026.</p><p class="previa-nota">Lei Municipal 10.336/2026</p><p class="tile-link"><a href="historico.html">Ver o histórico</a></p></div>
 </section>
 
 <!--aviso-inicio--><section class="aviso-teto" aria-labelledby="aviso-titulo"><h2 id="aviso-titulo">Avise-me quando o teto mudar</h2><p>Quando a lei de um ente mudar ou o salário mínimo e o teto do RGPS do ano saírem, você recebe um e-mail com o que mudou e o valor novo. Sem propaganda toda semana: só quando houver mudança, e um aviso quando sair a Edição 2027 da planilha.</p><form class="form-aviso" method="post" action="https://2626deaf.sibforms.com/serve/MUIFADu8YkLtNAUAzElSMQkqYBKV3XmFan1PAfeMvMLR2bW4Lx2J5RF0lFcu_NBHLnuyX4YNQ2QsshiPB1rcaZSnDbOiQWaDqHE9FmhXehOt2Y6hYBMOaN37PCsvb7czYoR5HU44rsTJCpZNAtVFgiJFZoxjFbouRmFxEtgoD768H9MYl4SfW0gBeKTTOXwgKb-1QXwwH31NKP302w==" target="_blank" rel="noopener"><div class="form-linha"><label for="aviso-email">Seu e-mail</label><input type="email" id="aviso-email" name="EMAIL" required autocomplete="email" placeholder="nome@escritorio.adv.br"></div><div class="form-linha"><label for="aviso-ente">Ente que você mais usa (opcional)</label><input type="text" id="aviso-ente" name="ENTE" placeholder="Ex.: INSS, Goiás, Recife"></div><p class="form-consentimento"><input type="checkbox" id="aviso-ok" name="OPT_IN" value="1" required> <label for="aviso-ok">Concordo em receber os avisos por e-mail. Posso cancelar em qualquer mensagem. <a href="privacidade.html">Como os dados são usados</a>.</label></p><input type="text" name="email_address_check" value="" hidden tabindex="-1" autocomplete="off" aria-hidden="true"><input type="hidden" name="locale" value="pt"><input type="hidden" name="html_type" value="simple"><p class="comprar"><button type="submit" class="botao">Quero ser avisado</button></p><p class="form-retorno" role="status" aria-live="polite" hidden></p></form><script>(function(){var f=document.querySelector('.form-aviso');if(!f||!window.fetch||!window.FormData)return;f.addEventListener('submit',function(e){e.preventDefault();var b=f.querySelector('button'),r=f.querySelector('.form-retorno');b.disabled=true;fetch(f.action,{method:'POST',body:new FormData(f),mode:'no-cors'}).then(function(){r.textContent='Quase pronto: enviamos um e-mail para você confirmar o cadastro. Se não chegar em alguns minutos, confira o spam.';r.hidden=false;f.reset();}).catch(function(){r.textContent='Não foi possível enviar agora. Tente de novo em instantes.';r.hidden=false;}).then(function(){b.disabled=false;});});})();</script></section><!--aviso-fim-->
 </main>
-<script type="application/json" id="dados-busca">[{"n": "União", "p": "teto-rpv-uniao.html", "t": "R$ 97.260,00", "l": "Lei 10.259/2001, art. 3º e art. 17, §1º"}, {"n": "São Paulo", "p": "teto-rpv-sao-paulo.html", "t": "R$ 16.913,05", "l": "Lei 17.205/2019, art. 1º"}, {"n": "Minas Gerais", "p": "teto-rpv-minas-gerais.html", "t": "R$ 27.345,70", "l": "Lei 14.699/2003, art. 9º, §3º, com redação dada pela Lei 20.540/2012"}, {"n": "Rio de Janeiro", "p": "teto-rpv-rio-de-janeiro.html", "t": "R$ 32.420,00", "l": "Lei 7.507/2016, art. 1º"}, {"n": "Bahia", "p": "teto-rpv-bahia.html", "t": "R$ 16.210,00", "l": "Lei 14.260/2020, art. 1º"}, {"n": "Paraná", "p": "teto-rpv-parana.html", "t": "R$ 24.782,81", "l": "Lei 18.664/2015, art. 1º, com redação dada pela Lei 20.038/2019"}, {"n": "Rio Grande do Sul", "p": "teto-rpv-rio-grande-do-sul.html", "t": "R$ 16.210,00", "l": "Lei 14.757/2015, art. 1º"}, {"n": "Pernambuco", "p": "teto-rpv-pernambuco.html", "t": "R$ 64.840,00", "l": "Lei Complementar 401/2018, art. 10"}, {"n": "Ceará", "p": "teto-rpv-ceara.html", "t": "R$ 15.746,80", "l": "Lei 16.382/2017, art. 1º"}, {"n": "Pará", "p": "teto-rpv-para.html", "t": "R$ 48.630,00", "l": "Lei nº 11.091, de 08/07/2025 (nova redação do art. 1º da Lei 6.624/2004)"}, {"n": "Maranhão", "p": "teto-rpv-maranhao.html", "t": "R$ 32.420,00", "l": "Lei 8.112, de 06/05/2004, com as alterações da Lei 8.202, de 21/12/2004"}, {"n": "Santa Catarina", "p": "teto-rpv-santa-catarina.html", "t": "R$ 16.210,00", "l": "Lei 13.120/2004, art. 1º, com redação dada pela Lei 15.945/2013"}, {"n": "Goiás", "p": "teto-rpv-goias.html", "t": "R$ 16.210,00", "l": "Lei 17.034/2010, art. 3º, com redação dada pela Lei 23.848/2025"}, {"n": "Amazonas", "p": "teto-rpv-amazonas.html", "t": "R$ 32.420,00", "l": "Lei 2.748/2002, art. 1º, I"}, {"n": "Espírito Santo", "p": "teto-rpv-espirito-santo.html", "t": "R$ 21.827,29", "l": "Lei 7.674/2003, art. 2º"}, {"n": "Paraíba", "p": "teto-rpv-paraiba.html", "t": "R$ 16.210,00", "l": "Lei 7.486/2003, art. 1º"}, {"n": "Rio Grande do Norte", "p": "teto-rpv-rio-grande-do-norte.html", "t": "R$ 32.420,00", "l": "Lei 8.428/2003, art. 1º, com redação dada pela Lei 10.166/2017"}, {"n": "Mato Grosso", "p": "teto-rpv-mato-grosso.html", "t": "R$ 26.312,00", "l": "Lei 10.656/2017, art. 1º"}, {"n": "Alagoas", "p": "teto-rpv-alagoas.html", "t": "R$ 8.475,55", "l": "Lei 7.154/2010, art. 1º"}, {"n": "Piauí", "p": "teto-rpv-piaui.html", "t": "R$ 8.475,55", "l": "Lei 5.250/2002, art. 1º, com redação dada pela Lei 6.009/2010"}, {"n": "Distrito Federal", "p": "teto-rpv-distrito-federal.html", "t": "R$ 32.420,00", "l": "Lei 3.624/2005, art. 1º, com redação dada pela Lei 6.618/2020"}, {"n": "Mato Grosso do Sul", "p": "teto-rpv-mato-grosso-do-sul.html", "t": "R$ 28.582,50", "l": "Lei 2.586, de 23/12/2002, art. 1º"}, {"n": "Sergipe", "p": "teto-rpv-sergipe.html", "t": "R$ 8.475,55", "l": "Lei Complementar 66/2001"}, {"n": "Rondônia", "p": "teto-rpv-rondonia.html", "t": "R$ 16.210,00", "l": "Lei 1.788/2007, art. 1º"}, {"n": "Tocantins", "p": "teto-rpv-tocantins.html", "t": "R$ 16.210,00", "l": "Lei Complementar 69/2010, art. 3º"}, {"n": "Acre", "p": "teto-rpv-acre.html", "t": "R$ 11.347,00", "l": "Lei 1.481/2003, art. 1º, com redação dada pela Lei 3.157/2016"}, {"n": "Amapá", "p": "teto-rpv-amapa.html", "t": "R$ 16.210,00", "l": "Lei 810/2004, art. 1º"}, {"n": "Roraima", "p": "teto-rpv-roraima.html", "t": "R$ 27.557,00", "l": "Lei 862/2012, art. 3º, com redação da Lei 1.635/2022"}, {"n": "Rio Branco", "p": "teto-rpv-rio-branco.html", "t": "R$ 16.210,00", "l": "Lei Municipal 1.562/2005, art. 1º"}, {"n": "Maceió", "p": "teto-rpv-maceio.html", "t": "R$ 21.073,00", "l": "Lei Municipal nº 5.760, de 22/04/2009, art. 1º"}, {"n": "Macapá", "p": "teto-rpv-macapa.html", "t": "R$ 8.475,55", "l": "Lei Municipal 1.803/2010"}, {"n": "Manaus", "p": "teto-rpv-manaus.html", "t": "R$ 24.315,00", "l": "Lei Municipal 716/2003, art. 1º"}, {"n": "Salvador", "p": "teto-rpv-salvador.html", "t": "R$ 8.475,55", "l": "Lei Municipal nº 8.723/2014, com redação dada pela Lei Complementar nº 72/2018"}, {"n": "Fortaleza", "p": "teto-rpv-fortaleza.html", "t": "R$ 8.475,55", "l": "Lei Municipal nº 10.562/2017, art. 1º"}, {"n": "Vitória", "p": "teto-rpv-vitoria.html", "t": "R$ 48.630,00", "l": "lei própria não localizada"}, {"n": "Goiânia", "p": "teto-rpv-goiania.html", "t": "R$ 48.630,00", "l": "lei própria não localizada"}, {"n": "São Luís", "p": "teto-rpv-sao-luis.html", "t": "R$ 16.210,00", "l": "Lei Municipal 4.476/2005, art. 1º"}, {"n": "Cuiabá", "p": "teto-rpv-cuiaba.html", "t": "R$ 8.475,55", "l": "Lei Municipal nº 5.953/2015, art. 1º, com redação dada pela Lei nº 6.837, de 24/06/2022"}, {"n": "Campo Grande", "p": "teto-rpv-campo-grande.html", "t": "R$ 10.099,18", "l": "Lei Municipal nº 4.498, de 27/07/2007, art. 1º"}, {"n": "Belo Horizonte", "p": "teto-rpv-belo-horizonte.html", "t": "R$ 8.475,55", "l": "Lei Municipal nº 11.158/2019"}, {"n": "Belém", "p": "teto-rpv-belem.html", "t": "R$ 16.210,00", "l": "Lei Municipal 10.336/2026 (DOM nº 15.456, de 25/06/2026)"}, {"n": "João Pessoa", "p": "teto-rpv-joao-pessoa.html", "t": "R$ 8.475,55", "l": "Lei Municipal 10.459/2005, art. 1º, com redação da Lei 11.983/2010"}, {"n": "Curitiba", "p": "teto-rpv-curitiba.html", "t": "R$ 8.475,55", "l": "Lei Municipal 10.235/2001, art. 1º e art. 5º; Decreto 789/2025"}, {"n": "Recife", "p": "teto-rpv-recife.html", "t": "R$ 48.630,00", "l": "Lei Municipal nº 18.364, de 26/07/2017, art. 9º"}, {"n": "Teresina", "p": "teto-rpv-teresina.html", "t": "R$ 11.347,00", "l": "Lei Municipal nº 3.871, de 05/06/2009"}, {"n": "Rio de Janeiro (capital)", "p": "teto-rpv-rio-de-janeiro-capital.html", "t": "R$ 16.210,00", "l": "Lei Municipal nº 9.005, de 18/08/2025, art. 1º"}, {"n": "Natal", "p": "teto-rpv-natal.html", "t": "R$ 16.210,00", "l": "Lei Municipal 5.509/2003, art. 1º"}, {"n": "Porto Alegre", "p": "teto-rpv-porto-alegre.html", "t": "R$ 48.630,00", "l": "lei própria não localizada"}, {"n": "Porto Velho", "p": "teto-rpv-porto-velho.html", "t": "R$ 16.210,00", "l": "LC Municipal 134/2001, art. 1º, com redação da LC 837/2021"}, {"n": "Boa Vista", "p": "teto-rpv-boa-vista.html", "t": "R$ 24.315,00", "l": "Lei Municipal 1.249/2010, art. 1º e parágrafo único"}, {"n": "Florianópolis", "p": "teto-rpv-florianopolis.html", "t": "R$ 8.475,55", "l": "Lei Municipal 8.258/2010, art. 1º"}, {"n": "São Paulo (capital)", "p": "teto-rpv-sao-paulo-capital.html", "t": "R$ 31.667,41", "l": "Lei Municipal nº 13.179, de 25/09/2001, art. 1º, com redação dada pela Lei nº 17.914/2023"}, {"n": "Aracaju", "p": "teto-rpv-aracaju.html", "t": "R$ 8.475,55", "l": "Lei Municipal 6.176/2025 (LDO 2026), art. 30, §4º"}, {"n": "Palmas", "p": "teto-rpv-palmas.html", "t": "R$ 24.315,00", "l": "Lei Municipal nº 2.328, de 13/07/2017, art. 1º, com redação dada pela Lei nº 2.861, de 17/05/2023"}]</script>
+<script type="application/json" id="dados-busca">[{"k": "ferramenta", "n": "Tetos de RPV", "p": "tetos-de-rpv.html", "d": "Teto de cada estado, capital e da União, com a lei e a fonte.", "w": "rpv obrigação pequeno valor estado município", "m": 1}, {"k": "ferramenta", "n": "Cabe em RPV?", "p": "calculadora-rpv.html", "d": "Confere se o crédito cabe no teto na data do trânsito em julgado.", "w": "rpv precatório teto excedente renúncia", "m": 1}, {"k": "ferramenta", "n": "Superpreferência", "p": "limite-superpreferencia.html", "d": "Quanto o idoso ou a pessoa com doença grave recebe antes da fila.", "w": "precatório idoso doença deficiência", "m": 0}, {"k": "ferramenta", "n": "Prazo do precatório", "p": "quando-o-precatorio-e-pago.html", "d": "Até quando o ente tem de pagar, pela data de apresentação.", "w": "precatório data de corte pagamento", "m": 0}, {"k": "ferramenta", "n": "Honorários contra a Fazenda", "p": "honorarios-fazenda-publica.html", "d": "Faixas do art. 85, §3º, do CPC sobre o valor da condenação.", "w": "honorários sucumbência fazenda cpc 85", "m": 0}, {"k": "ferramenta", "n": "Histórico de tetos", "p": "historico.html", "d": "Cada mudança de teto, com a lei nova e a data.", "w": "rpv teto mudança lei nova", "m": 0}, {"k": "ferramenta", "n": "Prazo processual", "p": "prazo-processual.html", "d": "Vencimento em dias úteis, com feriados e recesso de 13 tribunais.", "w": "prazo cpc clt dias úteis feriado vencimento", "m": 1}, {"k": "ferramenta", "n": "Verbas rescisórias", "p": "calculadora-verbas-rescisorias.html", "d": "Rescisão CLT e doméstico: aviso, férias, 13º e multa do FGTS.", "w": "rescisão trabalhista clt fgts aviso prévio", "m": 1}, {"k": "ferramenta", "n": "Atualizar pelo IPCA", "p": "atualizar-valor-ipca.html", "d": "Atualiza um valor pelo IPCA mês a mês, com a conta pronta.", "w": "correção monetária atualização ipca inflação", "m": 1}, {"k": "ferramenta", "n": "Índices de correção", "p": "indices-mensais.html", "d": "IPCA, INPC, IPCA-E, IGP-M, SELIC, TR e outros, mês a mês.", "w": "correção monetária índice selic igpm inpc", "m": 1}, {"k": "ferramenta", "n": "Tabelas oficiais 2026", "p": "tabelas-oficiais.html", "d": "Salário mínimo, INSS, IR, custas e outros valores do ano.", "w": "tabela inss imposto de renda salário mínimo", "m": 0}, {"k": "ferramenta", "n": "Salário mínimo e teto do RGPS", "p": "salario-minimo-e-teto-do-rgps.html", "d": "Salário mínimo e maior benefício do RGPS, ano a ano.", "w": "salário mínimo teto inss rgps", "m": 0}, {"k": "ferramenta", "n": "Guia de RPV e precatório", "p": "guia.html", "d": "Artigos sobre RPV, precatório, prazos e honorários.", "w": "artigo guia rpv precatório", "m": 0}, {"k": "ferramenta", "n": "Modelos gratuitos", "p": "modelos-gratuitos.html", "d": "Procuração, hipossuficiência, contrato de honorários e mais, em Word.", "w": "modelo word procuração petição", "m": 0}, {"k": "ferramenta", "n": "Tabela de prazos", "p": "tabela-de-prazos-processuais.html", "d": "Prazos do CPC, da CLT e de outras leis por ato processual.", "w": "prazo recurso contestação apelação", "m": 0}, {"k": "ferramenta", "n": "Prescrição e decadência", "p": "tabela-de-prescricao.html", "d": "Prazos de prescrição e decadência com o artigo de lei.", "w": "prescrição decadência prazo", "m": 0}, {"k": "ferramenta", "n": "Checklists de documentos", "p": "checklists-de-documentos.html", "d": "Documentos para cada tipo de ação, em lista.", "w": "documentos checklist petição inicial", "m": 0}, {"k": "ferramenta", "n": "Teses do STF e do STJ", "p": "teses-vinculantes.html", "d": "Temas de repercussão geral e repetitivos com a tese oficial.", "w": "stf stj tema repercussão geral repetitivo", "m": 0}, {"k": "ferramenta", "n": "Dados abertos", "p": "dados-abertos.html", "d": "A tabela de tetos em CSV e JSON, para usar em outros sistemas.", "w": "csv json dados tetos", "m": 0}, {"k": "ente", "n": "União", "p": "teto-rpv-uniao.html", "d": "Teto de RPV: R$ 97.260,00", "w": "teto rpv  União"}, {"k": "ente", "n": "São Paulo", "p": "teto-rpv-sao-paulo.html", "d": "Teto de RPV: R$ 16.913,05", "w": "teto rpv SP estado"}, {"k": "ente", "n": "Minas Gerais", "p": "teto-rpv-minas-gerais.html", "d": "Teto de RPV: R$ 27.345,70", "w": "teto rpv MG estado"}, {"k": "ente", "n": "Rio de Janeiro", "p": "teto-rpv-rio-de-janeiro.html", "d": "Teto de RPV: R$ 32.420,00", "w": "teto rpv RJ estado"}, {"k": "ente", "n": "Bahia", "p": "teto-rpv-bahia.html", "d": "Teto de RPV: R$ 16.210,00", "w": "teto rpv BA estado"}, {"k": "ente", "n": "Paraná", "p": "teto-rpv-parana.html", "d": "Teto de RPV: R$ 24.782,81", "w": "teto rpv PR estado"}, {"k": "ente", "n": "Rio Grande do Sul", "p": "teto-rpv-rio-grande-do-sul.html", "d": "Teto de RPV: R$ 16.210,00", "w": "teto rpv RS estado"}, {"k": "ente", "n": "Pernambuco", "p": "teto-rpv-pernambuco.html", "d": "Teto de RPV: R$ 64.840,00", "w": "teto rpv PE estado"}, {"k": "ente", "n": "Ceará", "p": "teto-rpv-ceara.html", "d": "Teto de RPV: R$ 15.746,80", "w": "teto rpv CE estado"}, {"k": "ente", "n": "Pará", "p": "teto-rpv-para.html", "d": "Teto de RPV: R$ 48.630,00", "w": "teto rpv PA estado"}, {"k": "ente", "n": "Maranhão", "p": "teto-rpv-maranhao.html", "d": "Teto de RPV: R$ 32.420,00", "w": "teto rpv MA estado"}, {"k": "ente", "n": "Santa Catarina", "p": "teto-rpv-santa-catarina.html", "d": "Teto de RPV: R$ 16.210,00", "w": "teto rpv SC estado"}, {"k": "ente", "n": "Goiás", "p": "teto-rpv-goias.html", "d": "Teto de RPV: R$ 16.210,00", "w": "teto rpv GO estado"}, {"k": "ente", "n": "Amazonas", "p": "teto-rpv-amazonas.html", "d": "Teto de RPV: R$ 32.420,00", "w": "teto rpv AM estado"}, {"k": "ente", "n": "Espírito Santo", "p": "teto-rpv-espirito-santo.html", "d": "Teto de RPV: R$ 21.827,29", "w": "teto rpv ES estado"}, {"k": "ente", "n": "Paraíba", "p": "teto-rpv-paraiba.html", "d": "Teto de RPV: R$ 16.210,00", "w": "teto rpv PB estado"}, {"k": "ente", "n": "Rio Grande do Norte", "p": "teto-rpv-rio-grande-do-norte.html", "d": "Teto de RPV: R$ 32.420,00", "w": "teto rpv RN estado"}, {"k": "ente", "n": "Mato Grosso", "p": "teto-rpv-mato-grosso.html", "d": "Teto de RPV: R$ 26.312,00", "w": "teto rpv MT estado"}, {"k": "ente", "n": "Alagoas", "p": "teto-rpv-alagoas.html", "d": "Teto de RPV: R$ 8.475,55", "w": "teto rpv AL estado"}, {"k": "ente", "n": "Piauí", "p": "teto-rpv-piaui.html", "d": "Teto de RPV: R$ 8.475,55", "w": "teto rpv PI estado"}, {"k": "ente", "n": "Distrito Federal", "p": "teto-rpv-distrito-federal.html", "d": "Teto de RPV: R$ 32.420,00", "w": "teto rpv DF distrito federal"}, {"k": "ente", "n": "Mato Grosso do Sul", "p": "teto-rpv-mato-grosso-do-sul.html", "d": "Teto de RPV: R$ 28.582,50", "w": "teto rpv MS estado"}, {"k": "ente", "n": "Sergipe", "p": "teto-rpv-sergipe.html", "d": "Teto de RPV: R$ 8.475,55", "w": "teto rpv SE estado"}, {"k": "ente", "n": "Rondônia", "p": "teto-rpv-rondonia.html", "d": "Teto de RPV: R$ 16.210,00", "w": "teto rpv RO estado"}, {"k": "ente", "n": "Tocantins", "p": "teto-rpv-tocantins.html", "d": "Teto de RPV: R$ 16.210,00", "w": "teto rpv TO estado"}, {"k": "ente", "n": "Acre", "p": "teto-rpv-acre.html", "d": "Teto de RPV: R$ 11.347,00", "w": "teto rpv AC estado"}, {"k": "ente", "n": "Amapá", "p": "teto-rpv-amapa.html", "d": "Teto de RPV: R$ 16.210,00", "w": "teto rpv AP estado"}, {"k": "ente", "n": "Roraima", "p": "teto-rpv-roraima.html", "d": "Teto de RPV: R$ 27.557,00", "w": "teto rpv RR estado"}, {"k": "ente", "n": "Rio Branco", "p": "teto-rpv-rio-branco.html", "d": "Teto de RPV: R$ 16.210,00", "w": "teto rpv AC capital"}, {"k": "ente", "n": "Maceió", "p": "teto-rpv-maceio.html", "d": "Teto de RPV: R$ 21.073,00", "w": "teto rpv AL capital"}, {"k": "ente", "n": "Macapá", "p": "teto-rpv-macapa.html", "d": "Teto de RPV: R$ 8.475,55", "w": "teto rpv AP capital"}, {"k": "ente", "n": "Manaus", "p": "teto-rpv-manaus.html", "d": "Teto de RPV: R$ 24.315,00", "w": "teto rpv AM capital"}, {"k": "ente", "n": "Salvador", "p": "teto-rpv-salvador.html", "d": "Teto de RPV: R$ 8.475,55", "w": "teto rpv BA capital"}, {"k": "ente", "n": "Fortaleza", "p": "teto-rpv-fortaleza.html", "d": "Teto de RPV: R$ 8.475,55", "w": "teto rpv CE capital"}, {"k": "ente", "n": "Vitória", "p": "teto-rpv-vitoria.html", "d": "Teto de RPV: R$ 48.630,00", "w": "teto rpv ES capital"}, {"k": "ente", "n": "Goiânia", "p": "teto-rpv-goiania.html", "d": "Teto de RPV: R$ 48.630,00", "w": "teto rpv GO capital"}, {"k": "ente", "n": "São Luís", "p": "teto-rpv-sao-luis.html", "d": "Teto de RPV: R$ 16.210,00", "w": "teto rpv MA capital"}, {"k": "ente", "n": "Cuiabá", "p": "teto-rpv-cuiaba.html", "d": "Teto de RPV: R$ 8.475,55", "w": "teto rpv MT capital"}, {"k": "ente", "n": "Campo Grande", "p": "teto-rpv-campo-grande.html", "d": "Teto de RPV: R$ 10.099,18", "w": "teto rpv MS capital"}, {"k": "ente", "n": "Belo Horizonte", "p": "teto-rpv-belo-horizonte.html", "d": "Teto de RPV: R$ 8.475,55", "w": "teto rpv MG capital"}, {"k": "ente", "n": "Belém", "p": "teto-rpv-belem.html", "d": "Teto de RPV: R$ 16.210,00", "w": "teto rpv PA capital"}, {"k": "ente", "n": "João Pessoa", "p": "teto-rpv-joao-pessoa.html", "d": "Teto de RPV: R$ 8.475,55", "w": "teto rpv PB capital"}, {"k": "ente", "n": "Curitiba", "p": "teto-rpv-curitiba.html", "d": "Teto de RPV: R$ 8.475,55", "w": "teto rpv PR capital"}, {"k": "ente", "n": "Recife", "p": "teto-rpv-recife.html", "d": "Teto de RPV: R$ 48.630,00", "w": "teto rpv PE capital"}, {"k": "ente", "n": "Teresina", "p": "teto-rpv-teresina.html", "d": "Teto de RPV: R$ 11.347,00", "w": "teto rpv PI capital"}, {"k": "ente", "n": "Rio de Janeiro (capital)", "p": "teto-rpv-rio-de-janeiro-capital.html", "d": "Teto de RPV: R$ 16.210,00", "w": "teto rpv RJ capital"}, {"k": "ente", "n": "Natal", "p": "teto-rpv-natal.html", "d": "Teto de RPV: R$ 16.210,00", "w": "teto rpv RN capital"}, {"k": "ente", "n": "Porto Alegre", "p": "teto-rpv-porto-alegre.html", "d": "Teto de RPV: R$ 48.630,00", "w": "teto rpv RS capital"}, {"k": "ente", "n": "Porto Velho", "p": "teto-rpv-porto-velho.html", "d": "Teto de RPV: R$ 16.210,00", "w": "teto rpv RO capital"}, {"k": "ente", "n": "Boa Vista", "p": "teto-rpv-boa-vista.html", "d": "Teto de RPV: R$ 24.315,00", "w": "teto rpv RR capital"}, {"k": "ente", "n": "Florianópolis", "p": "teto-rpv-florianopolis.html", "d": "Teto de RPV: R$ 8.475,55", "w": "teto rpv SC capital"}, {"k": "ente", "n": "São Paulo (capital)", "p": "teto-rpv-sao-paulo-capital.html", "d": "Teto de RPV: R$ 31.667,41", "w": "teto rpv SP capital"}, {"k": "ente", "n": "Aracaju", "p": "teto-rpv-aracaju.html", "d": "Teto de RPV: R$ 8.475,55", "w": "teto rpv SE capital"}, {"k": "ente", "n": "Palmas", "p": "teto-rpv-palmas.html", "d": "Teto de RPV: R$ 24.315,00", "w": "teto rpv TO capital"}, {"k": "artigo", "n": "Quando cai a RPV? Prazos de pagamento por tipo", "p": "guia-quando-cai-a-rpv.html", "d": "Guia", "w": "Prazo da RPV conta da entrega: 60 dias nos juizados, 2 meses no juízo comum. Na Justiça Federal, a União paga pelo TRF em relação mensal."}, {"k": "artigo", "n": "RPV vencida: o que fazer", "p": "guia-rpv-vencida-o-que-fazer.html", "d": "Guia", "w": "Passou o prazo da RPV e o depósito não veio: a lei prevê o sequestro do valor. Veja de que data contar, o prazo e os dados que fortalecem o pedido."}, {"k": "artigo", "n": "Renúncia ao excedente do teto de RPV: quando compensa", "p": "guia-renuncia-ao-excedente.html", "d": "Guia", "w": "Renunciar ao que passa do teto troca dinheiro por tempo. Veja a base legal, a regra do não fracionamento, a conta com o cliente e a forma exigida."}, {"k": "artigo", "n": "Data de corte do precatório: 1º de fevereiro (EC 136/2025)", "p": "guia-data-de-corte-precatorio.html", "d": "Guia", "w": "Desde a EC 136/2025, o precatório apresentado até 1º de fevereiro entra no orçamento do ano seguinte. Antes era 2 de abril. O recesso não move a data."}, {"k": "artigo", "n": "Superpreferência no precatório: quem tem direito e o limite", "p": "guia-superpreferencia-precatorio.html", "d": "Guia", "w": "Credor com 60 anos ou mais, doença grave ou deficiência recebe antes, até 3 vezes o teto de RPV (5 no regime especial). O resto volta para a fila."}, {"k": "artigo", "n": "RPV, precatório e alvará: qual é qual", "p": "guia-rpv-precatorio-alvara-diferencas.html", "d": "Guia", "w": "RPV e precatório são formas de a Fazenda pagar, separadas pelo teto do ente. Alvará é a ordem para levantar valor já depositado. Veja as diferenças."}, {"k": "artigo", "n": "Honorários na RPV e no precatório: contratuais, destaque e sucumbência", "p": "guia-honorarios-na-rpv.html", "d": "Guia", "w": "Contrato nos autos antes da expedição, destaque por dedução, sucumbência com requisição própria, faixas do art. 85 e natureza alimentar (Lei 15.472/2026)."}, {"k": "artigo", "n": "IR e PSS na RPV e no precatório", "p": "guia-ir-e-pss-na-rpv.html", "d": "Guia", "w": "Na Justiça Federal, o banco retém 3% de IR no pagamento de RPV e precatório. Atrasados seguem a regra dos rendimentos acumulados. Servidor pode ter PSS."}, {"k": "artigo", "n": "Recesso forense: o que para e o que não para (20/12 a 20/01)", "p": "guia-recesso-forense-prazos.html", "d": "Guia", "w": "De 20/12 a 20/01 o prazo processual fica suspenso. Prescrição, decadência e data de corte do precatório não param. Veja o que confere a cada ciclo."}, {"k": "artigo", "n": "Prescrição da execução contra a Fazenda: 5 anos, Decreto 20.910 e Súmula 150/STF", "p": "guia-prescricao-da-execucao-contra-a-fazenda.html", "d": "Guia", "w": "Sentença contra a Fazenda também prescreve: cinco anos para pedir o cumprimento (Decreto 20.910/1932; Súmula 150/STF). Interrupção única e recesso."}, {"k": "artigo", "n": "Cessão de crédito de precatório e RPV: regras e comunicação ao juízo", "p": "guia-cessao-de-credito-precatorio.html", "d": "Guia", "w": "O credor pode ceder o precatório sem anuência do devedor, mas a cessão só vale depois de comunicada. O comprador não leva superpreferência nem RPV."}, {"k": "artigo", "n": "Honorários no contrato: quota litis, compensação e prestação de contas (CED/OAB)", "p": "guia-honorarios-quota-litis-e-contrato.html", "d": "Guia", "w": "O contrato de êxito tem teto no Código de Ética: honorários em dinheiro, limitados ao ganho do cliente. Compensação só com autorização escrita."}, {"k": "artigo", "n": "Prazo em dobro da Fazenda e faixas do art. 85, §3º", "p": "guia-prazo-em-dobro-fazenda.html", "d": "Guia", "w": "A Fazenda tem prazo em dobro, contado da intimação pessoal, mas não nos juizados. E os honorários contra ela seguem cinco faixas (art. 85, §3º)."}, {"k": "artigo", "n": "Fracionamento da execução: litisconsórcio, honorários e o teto de RPV", "p": "guia-fracionamento-litisconsorcio-rpv.html", "d": "Guia", "w": "O crédito não pode ser partido para caber em RPV. Mas, com vários autores, o teto vale por credor, e os honorários de sucumbência têm requisição própria."}, {"k": "artigo", "n": "Correção do precatório e da RPV depois da EC 136/2025: IPCA, 2% ao ano e o limite da SELIC", "p": "guia-correcao-precatorio-rpv-ec-136.html", "d": "Guia", "w": "Da expedição ao pagamento, o requisitório é corrigido pelo IPCA com juros simples de 2% ao ano, limitado à SELIC. Onde está a regra e o que segue em aberto."}, {"k": "artigo", "n": "Precatório alimentar ou comum: o que mudou com a EC 136/2025 e por que muda a fila", "p": "guia-precatorio-alimentar-ou-comum.html", "d": "Guia", "w": "A EC 136/2025 reescreveu o que é crédito alimentar. A natureza vai no ofício requisitório e decide em que fila o precatório espera."}, {"k": "artigo", "n": "RPV contra o INSS: prazo, onde consultar e quando o dinheiro cai", "p": "guia-rpv-inss-prazo-consulta.html", "d": "Guia", "w": "RPV contra o INSS: teto de 60 salários mínimos, prazo contado da entrega, depósito mensal pelo TRF e saque no banco, em regra sem alvará."}, {"k": "artigo", "n": "Res. CJF 995/2026: RPV e precatório federal só com o crédito definitivo", "p": "guia-res-cjf-995-expedicao-rpv-precatorio.html", "d": "Guia", "w": "Res. CJF 995/2026: RPV e precatório federal só com o crédito definitivo, depois dos embargos ou do fim do prazo. Parcela incontroversa continua."}, {"k": "artigo", "n": "Precatório estadual e municipal: onde ver a posição na lista do TJ", "p": "guia-lista-de-precatorios-tj-posicao.html", "d": "Guia", "w": "Todo TJ publica a lista cronológica de precatórios. Veja onde consultar a posição, o plano do regime especial e por que a RPV não passa pelo TJ."}, {"k": "artigo", "n": "Impugnação da Fazenda ao cumprimento de sentença: prazo, o que ela pode alegar e o que acontece depois", "p": "guia-impugnacao-cumprimento-sentenca-fazenda.html", "d": "Guia", "w": "A Fazenda tem 30 dias para impugnar o cumprimento de sentença (CPC, art. 535). O que ela pode alegar, a parte incontroversa e o efeito na RPV."}, {"k": "artigo", "n": "Juros de mora na RPV e no precatório: do cálculo à requisição (Tema 96) e o período de graça (SV 17)", "p": "guia-juros-de-mora-rpv-precatorio-sv-17-tema-96.html", "d": "Guia", "w": "Correm juros entre o cálculo e a requisição (Tema 96 do STF). No prazo de pagamento do precatório, não (SV 17). Veja quando voltam a correr."}, {"k": "artigo", "n": "Credor falecido na RPV e no precatório: sucessores, habilitação e o que acontece com o valor", "p": "guia-credor-falecido-rpv-precatorio-herdeiros.html", "d": "Guia", "w": "Morreu o credor: os sucessores se habilitam nos autos, o valor fica à ordem do juízo e o ofício mantém o falecido como beneficiário originário."}, {"k": "artigo", "n": "Usar precatório para pagar dívida com o ente: o §11 do art. 100 da Constituição", "p": "guia-usar-precatorio-para-pagar-divida-art-100-11.html", "d": "Guia", "w": "O §11 do art. 100 da CF permite usar precatório para quitar dívida ativa, comprar imóvel público e mais. Na União já vale; nos demais, depende de lei."}, {"k": "artigo", "n": "Sequestro no precatório: preterição da ordem e falta de verba no orçamento (CF, art. 100, §6º)", "p": "guia-sequestro-precatorio-art-100-6.html", "d": "Guia", "w": "O sequestro no precatório só cabe em dois casos (CF, art. 100, §6º): preterição da ordem ou falta de verba no orçamento. Veja quem pede, a quem e o rito."}]</script>
 <script>
 (function () {
   var dados = JSON.parse(document.getElementById('dados-busca').textContent);
-  var form = document.getElementById('busca'), campo = document.getElementById('busca-ente');
-  var saida = document.getElementById('busca-resultado');
-  function normal(s) { return s.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim(); }
-  function achar(txt) {
-    var n = normal(txt); if (!n) return null;
-    for (var i = 0; i < dados.length; i++) if (normal(dados[i].n) === n) return dados[i];
-    var parcial = dados.filter(function (d) { return normal(d.n).indexOf(n) === 0; });
-    return parcial.length === 1 ? parcial[0] : null;
+  var form = document.getElementById('busca-geral'), campo = document.getElementById('busca-campo');
+  var lista = document.getElementById('busca-sugestoes'), ajuda = document.getElementById('busca-ajuda');
+  var PARADAS = ['a', 'o', 'as', 'os', 'de', 'da', 'do', 'das', 'dos', 'e', 'em', 'na', 'no', 'nas', 'nos', 'para', 'pelo', 'pela', 'qual', 'quanto', 'como', 'um', 'uma'];
+  var ORDEM = { ferramenta: 0, ente: 1, artigo: 2 };
+  function normal(s) { return (s || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase(); }
+  dados.forEach(function (d) { d._n = normal(d.n); d._w = normal(d.w + ' ' + d.d); });
+  function procurar(txt) {
+    var termos = normal(txt).split(/[^a-z0-9]+/).filter(function (t) { return t && PARADAS.indexOf(t) < 0; });
+    if (!termos.length) return [];
+    var achados = [];
+    dados.forEach(function (d) {
+      var nota = 0;
+      for (var i = 0; i < termos.length; i++) {
+        if (d._n.indexOf(termos[i]) >= 0) nota += 3;
+        else if (d._w.indexOf(termos[i]) >= 0) nota += 1;
+        else return;
+      }
+      if (d._n === termos.join(' ')) nota += 5;
+      nota += d.m || 0;
+      achados.push({ d: d, nota: nota });
+    });
+    achados.sort(function (a, b) { return b.nota - a.nota || ORDEM[a.d.k] - ORDEM[b.d.k]; });
+    return achados.slice(0, 6).map(function (a) { return a.d; });
   }
-  campo.addEventListener('input', function () {
-    var d = achar(campo.value);
-    saida.textContent = d ? d.n + ': ' + d.t + ' (' + d.l + ')' : (campo.value ? 'Continue digitando ou escolha da lista.' : 'Comece a digitar: o teto aparece aqui.');
-    saida.classList.toggle('achou', !!d);
-  });
+  var ROTULO = { ferramenta: 'Ferramenta', ente: 'Teto de RPV', artigo: 'Guia' };
+  function mostrar() {
+    var achados = procurar(campo.value);
+    lista.innerHTML = '';
+    achados.forEach(function (d) {
+      var li = document.createElement('li'), a = document.createElement('a'), s = document.createElement('span');
+      a.href = d.p; a.textContent = d.n;
+      s.textContent = d.k === 'ente' ? d.d : ROTULO[d.k];
+      li.appendChild(a); li.appendChild(s); lista.appendChild(li);
+    });
+    ajuda.textContent = !campo.value ? 'Digite um estado, uma capital, uma ferramenta ou um assunto.'
+      : (achados.length ? '' : 'Nada encontrado. Tente outra palavra ou veja a tabela de tetos.');
+    return achados;
+  }
+  campo.addEventListener('input', mostrar);
   form.addEventListener('submit', function (ev) {
-    var d = achar(campo.value);
-    if (d) { ev.preventDefault(); window.location.href = d.p; }
+    var achados = mostrar();
+    if (achados.length) { ev.preventDefault(); window.location.href = achados[0].p; }
   });
 })();
 </script>
-<footer class="rodape-site" aria-label="Rodapé do site"><div class="rodape-colunas"><div><h2>Ferramentas gratuitas</h2><ul><li><a href="tetos-de-rpv.html">Tetos de RPV</a></li><li><a href="calculadora-rpv.html">Cabe em RPV?</a></li><li><a href="limite-superpreferencia.html">Superpreferência</a></li><li><a href="quando-o-precatorio-e-pago.html">Prazo do precatório</a></li><li><a href="honorarios-fazenda-publica.html">Honorários contra a Fazenda</a></li><li><a href="historico.html">Histórico de tetos</a></li><li><a href="prazo-processual.html">Prazo processual</a></li><li><a href="calculadora-verbas-rescisorias.html">Verbas rescisórias</a></li><li><a href="atualizar-valor-ipca.html">Atualizar pelo IPCA</a></li><li><a href="indices-mensais.html">Índices de correção</a></li><li><a href="tabelas-oficiais.html">Tabelas oficiais 2026</a></li><li><a href="salario-minimo-e-teto-do-rgps.html">Salário mínimo e teto do RGPS</a></li></ul></div><div><h2>Planilhas</h2><ul><li><a href="planilha-atrio-recebiveis.html">Átrio Recebíveis · R$ 47</a></li><li><a href="planilha-atrio-acordos.html">Átrio Acordos · R$ 37</a></li><li><a href="planilha-atrio-acordos.html#preco">As duas planilhas · R$ 67</a></li><li><a href="index.html#produtos">Átrio Calculadora · em breve</a></li></ul></div><div><h2>Conteúdo</h2><ul><li><a href="guia.html">Guia de RPV e precatório</a></li><li><a href="modelos-gratuitos.html">Modelos gratuitos</a></li><li><a href="tabela-de-prazos-processuais.html">Tabela de prazos</a></li><li><a href="tabela-de-prescricao.html">Prescrição e decadência</a></li><li><a href="checklists-de-documentos.html">Checklists de documentos</a></li><li><a href="teses-vinculantes.html">Teses do STF e do STJ</a></li><li><a href="dados-abertos.html">Dados abertos</a></li><li><a href="modelo-peticao-rpv.html">Modelo de petição de RPV</a></li></ul></div><div><h2>Átrio</h2><ul><li><a href="mailto:suporte.atrio.br@gmail.com">Suporte por e-mail</a></li><li><a href="https://instagram.com/atriojur">Instagram @atriojur</a></li><li><a href="https://www.youtube.com/@atriojur">YouTube @atriojur</a></li><li><a href="privacidade.html">Política de privacidade</a></li></ul></div></div><p class="rodape-marca"><strong>Átrio</strong>, ferramentas para escritórios de advocacia. Conteúdo informativo: confira a lei do ente e a fonte indicada em cada página; não substitui a orientação de um advogado.</p></footer>
+<footer class="rodape-site" aria-label="Rodapé do site"><div class="rodape-colunas"><div><h2>Ferramentas gratuitas</h2><ul><li><a href="tetos-de-rpv.html">Tetos de RPV</a></li><li><a href="calculadora-rpv.html">Cabe em RPV?</a></li><li><a href="limite-superpreferencia.html">Superpreferência</a></li><li><a href="quando-o-precatorio-e-pago.html">Prazo do precatório</a></li><li><a href="honorarios-fazenda-publica.html">Honorários contra a Fazenda</a></li><li><a href="historico.html">Histórico de tetos</a></li><li><a href="prazo-processual.html">Prazo processual</a></li><li><a href="calculadora-verbas-rescisorias.html">Verbas rescisórias</a></li><li><a href="atualizar-valor-ipca.html">Atualizar pelo IPCA</a></li><li><a href="indices-mensais.html">Índices de correção</a></li><li><a href="tabelas-oficiais.html">Tabelas oficiais 2026</a></li><li><a href="salario-minimo-e-teto-do-rgps.html">Salário mínimo e teto do RGPS</a></li></ul></div><div><h2>Planilhas</h2><ul><li><a href="planilha-atrio-recebiveis.html">Átrio Recebíveis · R$ 47</a></li><li><a href="planilha-atrio-acordos.html">Átrio Acordos · R$ 37</a></li><li><a href="planilha-atrio-acordos.html#preco">As duas planilhas · R$ 67</a></li><li><a href="index.html#produtos">Átrio Calculadora · em breve</a></li></ul></div><div><h2>Conteúdo</h2><ul><li><a href="guia.html">Guia de RPV e precatório</a></li><li><a href="modelos-gratuitos.html">Modelos gratuitos</a></li><li><a href="tabela-de-prazos-processuais.html">Tabela de prazos</a></li><li><a href="tabela-de-prescricao.html">Prescrição e decadência</a></li><li><a href="checklists-de-documentos.html">Checklists de documentos</a></li><li><a href="teses-vinculantes.html">Teses do STF e do STJ</a></li><li><a href="dados-abertos.html">Dados abertos</a></li><li><a href="modelo-peticao-rpv.html">Modelo de petição de RPV</a></li></ul></div><div><h2>Átrio</h2><ul><li><a href="fontes-e-metodologia.html">Fontes e metodologia</a></li><li><a href="mailto:suporte.atrio.br@gmail.com">Suporte por e-mail</a></li><li><a href="https://instagram.com/atriojur">Instagram @atriojur</a></li><li><a href="https://www.youtube.com/@atriojur">YouTube @atriojur</a></li><li><a href="privacidade.html">Política de privacidade</a></li></ul></div></div><p class="rodape-marca"><strong>Átrio</strong>, ferramentas para escritórios de advocacia. Conteúdo informativo: confira a lei do ente e a fonte indicada em cada página; não substitui a orientação de um advogado.</p></footer>
 </div></div>
 <script>
 (function () {

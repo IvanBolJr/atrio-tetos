@@ -604,3 +604,68 @@ fieldset.calc-campo label { display: flex; gap: .6rem; align-items: flex-start; 
 .card { border-top: 1px solid var(--linha); }
 .botao { border-radius: .8rem; }
 .calc-veredito, .preco-valor, .valor-num, .previa-veredito, .tabela-indices .num, #tabela-tetos td.num, .hero-dados dd { font-family: var(--mono); }
+
+/* início na Proposta A (18/11/2026): hero com a busca geral; seções com rótulo, título e grade de cartões */
+.abertura-a { margin: 1.2rem 0 2rem; padding: 1.8rem 1.6rem 1.4rem; border-radius: var(--raio); background: var(--destaque); color: #E6E9ED;
+  background-image: radial-gradient(rgba(255, 255, 255, .08) 1px, transparent 1px); background-size: 18px 18px; }
+.abertura-a .selo-base { background: rgba(255, 255, 255, .08); border-color: #3B424C; color: #C9CFD6; }
+.abertura-a h1 { margin: .2rem 0 .6rem; font-size: clamp(2rem, 4.4vw, 3.4rem); line-height: 1.04; letter-spacing: -.045em; font-weight: 800; color: #FFFFFF; max-width: 18ch; }
+.abertura-a h1::after { display: none; }
+.lead-a { margin: 0 0 1.2rem; max-width: 46ch; font-size: 1.05rem; line-height: 1.55; color: #C9CFD6; text-align: left !important; }
+.busca-geral { max-width: 44rem; }
+.busca .busca-pergunta { position: static; display: block; margin: 0 0 .45rem; font-size: 1.05rem; font-weight: 700; color: #FFFFFF; }
+.busca-sugestoes { list-style: none; margin: .4rem 0 0; padding: 0; display: grid; gap: .3rem; }
+.busca-sugestoes li { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: .2rem .8rem; padding: .5rem .8rem; border-radius: .6rem; background: rgba(255, 255, 255, .07); }
+.busca-sugestoes a { color: #FFFFFF; font-weight: 600; text-decoration-color: var(--coral); }
+.busca-sugestoes span { font-family: var(--mono); font-size: .78rem; color: #AEB5BE; }
+.busca-sugestoes:empty { display: none; }
+.abertura-a .chips { margin-top: 1rem; }
+.secao-a { margin: 0 0 2.6rem; }
+.rotulo-secao { display: flex; align-items: center; gap: .45rem; margin: 0 0 .2rem; font-family: var(--mono); font-size: .75rem; letter-spacing: .1em; text-transform: uppercase; color: #C2410C; text-align: left !important; }
+.secao-a > h2 { margin: 0 0 1rem; font-size: clamp(1.4rem, 2.4vw, 1.9rem); letter-spacing: -.03em; }
+.secao-a > h2::after { display: none; }
+.grade-a { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
+.cartao-a { display: flex; flex-direction: column; gap: .45rem; padding: 1.2rem 1.3rem; border-radius: var(--raio); background: var(--papel); border: 1px solid var(--linha); }
+.cartao-a .tile-titulo { font-size: 1.05rem; color: var(--texto); }
+.cartao-a .tile-titulo a { text-decoration: underline; text-decoration-color: var(--coral); text-underline-offset: .2em; }
+.cartao-desc { margin: 0; font-size: .92rem; color: var(--suave); text-align: left !important; }
+.cartao-a .veredito { margin-top: auto; font-size: 1.35rem; }
+.produtos-a { padding: 1.4rem; border: 2px solid var(--coral-forte); border-radius: var(--raio); background: linear-gradient(135deg, #FFF6F2 0%, #FFFFFF 60%); box-shadow: 0 10px 30px rgba(228, 87, 46, .12); }
+.produtos-grade { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); gap: 1rem; }
+.produto-a { display: flex; flex-direction: column; gap: .5rem; padding: 1.3rem 1.4rem; border-radius: var(--raio); background: #FFFFFF; border: 1px solid var(--linha); }
+.produto-principal { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1.2rem; }
+.produto-a-texto { display: flex; flex-direction: column; gap: .5rem; }
+.produto-a h3 { margin: 0; font-size: 1.7rem; letter-spacing: -.03em; }
+.produto-a h3 a { color: var(--texto); text-decoration: none; }
+.produto-a h3 a:hover { color: var(--coral-forte); }
+.produto-sub { margin: 0; font-size: .85rem; font-weight: 700; color: var(--suave); text-align: left !important; }
+.produto-a .produto-promessa { margin: 0; font-size: .98rem; color: var(--texto); }
+.preco-a { margin: auto 0 0; font-family: var(--mono); font-size: 1.9rem; font-weight: 600; letter-spacing: -.02em; text-align: left !important; }
+.preco-a span { display: block; margin-top: .2rem; font-family: var(--sans); font-size: .78rem; font-weight: 500; color: var(--suave); }
+.produto-a .comprar { display: flex; flex-wrap: wrap; gap: .5rem; margin: 0; }
+.produto-a .botao { margin: 0; background: var(--coral-forte); border-color: var(--coral-forte); color: #FFFFFF; }
+.produto-a .botao-secundario { background: #FFFFFF; color: var(--coral-forte); border-color: var(--coral-forte); }
+.produto-a .botao-secundario:hover { background: var(--coral-forte); color: #FFFFFF; }
+.produto-a-imagem { display: block; min-height: 0; }
+.produto-a-imagem img { display: block; width: 100%; height: 100%; max-height: 22rem; object-fit: cover; object-position: left top; border-radius: .9rem; border: 1px solid var(--linha); }
+.produtos-nota { margin: .9rem 0 0; font-size: .85rem; color: var(--suave); text-align: left !important; }
+.produtos-nota + .produtos-nota { margin-top: .3rem; }
+.produtos-nota b { font-family: var(--mono); color: var(--coral-forte); }
+.em-breve { display: inline-block; }
+.conteudo-grade { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1rem; align-items: start; }
+.conteudo-guia .numero-grande { font-size: 2.6rem; }
+.lista-artigos { margin: .2rem 0; padding-left: 1.1rem; display: grid; gap: .35rem; font-size: .95rem; }
+.lista-artigos li { text-align: left; }
+.lista-conteudo { list-style: none; margin: 0; padding: 0; display: grid; gap: .1rem; }
+.lista-conteudo li { padding: .6rem 0; border-bottom: 1px solid var(--linha); text-align: left; }
+.lista-conteudo a { font-weight: 700; }
+.lista-conteudo span { display: block; font-size: .88rem; color: var(--suave); }
+.metodo a { color: var(--texto); text-decoration-color: var(--coral); }
+#mudancas .tile { display: flex; flex-direction: column; gap: .4rem; padding: 1.2rem 1.3rem; border-radius: var(--raio); max-width: 44rem; }
+@media (max-width: 899px) {
+  .grade-a, .produtos-grade, .produto-principal, .conteudo-grade { grid-template-columns: minmax(0, 1fr); }
+  .produto-a-imagem { display: none; }
+  .abertura-a { padding: 1.3rem 1rem 1.1rem; }
+  .produtos-a { padding: 1rem; }
+}
+@media (min-width: 900px) and (max-width: 1099px) { .grade-a { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
